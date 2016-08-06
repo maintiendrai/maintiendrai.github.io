@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Study on My New Hugo Site</title>
+    <link>http://maintiendrai.github.io/categories/study/</link>
+    <description>Recent content in Study on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 26 Jul 2016 12:09:09 +0800</lastBuildDate>
+    <atom:link href="http://maintiendrai.github.io/categories/study/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Objective-C转向Swift若干tips</title>
+      <link>http://maintiendrai.github.io/post/2016-07-26-Objective-C%E8%BD%AC%E5%90%91Swift%E8%8B%A5%E5%B9%B2tips/</link>
+      <pubDate>Tue, 26 Jul 2016 12:09:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/post/2016-07-26-Objective-C%E8%BD%AC%E5%90%91Swift%E8%8B%A5%E5%B9%B2tips/</guid>
+      <description>
+
+&lt;h2 id=&#34;objective-c转向swift若干tips&#34;&gt;Objective-C转向Swift若干tips&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Swift 的 playground 就像是一个可交互的文档，它是用来练手学swift的，写一句代码出一行结果（右侧），可以实时查看代码结果，是学习swift语言的利器&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;不分头文件和实现文件，而是集合到.swift文件&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;swift中无需使用代码分隔符，以行作为代码分隔，如一行内有多行代码，则各行代码之间同样需使用分号;分隔&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;swift没有main函数，其代码是至上而下运行，第一行代码即为程序入口&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;类型对象化（类似于java） Int、Float、Double、Bool、Character&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;let 定义常量； len pi = 3.14&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;var hello :NSString ?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;var 定义变量var hello :NSString = @“test”&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;dl&gt;
+&lt;dd&gt;指定变量类型&lt;/dd&gt;
+&lt;/dl&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;? 表示optional，即该变量可能为nil; 调用时必须加? 如 hello?.length&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;! 表示该变量一定不为nil，否则crash&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;@”hello”不存在了,变回了”hello” 如var hello :NSString = &amp;ldquo;hello&amp;rdquo;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;可以使用+来拼接字符串 &amp;ldquo;hello&amp;rdquo;+&amp;ldquo;world&amp;rdquo;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;使用()可以在字符串插入变量 let lang = &amp;ldquo;swift&amp;rdquo;; &amp;ldquo;hello \(lang) world&amp;rdquo;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;class 定义类&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;func 定义函数&lt;/p&gt;
+
+&lt;p&gt;func myTest(xxx …) -&amp;gt; 返回类型&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;println 带换行的print&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;as 类型转换 “当作”&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;where 关键字（可以作为过滤条件用于 for-in \ do-catch \ while \ if \ guard \ switch-case \ generics）&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

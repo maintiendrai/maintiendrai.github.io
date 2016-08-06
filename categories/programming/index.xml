@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming on My New Hugo Site</title>
+    <link>http://maintiendrai.github.io/categories/programming/</link>
+    <description>Recent content in Programming on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 09 Oct 2014 12:09:09 +0800</lastBuildDate>
+    <atom:link href="http://maintiendrai.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Vim写博客同步到evernote</title>
+      <link>http://maintiendrai.github.io/post/2014-10-09-vim-geeknode/</link>
+      <pubDate>Thu, 09 Oct 2014 12:09:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/post/2014-10-09-vim-geeknode/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;通过VIM写博客通过geeknote同步到evernote&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Vim/vim-markdown/markdown preview plus &amp;lt; -&amp;gt; GeekNote -&amp;gt; Evernote
+_
+不需要任何第三方服务器的方案，就是使用Vim编写markdown。
+给Vim配上markdown着色的插件vim-markdown。&lt;/p&gt;
+
+&lt;p&gt;mac os下默认的python是narrow build path&lt;/p&gt;
+
+&lt;p&gt;python 解决 narrow build path 导致的 ValueError: unichr() arg not in
+range(0x10000) (narrow Python build)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;./configure --enable-unicode=ucs4 --prefix=/usr
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;给chrome装上实时查看markdown效果的插件markdown preview plus，这插件非常好用！特
+别是开启了“Enable auto-reload”之后，每次用Vim保存文件时都能马上刷新。
+然后用类似上一个方案的用法使用GeekNote，生成富文本同步到Evernote。
+为了更方便的使用GeekNote，可以在Dropbox里新建一个evernotebank的文件夹，然后按照
+你想同步的notebook的名字新建同名文件夹；
+比如我在evernotebank里建立blog.chetui.org的文件夹，并在该目录下建立如下脚本，命
+名为sync：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#!/bin/bash
+
+allFiles() {
+    for file in $1/*
+    do
+        if [ -d $file ]; then
+            echo $file
+            /Users/lilkr/Tools/hack/geeknote/geeknote/gnsync.py --path $file --mask &amp;quot;*.md&amp;quot; --format markdown --logpath log--notebook &amp;quot;goandfight&amp;quot;
+            allFiles $file
+        fi
+    done
+}
+
+testdir=./louisa/_posts/
+allFiles $testdir
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;然后加入可执行权限：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;chmod +x sync
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;每次在该目录下写完md格式的文件，就跑一下./sync，就把富文本同步到Evernote里了。
+单向编辑的缺陷实在是很难解决，因为markdown生成富文本只能是单向的，而Evernote官方
+又没有打算内置markdown。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Wireshark分析SIP交换中的SDP及RTP的工作过程</title>
+      <link>http://maintiendrai.github.io/post/2014-09-20-wireshark-sdp-rtp/</link>
+      <pubDate>Sat, 20 Sep 2014 12:09:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/post/2014-09-20-wireshark-sdp-rtp/</guid>
+      <description>
+
+&lt;h3 id=&#34;一-sip协议告知对方udp端口号-协商媒体类型&#34;&gt;一、SIP协议告知对方UDP端口号，协商媒体类型&lt;/h3&gt;
+
+&lt;p&gt;0.0  整个通信过程分析图&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://ww1.sinaimg.cn/large/637573b1gw1ekm90hpuo4j20kk0bbju3.jpg&#34; alt=&#34;Mou icon&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;1.1  主叫方发给被叫方的INVITE请求&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://ww4.sinaimg.cn/large/637573b1gw1ekm80zx8vrj20kj0a5jtn.jpg&#34; alt=&#34;Mou icon&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;1.2  被叫方回给主叫方的180消息&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://ww1.sinaimg.cn/large/637573b1gw1el653fadnzj20kk0aj76r.jpg&#34; alt=&#34;Mou icon&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;二-rtp媒体流&#34;&gt;二、RTP媒体流&lt;/h3&gt;
+
+&lt;p&gt;2.1  主叫方发给被叫方的一个RTP包，UDP端口号是SDP协商好的，包的序列号是0&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://ww4.sinaimg.cn/large/637573b1gw1ekm8m5uz36j20kk0al769.jpg&#34; alt=&#34;Mou icon&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;第二个RTP包，包的序列号是0，其它一样&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://ww2.sinaimg.cn/large/637573b1gw1ekm8owhyqqj20kk0abmz1.jpg&#34; alt=&#34;Mou icon&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;三-rtcp包&#34;&gt;三、RTCP包&lt;/h3&gt;
+
+&lt;p&gt;3.1  每发完一批RTP包的时候，就发一个RTCP包，告诉接收方我刚才发了多少RTP包，多少个字节&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://ww3.sinaimg.cn/large/637573b1gw1ekm8y9ou8tj20kk0abjtk.jpg&#34; alt=&#34;Mou icon&#34; /&gt;
+i&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Wireshark分析SIP协议</title>
+      <link>http://maintiendrai.github.io/post/2014-09-19-wireshark-sip/</link>
+      <pubDate>Fri, 19 Sep 2014 12:09:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/post/2014-09-19-wireshark-sip/</guid>
+      <description>
+
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+
+&lt;p&gt;SIP 是VOIP目前非常流行的一种协议。有关协议的详细原理参照相关文档。&lt;/p&gt;
+
+&lt;p&gt;SIP 组件
+1.User Agent
+UA 是 SIP 的基本组件，可分为 UAC（User Agent Client）和 UAS（User Agent Server）。
+发起呼叫的为 UAC（X-Lite:iP 192.168.61.221），接收呼叫的为 UAS（本文手机端选用LinPhone:iP）。很多设备都可做 UA，如 IP 电话、PC、路由器等。
+2.SIP server
+SIP server（本文选用Asterisk）实现了Proxy Server（代理服务器）、Redirect Server（重定向服务器）、注册服务器的功能（Registrar Server）、Location Server、Back-to-back user agent (B2BUA)
+、Presence Server。&lt;/p&gt;
+
+&lt;p&gt;本文通过wireshark抓包分析SIP user agent（用户代理客户机，uac）与SIP serve之间的交互过程，在拨打SIP电话之前，先需要搭建相应的环境：&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;wireshark分析account注册过程&#34;&gt;Wireshark分析Account注册过程&lt;/h3&gt;
+
+&lt;p&gt;设置过滤条件，只catch从UAC（ip.addr == 192.168.61.221 &amp;amp;&amp;amp; sip）发出或接收的数据包。
+&lt;img src=&#34;http://ww3.sinaimg.cn/large/637573b1jw1eklahsn3myj20vl0180t4.jpg&#34; alt=&#34;Mou icon&#34; /&gt;
+&lt;img src=&#34;http://ww1.sinaimg.cn/large/637573b1jw1eklafbmponj20yn0bh77o.jpg&#34; alt=&#34;Mou icon&#34; /&gt;
+1.首先UAC向SIP serve(112.124.57.23)发出REGISTER信息&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;REGISTER:UA client 使用此 message 向 server 注册以标明自己的位置。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;SIP电话的格式是：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sip:username@UAC_IP 
+sip:username@UAC_IP_DNS （如果网络中有DNS服务器，并配置了UAC_IP对应的域名UAC_IP_DNS ）
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;如上图所示，sip电话格式为：
+sip:100@112.124.57.23   或   sip:100@lilkr（配置了DNS服务器）
+2.sip server请求要求身份验证。
+&lt;img src=&#34;http://ww1.sinaimg.cn/large/637573b1jw1eklajooh9aj20tx0bsdj6.jpg&#34; alt=&#34;Mou icon&#34; /&gt;
+3.重复1&lt;/p&gt;
+
+&lt;p&gt;4.sip server响应，发送200 OK信息
+&lt;img src=&#34;http://ww4.sinaimg.cn/large/637573b1jw1eklaid9b81j20xn0cpq6m.jpg&#34; alt=&#34;Mou icon&#34; /&gt;
+5.UAC向SIP server(112.124.57.23)发出SUBSCRIBE信息&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;SUBSCRIBE:告诉 server 一旦发生特定事件时，愿意接收一个通知。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://ww3.sinaimg.cn/large/637573b1jw1eklak5guwkj20wz0czn0t.jpg&#34; alt=&#34;Mou icon&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;wireshark分析uac跟uas交互过程&#34;&gt;Wireshark分析UAC跟UAS交互过程&lt;/h3&gt;
+
+&lt;p&gt;1.UAC向UAS拨打电话，UAS拒绝
+&lt;img src=&#34;http://ww2.sinaimg.cn/large/637573b1jw1eklaks830lj20xf05ttba.jpg&#34; alt=&#34;Mou icon&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;INVITE:UAC 发送此信息用以邀请 UAS 加入会话（包择一对一通话或 conference），其实就是一个 call setup message。
+ACK:为 INVITE 回复一个确认信息。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;SIP Response:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://ww4.sinaimg.cn/large/637573b1jw1eklbanaxyaj20ae039aa7.jpg&#34; alt=&#34;Mou icon&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;UAS直接挂断，UAC收到486.然后UAC给Sip Server发一个ACK&lt;/p&gt;
+
+&lt;p&gt;2.UAC向UAS拨打电话，UAC自己挂断
+&lt;img src=&#34;http://ww1.sinaimg.cn/large/637573b1jw1eklalabfl5j20we06twhi.jpg&#34; alt=&#34;Mou icon&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;CANCEL:用来中止一个还没建立（在建立过程当中）的呼叫。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;SIP Response:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://ww3.sinaimg.cn/large/637573b1jw1eklbbu5c1jj20aq02haa2.jpg&#34; alt=&#34;Mou icon&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;UAC直接挂断，给Sip Server发一个CANCEL，Sip Server给UAC反馈状态码487，并反馈状态码200.UAC再反馈一个ACK&lt;/p&gt;
+
+&lt;p&gt;3.UAC向UAS拨打电话,进行通话
+&lt;img src=&#34;http://ww4.sinaimg.cn/large/637573b1jw1eklam4mg8qj20yw09saf2.jpg&#34; alt=&#34;Mou icon&#34; /&gt;
+ACK之后为完全接通，对方挂断的话Sip Server重新向UAC发送INVITE&lt;/p&gt;
+
+&lt;p&gt;VOIP整个Flow分析图：
+&lt;img src=&#34;http://ww1.sinaimg.cn/large/637573b1jw1eklamkks4lj20wq0ffwk4.jpg&#34; alt=&#34;Mou icon&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>问题分析</title>
+      <link>http://maintiendrai.github.io/post/2014-01-20-ability-enhancement/</link>
+      <pubDate>Mon, 20 Jan 2014 12:09:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/post/2014-01-20-ability-enhancement/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;问题:提升问题分析解决的能力，我这边根据自己的情况总结几点，可做参考：&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;问题定位:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1.遇到问题可以自己稍微考虑下或查找官方API，而不是直接去Google；有些问题的解决有时候是因为API没研究透，没站在开发人员设计接口的角度上面考虑他们接口的设计以及属性的设置，一个问题解决出来后会想到头文件的有些接口设计是有它道理的。还是要多站在提供接口的开发者的高度上面，才能更好地解决问题。还有就是自己开发库的时候，没能更清晰地想好设计好所需要的类跟接口，只有有更清晰的想法，才能设计出更精简的库，而不是拿别人的库文件来改，感觉总是不够精简，有很多冗余的东西。&lt;/li&gt;
+&lt;li&gt;2.遇到问题先理一理逻辑，从逻辑上考虑是否会发生该情况，而不是仅仅根据几个打印就断定原因；&lt;/li&gt;
+&lt;li&gt;3.解决问题优先从本质上入手；&lt;/li&gt;
+&lt;li&gt;4.平时要注重提升下基础知识的积累，多写代码，对代码适当重构，多积累，多看书，多自己实现一些底层的东西，一个好的基础将有助于更快地分析解决问题；&lt;/li&gt;
+&lt;li&gt;5.实在分析不出原因，可以Google，找出解决方案后，自己也应该稍加考虑，并将此解决方案转化为自己的经验库；&lt;/li&gt;
+&lt;li&gt;6.多看书&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hello</title>
+      <link>http://maintiendrai.github.io/post/2013-09-25-hello/</link>
+      <pubDate>Wed, 25 Sep 2013 12:09:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/post/2013-09-25-hello/</guid>
+      <description>&lt;p&gt;ii
+Hello&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hosting wordpress in the amazon ec2 cloud with linux using mac</title>
+      <link>http://maintiendrai.github.io/post/2009-09-25-aws-wordpress/</link>
+      <pubDate>Fri, 25 Sep 2009 12:09:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/post/2009-09-25-aws-wordpress/</guid>
+      <description>&lt;p&gt;&lt;img  width=&#34;400&#34; height=&#34;147&#34; src=&#34;http://articles.csdn.net/uploads/allimg/120323/112_120323105235_1.jpg&#34;/&gt;&lt;/p&gt;
+
+&lt;p&gt;朋友告诉我亚马逊有个免费一年的Linux主机，AWS，速度还不错，叫我试一下。只不过要先支付1美金。感觉跟VPS差不多。那我就试一下。在天朝，80端口被电信各个运营商给限了，自己有台服务器都要先备案，才能正常使用80端口。不折腾了，先这样吧。&lt;/p&gt;
+
+&lt;p&gt;做一件事情之前，总是要先找文档，看了亚马逊的文档，又不是母语，想快点，就找到了一个中文的BLOG，我就很信任地大干了起来。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;http://quanzhibaba.com/archives/315 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;STEP1没啥问题&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;STEP2也没什么问题。我也选择了最基本的选项：“Basic 32-bit Amazon Linux AMI 1.0.” （话说在COMMUNITY AMI这地方点下去，是能选择UBUNTU的）嗯，但是我毕竟还是选了AMI的，貌似是REDHAT的系统。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;STEP3安装编译PHP的时候，作者是这么做的：sudo yum install php。编译少了其它的一些项，给我后续的工作制造了不少的麻烦，正确应该这样 yum install php libmcrypt libmcrypt-devel php-mcrypt php-mbstring 。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;STEP4这里我特地分段了，
+作者居然把mysql托管到了RDS，其实数据库是不用托管的，直接在AMI里面安装就可以了，我照着作者的方法做了，结果托管后，按流量收费，被扣了4美元，血琳琳的教训啊。&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;接着看比较完整的文档吧。这文章写得比较严谨。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;http://calebogden.com/wordpress-on-linux-in-the-amazon-cloud-with-mac/ 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Thanks to @calebogden ， 当然还有@quanzhibaba。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

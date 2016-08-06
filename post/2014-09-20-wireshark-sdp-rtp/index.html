@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>Tags  &middot; My New Hugo Site</title>
+  <title>Wireshark分析SIP交换中的SDP及RTP的工作过程  &middot; My New Hugo Site</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
@@ -14,22 +14,54 @@
 
 <meta name="description" content="" />
 
-<meta name="keywords" content="">
+<meta name="keywords" content="SIP, ">
 
 
-<meta property="og:title" content="Tags  &middot; My New Hugo Site ">
+<meta property="og:title" content="Wireshark分析SIP交换中的SDP及RTP的工作过程  &middot; My New Hugo Site ">
 <meta property="og:site_name" content="My New Hugo Site"/>
-<meta property="og:url" content="http://maintiendrai.github.io/tags/" />
+<meta property="og:url" content="http://maintiendrai.github.io/post/2014-09-20-wireshark-sdp-rtp/" />
 <meta property="og:locale" content="en-us">
 
 
-<meta property="og:type" content="website" />
+<meta property="og:type" content="article" />
+<meta property="og:description" content=""/>
+<meta property="og:article:published_time" content="2014-09-20T12:09:09&#43;08:00" />
+<meta property="og:article:modified_time" content="2014-09-20T12:09:09&#43;08:00" />
+
+  
+    
+<meta property="og:article:tag" content="SIP">
+    
+  
+
+  
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:creator" content="@" />
+<meta name="twitter:title" content="Wireshark分析SIP交换中的SDP及RTP的工作过程" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:url" content="http://maintiendrai.github.io/post/2014-09-20-wireshark-sdp-rtp/" />
+<meta name="twitter:domain" content="http://maintiendrai.github.io/">
+  
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "Wireshark分析SIP交换中的SDP及RTP的工作过程",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+?rel=author"
+    },
+    "datePublished": "2014-09-20",
+    "description": "",
+    "wordCount":  15 
+  }
+</script>
 
 
 
-<link href="http://maintiendrai.github.io/tags/index.xml" rel="alternate" type="application/rss+xml" title="Tags" />
-
-<link rel="canonical" href="http://maintiendrai.github.io/tags/" />
+<link rel="canonical" href="http://maintiendrai.github.io/post/2014-09-20-wireshark-sdp-rtp/" />
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/touch-icon-144-precomposed.png">
 <link rel="icon" href="/favicon.png">
 <meta name="generator" content="Hugo 0.16" />
@@ -139,107 +171,115 @@
 </header>
 
 
-<div id="main-content" class="container">
-  <header>
-    <h1>Tags
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <div class="text-center">
+
+    <h1>Wireshark分析SIP交换中的SDP及RTP的工作过程
 </h1>
 
-  </header>
-  <ul class="container content">
+    <div class="metas">
+<small>
+  <i class="fa fa-calendar"></i>
+  <time datetime="2014-09-20">20 Sep, 2014</time>
+</small>
+
+
+  <small>
+  &middot; Read in about 1 min
+  &middot; (15 Words)
+</small>
+
+
+<div class="margin-10">
+  <i class="fa fa-tags"></i>
   
+  <a href="http://maintiendrai.github.io/tags/sip" class="label label-primary">SIP</a>
   
+
+
+</div>
+<br>
+</div>
+
+  </div>
+</div>
+
+      <div class="content">
   
-    <li>
-      <a href="http://maintiendrai.github.io/tags/git">
-        git
-      </a>
-      <strong>
-        2
-      </strong>
-    </li>
+
+<h3 id="一-sip协议告知对方udp端口号-协商媒体类型">一、SIP协议告知对方UDP端口号，协商媒体类型</h3>
+
+<p>0.0  整个通信过程分析图</p>
+
+<p><img src="http://ww1.sinaimg.cn/large/637573b1gw1ekm90hpuo4j20kk0bbju3.jpg" alt="Mou icon" /></p>
+
+<p>1.1  主叫方发给被叫方的INVITE请求</p>
+
+<p><img src="http://ww4.sinaimg.cn/large/637573b1gw1ekm80zx8vrj20kj0a5jtn.jpg" alt="Mou icon" /></p>
+
+<p>1.2  被叫方回给主叫方的180消息</p>
+
+<p><img src="http://ww1.sinaimg.cn/large/637573b1gw1el653fadnzj20kk0aj76r.jpg" alt="Mou icon" /></p>
+
+<h3 id="二-rtp媒体流">二、RTP媒体流</h3>
+
+<p>2.1  主叫方发给被叫方的一个RTP包，UDP端口号是SDP协商好的，包的序列号是0</p>
+
+<p><img src="http://ww4.sinaimg.cn/large/637573b1gw1ekm8m5uz36j20kk0al769.jpg" alt="Mou icon" /></p>
+
+<p>第二个RTP包，包的序列号是0，其它一样</p>
+
+<p><img src="http://ww2.sinaimg.cn/large/637573b1gw1ekm8owhyqqj20kk0abmz1.jpg" alt="Mou icon" /></p>
+
+<h3 id="三-rtcp包">三、RTCP包</h3>
+
+<p>3.1  每发完一批RTP包的时候，就发一个RTCP包，告诉接收方我刚才发了多少RTP包，多少个字节</p>
+
+<p><img src="http://ww3.sinaimg.cn/large/637573b1gw1ekm8y9ou8tj20kk0abjtk.jpg" alt="Mou icon" />
+i</p>
+
+</div>
+
+
+      <footer>
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      
   
-    <li>
-      <a href="http://maintiendrai.github.io/tags/sip">
-        sip
-      </a>
-      <strong>
-        2
-      </strong>
-    </li>
+    <nav><ul class="pager">
+    
+        <li class="previous">
+          <a href="http://maintiendrai.github.io/post/2014-09-19-wireshark-sip/" title="Wireshark分析SIP协议">
+            <span aria-hidden="true">&larr;</span>Previous
+          </a>
+        </li>
+    
+
+    
+      <li class="next">
+        <a href="http://maintiendrai.github.io/post/2014-10-09-vim-geeknode/" title="Vim写博客同步到evernote">
+            Next <span aria-hidden="true">&rarr;</span>
+        </a>
+      </li>
+    
+    </ul> </nav>
   
-    <li>
-      <a href="http://maintiendrai.github.io/tags/svn-git">
-        svn-git
-      </a>
-      <strong>
-        2
-      </strong>
-    </li>
+
+
+</div>
+
+  <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
   
-    <li>
-      <a href="http://maintiendrai.github.io/tags/dsm-git">
-        dsm-git
-      </a>
-      <strong>
-        1
-      </strong>
-    </li>
-  
-    <li>
-      <a href="http://maintiendrai.github.io/tags/focus-on">
-        focus-on
-      </a>
-      <strong>
-        1
-      </strong>
-    </li>
-  
-    <li>
-      <a href="http://maintiendrai.github.io/tags/openwrt-ddwrt">
-        openwrt-ddwrt
-      </a>
-      <strong>
-        1
-      </strong>
-    </li>
-  
-    <li>
-      <a href="http://maintiendrai.github.io/tags/programming">
-        programming
-      </a>
-      <strong>
-        1
-      </strong>
-    </li>
-  
-    <li>
-      <a href="http://maintiendrai.github.io/tags/swift">
-        swift
-      </a>
-      <strong>
-        1
-      </strong>
-    </li>
-  
-    <li>
-      <a href="http://maintiendrai.github.io/tags/thinking">
-        thinking
-      </a>
-      <strong>
-        1
-      </strong>
-    </li>
-  
-    <li>
-      <a href="http://maintiendrai.github.io/tags/tools">
-        tools
-      </a>
-      <strong>
-        1
-      </strong>
-    </li>
-  
-  </ul>
+
+</div>
+
+</footer>
+
+    </div>
+    
+  </div>
 </div>
       
 <footer class="footer hidden-print">

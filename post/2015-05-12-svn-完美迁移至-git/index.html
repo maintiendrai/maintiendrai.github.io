@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>SVN迁移到Git的过程(svn2git)  &middot; My New Hugo Site</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="description" content="" />
+
+<meta name="keywords" content="SVN GIT, ">
+
+
+<meta property="og:title" content="SVN迁移到Git的过程(svn2git)  &middot; My New Hugo Site ">
+<meta property="og:site_name" content="My New Hugo Site"/>
+<meta property="og:url" content="http://maintiendrai.github.io/post/2015-05-12-svn-%E5%AE%8C%E7%BE%8E%E8%BF%81%E7%A7%BB%E8%87%B3-git/" />
+<meta property="og:locale" content="en-us">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content=""/>
+<meta property="og:article:published_time" content="2015-05-12T12:09:09&#43;08:00" />
+<meta property="og:article:modified_time" content="2015-05-12T12:09:09&#43;08:00" />
+
+  
+    
+<meta property="og:article:tag" content="SVN GIT">
+    
+  
+
+  
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:creator" content="@" />
+<meta name="twitter:title" content="SVN迁移到Git的过程(svn2git)" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:url" content="http://maintiendrai.github.io/post/2015-05-12-svn-%E5%AE%8C%E7%BE%8E%E8%BF%81%E7%A7%BB%E8%87%B3-git/" />
+<meta name="twitter:domain" content="http://maintiendrai.github.io/">
+  
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "SVN迁移到Git的过程(svn2git)",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+?rel=author"
+    },
+    "datePublished": "2015-05-12",
+    "description": "",
+    "wordCount":  226 
+  }
+</script>
+
+
+
+<link rel="canonical" href="http://maintiendrai.github.io/post/2015-05-12-svn-%E5%AE%8C%E7%BE%8E%E8%BF%81%E7%A7%BB%E8%87%B3-git/" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/touch-icon-144-precomposed.png">
+<link rel="icon" href="/favicon.png">
+<meta name="generator" content="Hugo 0.16" />
+
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+
+    <link rel="stylesheet" href="http://maintiendrai.github.io/css/bootswatch/default/bootstrap.min.css">
+
+
+<link rel="stylesheet" href="http://maintiendrai.github.io/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://maintiendrai.github.io/css/style.css">
+
+
+  <link rel="stylesheet" href="http://maintiendrai.github.io/css/highlight/default.css">
+
+
+</head>
+<body data-ng-app="myapp" data-ng-controller="MyController" data-ng-mouseleave="MouseLeave($event)">
+    <header id="main-header">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+          
+          
+            <a class="navbar-brand-img" href="http://maintiendrai.github.io/">
+          <img alt="" src="">
+            
+        </a>
+
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          
+          <li>
+
+            <a href="https://appernetic.io/app/#/about"
+            >
+
+            
+
+            About
+            </a>
+          </li>
+          
+          <li>
+
+            <a href="https://blog.appernetic.io/"
+            >
+
+            
+
+            Blog
+            </a>
+          </li>
+          
+          <li>
+
+            <a href="https://appernetic.io/app/#/dashboard/list/create"
+            >
+
+            
+
+            Dashboard
+            </a>
+          </li>
+          
+          <li>
+
+            <a href="http://maintiendrai.github.io/post"
+            >
+
+            
+
+            Posts
+            </a>
+          </li>
+          
+          <li>
+
+            <a href="http://maintiendrai.github.io/tags"
+            >
+
+            
+
+            Tags
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+      
+    </div>
+  </nav>
+
+</header>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <div class="text-center">
+
+    <h1>SVN迁移到Git的过程(svn2git)
+</h1>
+
+    <div class="metas">
+<small>
+  <i class="fa fa-calendar"></i>
+  <time datetime="2015-05-12">12 May, 2015</time>
+</small>
+
+
+  <small>
+  &middot; Read in about 2 min
+  &middot; (226 Words)
+</small>
+
+
+<div class="margin-10">
+  <i class="fa fa-tags"></i>
+  
+  <a href="http://maintiendrai.github.io/tags/svn-git" class="label label-primary">SVN GIT</a>
+  
+
+
+</div>
+<br>
+</div>
+
+  </div>
+</div>
+
+      <div class="content">
+  <p>##SVN完美迁移到Git</p>
+
+<p>###前言
+SVN迁移到GIT，一般我们想到的是《Pro Git》上的git svn命令 它可以把SVN迁移到GIT，它可以支持双向提交，即提交到GIT的同时提交到SVN。但是这个可能是不完美的，因为SVN跟GIT毕竟不是一个东西，组织结构也不一样 github上面推荐svn2git工具。支持完美GIT，但是对SVN的双向commit有所欠缺</p>
+
+<p>###Installation
+Make sure you have git, git-svn, and ruby installed. svn2git is a ruby wrapper around git&rsquo;s native SVN support through git-svn. It is possible to have git installed without git-svn installed, so please do verify that you can run $ git svn successfully. For a Debian-based system, the installation of the prerequisites would look like:</p>
+
+<pre><code>$ sudo apt-get install git-core git-svn ruby
+</code></pre>
+
+<p>Once you have the necessary software on your system, you can install svn2git through rubygems, which will add the svn2git command to your PATH.</p>
+
+<pre><code>$ sudo gem install svn2git
+</code></pre>
+
+<p>###Usage
+Initial Conversion
+编辑author.txt（具体路径待修改）</p>
+
+<pre><code>$ svn log --quiet svn://111.24.73.118/asterisk --username xxx --password xxx  | grep -E &quot;r[0-9]+ \| .+ \|&quot; | cut -d'|' -f2 | sed 's/ //g' | sort | uniq
+
+返回
+crm
+lfr
+ljp
+lwq
+</code></pre>
+
+<p>修改author.txt为（具体人不一样）</p>
+
+<pre><code>user = user &lt;email@domain.cn&gt;
+xxx = xxx &lt;xxx@domain.cn&gt;                                          
+</code></pre>
+
+<p>修改
+    修改svn2git的BUG</p>
+
+<pre><code>$ vim /Applications/Xcode.app/Contents/Developer/usr/share/git-core/perl/Git/SVN.pm +106
+</code></pre>
+
+<p>修改</p>
+
+<pre><code>     my $u = (::cmt_metadata(&quot;$refname&quot;))[0];                                 
+     $u =~ s!^\Q$url\E(/|$)!! or die                                          
+       &quot;$refname: '$url' not found in '$u'\n&quot;;
+</code></pre>
+
+<p>为</p>
+
+<pre><code>      my $u = (::cmt_metadata(&quot;$refname&quot;))[0];                                 
+    if(!$u) {                                                                
+        $u = $pathname;                                                      
+    }else {                                                                  
+        $u =~ s!^\Q$url\E(/|$)!! or die                                      
+        &quot;$refname: '$url' not found in '$u'\n&quot;;                              
+    }  
+</code></pre>
+
+<p>迁移</p>
+
+<pre><code> $ svn2git https://192.168.60.200/svn/widisk/ --trunk trunk/widisk --branches branches --tags tags --authors authors.txt --verbose
+</code></pre>
+
+<p>到这步的时候，本地已经clone了SVN仓库，现在需要的就是提交到远程了。首先，关联github远程仓库，如下：</p>
+
+<p>git remote add origin git@192.168.60.151:lilkr/widisk.git
+git push -u origin master
+现在所有的旧分支都变成真正的Git 分支，所有的旧标签也变成真正的Git 标签。最后，一项工作就是把新建的Git 服务器添加为远程服务器并且向它推送。为了让所有的分支和标签都得到上传，我们使用这条命令</p>
+
+<p>git push &ndash;all origin
+所有的分支和标签现在都应该整齐干净的躺在新的Git 服务器里了。</p>
+
+<p>如果有其它问题，参见<a href="https://github.com/nirvdrum/svn2git">https://github.com/nirvdrum/svn2git</a></p>
+
+</div>
+
+
+      <footer>
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      
+  
+    <nav><ul class="pager">
+    
+        <li class="previous">
+          <a href="http://maintiendrai.github.io/post/2014-10-09-vim-geeknode/" title="Vim写博客同步到evernote">
+            <span aria-hidden="true">&larr;</span>Previous
+          </a>
+        </li>
+    
+
+    
+      <li class="next">
+        <a href="http://maintiendrai.github.io/post/2015-05-24-%E8%B7%AF%E7%94%B1%E5%99%A8%E6%8A%98%E8%85%BE/" title="折腾路由器的一天">
+            Next <span aria-hidden="true">&rarr;</span>
+        </a>
+      </li>
+    
+    </ul> </nav>
+  
+
+
+</div>
+
+  <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+  
+
+</div>
+
+</footer>
+
+    </div>
+    
+  </div>
+</div>
+      
+<footer class="footer hidden-print">
+  <div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+           <div class="pull-left">
+  <a class="toplink" href="#">back to top</a>
+</div>
+<div class="pull-right">
+  
+  <a href="http://maintiendrai.github.io/license" >license</a>
+  
+</div>
+
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+              
+    
+<div class="container footline">
+    <small>
+</small>
+</div>
+
+
+    
+
+
+        </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+<script src="http://maintiendrai.github.io/js/jquery.min.js"></script>
+<script src="http://maintiendrai.github.io/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+<script src="/js/popover/angular-storage.min.js"></script>
+
+
+
+<script src="http://maintiendrai.github.io/js/highlight.pack.js"></script>
+<script src="http://maintiendrai.github.io/js/site.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script>
+var ENABLE_POPOVER = ""; 
+var EXPIRE_COOKIE = ""; 
+var SHOW_MODAL_TIMEOUT = ""; 
+var MOUSE_LEAVE = ""; 
+var MODAL_SIZE = ""; 
+var POST_URL = ""; 
+var SIGNUP_HEADER = "";
+var HEADER_IMAGE = "";
+var IMG_DESCRIPTION = "";
+var SIGNUP_TEXT = "";
+var INPUT_PLACEHOLDER = "";
+var SUBMIT_BUTTON = "";
+var SUCCESS_MESSAGE = "";
+var ERROR_MESSAGE = "";
+var OPTIN = "";
+var COOKIE_NAME = "";
+</script>
+<script src="/js/popover/angular-modal-service.min.js"></script>
+<script src="/js/angular-ismobile.min.js"></script>
+<script src="/js/popover/popover.min.js"></script>
+
+  </body>
+</html>
+

@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>Tags  &middot; My New Hugo Site</title>
+  <title>Hosting wordpress in the amazon ec2 cloud with linux using mac  &middot; My New Hugo Site</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
@@ -14,22 +14,54 @@
 
 <meta name="description" content="" />
 
-<meta name="keywords" content="">
+<meta name="keywords" content="Programming, ">
 
 
-<meta property="og:title" content="Tags  &middot; My New Hugo Site ">
+<meta property="og:title" content="Hosting wordpress in the amazon ec2 cloud with linux using mac  &middot; My New Hugo Site ">
 <meta property="og:site_name" content="My New Hugo Site"/>
-<meta property="og:url" content="http://maintiendrai.github.io/tags/" />
+<meta property="og:url" content="http://maintiendrai.github.io/post/2009-09-25-aws-wordpress/" />
 <meta property="og:locale" content="en-us">
 
 
-<meta property="og:type" content="website" />
+<meta property="og:type" content="article" />
+<meta property="og:description" content=""/>
+<meta property="og:article:published_time" content="2009-09-25T12:09:09&#43;08:00" />
+<meta property="og:article:modified_time" content="2009-09-25T12:09:09&#43;08:00" />
+
+  
+    
+<meta property="og:article:tag" content="Programming">
+    
+  
+
+  
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:creator" content="@" />
+<meta name="twitter:title" content="Hosting wordpress in the amazon ec2 cloud with linux using mac" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:url" content="http://maintiendrai.github.io/post/2009-09-25-aws-wordpress/" />
+<meta name="twitter:domain" content="http://maintiendrai.github.io/">
+  
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "Hosting wordpress in the amazon ec2 cloud with linux using mac",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+?rel=author"
+    },
+    "datePublished": "2009-09-25",
+    "description": "",
+    "wordCount":  33 
+  }
+</script>
 
 
 
-<link href="http://maintiendrai.github.io/tags/index.xml" rel="alternate" type="application/rss+xml" title="Tags" />
-
-<link rel="canonical" href="http://maintiendrai.github.io/tags/" />
+<link rel="canonical" href="http://maintiendrai.github.io/post/2009-09-25-aws-wordpress/" />
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/touch-icon-144-precomposed.png">
 <link rel="icon" href="/favicon.png">
 <meta name="generator" content="Hugo 0.16" />
@@ -139,107 +171,103 @@
 </header>
 
 
-<div id="main-content" class="container">
-  <header>
-    <h1>Tags
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <div class="text-center">
+
+    <h1>Hosting wordpress in the amazon ec2 cloud with linux using mac
 </h1>
 
-  </header>
-  <ul class="container content">
+    <div class="metas">
+<small>
+  <i class="fa fa-calendar"></i>
+  <time datetime="2009-09-25">25 Sep, 2009</time>
+</small>
+
+
+  <small>
+  &middot; Read in about 1 min
+  &middot; (33 Words)
+</small>
+
+
+<div class="margin-10">
+  <i class="fa fa-tags"></i>
   
+  <a href="http://maintiendrai.github.io/tags/programming" class="label label-primary">Programming</a>
   
+
+
+</div>
+<br>
+</div>
+
+  </div>
+</div>
+
+      <div class="content">
+  <p><img  width="400" height="147" src="http://articles.csdn.net/uploads/allimg/120323/112_120323105235_1.jpg"/></p>
+
+<p>朋友告诉我亚马逊有个免费一年的Linux主机，AWS，速度还不错，叫我试一下。只不过要先支付1美金。感觉跟VPS差不多。那我就试一下。在天朝，80端口被电信各个运营商给限了，自己有台服务器都要先备案，才能正常使用80端口。不折腾了，先这样吧。</p>
+
+<p>做一件事情之前，总是要先找文档，看了亚马逊的文档，又不是母语，想快点，就找到了一个中文的BLOG，我就很信任地大干了起来。</p>
+
+<pre><code>http://quanzhibaba.com/archives/315 
+</code></pre>
+
+<ol>
+<li><p>STEP1没啥问题</p></li>
+
+<li><p>STEP2也没什么问题。我也选择了最基本的选项：“Basic 32-bit Amazon Linux AMI 1.0.” （话说在COMMUNITY AMI这地方点下去，是能选择UBUNTU的）嗯，但是我毕竟还是选了AMI的，貌似是REDHAT的系统。</p></li>
+
+<li><p>STEP3安装编译PHP的时候，作者是这么做的：sudo yum install php。编译少了其它的一些项，给我后续的工作制造了不少的麻烦，正确应该这样 yum install php libmcrypt libmcrypt-devel php-mcrypt php-mbstring 。</p></li>
+
+<li><p>STEP4这里我特地分段了，
+作者居然把mysql托管到了RDS，其实数据库是不用托管的，直接在AMI里面安装就可以了，我照着作者的方法做了，结果托管后，按流量收费，被扣了4美元，血琳琳的教训啊。</p></li>
+</ol>
+
+<p>接着看比较完整的文档吧。这文章写得比较严谨。</p>
+
+<pre><code>http://calebogden.com/wordpress-on-linux-in-the-amazon-cloud-with-mac/ 
+</code></pre>
+
+<p>Thanks to @calebogden ， 当然还有@quanzhibaba。</p>
+
+</div>
+
+
+      <footer>
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      
   
-    <li>
-      <a href="http://maintiendrai.github.io/tags/git">
-        git
-      </a>
-      <strong>
-        2
-      </strong>
-    </li>
+    <nav><ul class="pager">
+    
+
+    
+      <li class="next">
+        <a href="http://maintiendrai.github.io/post/2013-09-25-hello/" title="Hello">
+            Next <span aria-hidden="true">&rarr;</span>
+        </a>
+      </li>
+    
+    </ul> </nav>
   
-    <li>
-      <a href="http://maintiendrai.github.io/tags/sip">
-        sip
-      </a>
-      <strong>
-        2
-      </strong>
-    </li>
+
+
+</div>
+
+  <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
   
-    <li>
-      <a href="http://maintiendrai.github.io/tags/svn-git">
-        svn-git
-      </a>
-      <strong>
-        2
-      </strong>
-    </li>
-  
-    <li>
-      <a href="http://maintiendrai.github.io/tags/dsm-git">
-        dsm-git
-      </a>
-      <strong>
-        1
-      </strong>
-    </li>
-  
-    <li>
-      <a href="http://maintiendrai.github.io/tags/focus-on">
-        focus-on
-      </a>
-      <strong>
-        1
-      </strong>
-    </li>
-  
-    <li>
-      <a href="http://maintiendrai.github.io/tags/openwrt-ddwrt">
-        openwrt-ddwrt
-      </a>
-      <strong>
-        1
-      </strong>
-    </li>
-  
-    <li>
-      <a href="http://maintiendrai.github.io/tags/programming">
-        programming
-      </a>
-      <strong>
-        1
-      </strong>
-    </li>
-  
-    <li>
-      <a href="http://maintiendrai.github.io/tags/swift">
-        swift
-      </a>
-      <strong>
-        1
-      </strong>
-    </li>
-  
-    <li>
-      <a href="http://maintiendrai.github.io/tags/thinking">
-        thinking
-      </a>
-      <strong>
-        1
-      </strong>
-    </li>
-  
-    <li>
-      <a href="http://maintiendrai.github.io/tags/tools">
-        tools
-      </a>
-      <strong>
-        1
-      </strong>
-    </li>
-  
-  </ul>
+
+</div>
+
+</footer>
+
+    </div>
+    
+  </div>
 </div>
       
 <footer class="footer hidden-print">

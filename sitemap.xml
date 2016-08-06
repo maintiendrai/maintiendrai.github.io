@@ -2,7 +2,73 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://replace-this-with-your-hugo-site.com/</loc>
+    <loc>http://maintiendrai.github.io/</loc>
+    <lastmod>2016-07-26T12:09:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://maintiendrai.github.io/post/2016-07-26-Objective-C%E8%BD%AC%E5%90%91Swift%E8%8B%A5%E5%B9%B2tips/</loc>
+    <lastmod>2016-07-26T12:09:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://maintiendrai.github.io/post/2015-07-03-%E6%88%91%E7%9A%84git%E5%B7%A5%E4%BD%9C%E6%B5%81/</loc>
+    <lastmod>2015-07-03T12:09:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://maintiendrai.github.io/post/2015-05-24-%E8%B7%AF%E7%94%B1%E5%99%A8%E6%8A%98%E8%85%BE/</loc>
+    <lastmod>2015-05-24T12:09:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://maintiendrai.github.io/post/2015-05-12-svn-%E5%AE%8C%E7%BE%8E%E8%BF%81%E7%A7%BB%E8%87%B3-git/</loc>
+    <lastmod>2015-05-12T12:09:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://maintiendrai.github.io/post/2014-10-09-vim-geeknode/</loc>
+    <lastmod>2014-10-09T12:09:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://maintiendrai.github.io/post/2014-09-20-wireshark-sdp-rtp/</loc>
+    <lastmod>2014-09-20T12:09:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://maintiendrai.github.io/post/2014-09-19-wireshark-sip/</loc>
+    <lastmod>2014-09-19T12:09:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://maintiendrai.github.io/post/2014-07-01-syn-dsm-git-server/</loc>
+    <lastmod>2014-07-01T12:09:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://maintiendrai.github.io/post/2014-04-22-sinus-headache-cure/</loc>
+    <lastmod>2014-04-22T12:09:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://maintiendrai.github.io/post/2014-01-20-ability-enhancement/</loc>
+    <lastmod>2014-01-20T12:09:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://maintiendrai.github.io/post/2013-10-12-git-svn/</loc>
+    <lastmod>2013-10-12T12:09:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://maintiendrai.github.io/post/2013-09-25-hello/</loc>
+    <lastmod>2013-09-25T12:09:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://maintiendrai.github.io/post/2009-09-25-aws-wordpress/</loc>
+    <lastmod>2009-09-25T12:09:09+08:00</lastmod>
   </url>
   
 </urlset>

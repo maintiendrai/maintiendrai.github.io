@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>Tags  &middot; My New Hugo Site</title>
+  <title>Vim写博客同步到evernote  &middot; My New Hugo Site</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
@@ -14,22 +14,54 @@
 
 <meta name="description" content="" />
 
-<meta name="keywords" content="">
+<meta name="keywords" content="Tools, ">
 
 
-<meta property="og:title" content="Tags  &middot; My New Hugo Site ">
+<meta property="og:title" content="Vim写博客同步到evernote  &middot; My New Hugo Site ">
 <meta property="og:site_name" content="My New Hugo Site"/>
-<meta property="og:url" content="http://maintiendrai.github.io/tags/" />
+<meta property="og:url" content="http://maintiendrai.github.io/post/2014-10-09-vim-geeknode/" />
 <meta property="og:locale" content="en-us">
 
 
-<meta property="og:type" content="website" />
+<meta property="og:type" content="article" />
+<meta property="og:description" content=""/>
+<meta property="og:article:published_time" content="2014-10-09T12:09:09&#43;08:00" />
+<meta property="og:article:modified_time" content="2014-10-09T12:09:09&#43;08:00" />
+
+  
+    
+<meta property="og:article:tag" content="Tools">
+    
+  
+
+  
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:creator" content="@" />
+<meta name="twitter:title" content="Vim写博客同步到evernote" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:url" content="http://maintiendrai.github.io/post/2014-10-09-vim-geeknode/" />
+<meta name="twitter:domain" content="http://maintiendrai.github.io/">
+  
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "Vim写博客同步到evernote",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+?rel=author"
+    },
+    "datePublished": "2014-10-09",
+    "description": "",
+    "wordCount":  85 
+  }
+</script>
 
 
 
-<link href="http://maintiendrai.github.io/tags/index.xml" rel="alternate" type="application/rss+xml" title="Tags" />
-
-<link rel="canonical" href="http://maintiendrai.github.io/tags/" />
+<link rel="canonical" href="http://maintiendrai.github.io/post/2014-10-09-vim-geeknode/" />
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/touch-icon-144-precomposed.png">
 <link rel="icon" href="/favicon.png">
 <meta name="generator" content="Hugo 0.16" />
@@ -139,107 +171,133 @@
 </header>
 
 
-<div id="main-content" class="container">
-  <header>
-    <h1>Tags
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <div class="text-center">
+
+    <h1>Vim写博客同步到evernote
 </h1>
 
-  </header>
-  <ul class="container content">
+    <div class="metas">
+<small>
+  <i class="fa fa-calendar"></i>
+  <time datetime="2014-10-09">9 Oct, 2014</time>
+</small>
+
+
+  <small>
+  &middot; Read in about 1 min
+  &middot; (85 Words)
+</small>
+
+
+<div class="margin-10">
+  <i class="fa fa-tags"></i>
   
+  <a href="http://maintiendrai.github.io/tags/tools" class="label label-primary">Tools</a>
   
+
+
+</div>
+<br>
+</div>
+
+  </div>
+</div>
+
+      <div class="content">
+  <blockquote>
+<p>通过VIM写博客通过geeknote同步到evernote</p>
+</blockquote>
+
+<p>Vim/vim-markdown/markdown preview plus &lt; -&gt; GeekNote -&gt; Evernote
+_
+不需要任何第三方服务器的方案，就是使用Vim编写markdown。
+给Vim配上markdown着色的插件vim-markdown。</p>
+
+<p>mac os下默认的python是narrow build path</p>
+
+<p>python 解决 narrow build path 导致的 ValueError: unichr() arg not in
+range(0x10000) (narrow Python build)</p>
+
+<pre><code>./configure --enable-unicode=ucs4 --prefix=/usr
+</code></pre>
+
+<p>给chrome装上实时查看markdown效果的插件markdown preview plus，这插件非常好用！特
+别是开启了“Enable auto-reload”之后，每次用Vim保存文件时都能马上刷新。
+然后用类似上一个方案的用法使用GeekNote，生成富文本同步到Evernote。
+为了更方便的使用GeekNote，可以在Dropbox里新建一个evernotebank的文件夹，然后按照
+你想同步的notebook的名字新建同名文件夹；
+比如我在evernotebank里建立blog.chetui.org的文件夹，并在该目录下建立如下脚本，命
+名为sync：</p>
+
+<pre><code>#!/bin/bash
+
+allFiles() {
+    for file in $1/*
+    do
+        if [ -d $file ]; then
+            echo $file
+            /Users/lilkr/Tools/hack/geeknote/geeknote/gnsync.py --path $file --mask &quot;*.md&quot; --format markdown --logpath log--notebook &quot;goandfight&quot;
+            allFiles $file
+        fi
+    done
+}
+
+testdir=./louisa/_posts/
+allFiles $testdir
+</code></pre>
+
+<p>然后加入可执行权限：</p>
+
+<pre><code>chmod +x sync
+</code></pre>
+
+<p>每次在该目录下写完md格式的文件，就跑一下./sync，就把富文本同步到Evernote里了。
+单向编辑的缺陷实在是很难解决，因为markdown生成富文本只能是单向的，而Evernote官方
+又没有打算内置markdown。</p>
+
+</div>
+
+
+      <footer>
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      
   
-    <li>
-      <a href="http://maintiendrai.github.io/tags/git">
-        git
-      </a>
-      <strong>
-        2
-      </strong>
-    </li>
+    <nav><ul class="pager">
+    
+        <li class="previous">
+          <a href="http://maintiendrai.github.io/post/2014-09-20-wireshark-sdp-rtp/" title="Wireshark分析SIP交换中的SDP及RTP的工作过程">
+            <span aria-hidden="true">&larr;</span>Previous
+          </a>
+        </li>
+    
+
+    
+      <li class="next">
+        <a href="http://maintiendrai.github.io/post/2015-05-12-svn-%E5%AE%8C%E7%BE%8E%E8%BF%81%E7%A7%BB%E8%87%B3-git/" title="SVN迁移到Git的过程(svn2git)">
+            Next <span aria-hidden="true">&rarr;</span>
+        </a>
+      </li>
+    
+    </ul> </nav>
   
-    <li>
-      <a href="http://maintiendrai.github.io/tags/sip">
-        sip
-      </a>
-      <strong>
-        2
-      </strong>
-    </li>
+
+
+</div>
+
+  <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
   
-    <li>
-      <a href="http://maintiendrai.github.io/tags/svn-git">
-        svn-git
-      </a>
-      <strong>
-        2
-      </strong>
-    </li>
-  
-    <li>
-      <a href="http://maintiendrai.github.io/tags/dsm-git">
-        dsm-git
-      </a>
-      <strong>
-        1
-      </strong>
-    </li>
-  
-    <li>
-      <a href="http://maintiendrai.github.io/tags/focus-on">
-        focus-on
-      </a>
-      <strong>
-        1
-      </strong>
-    </li>
-  
-    <li>
-      <a href="http://maintiendrai.github.io/tags/openwrt-ddwrt">
-        openwrt-ddwrt
-      </a>
-      <strong>
-        1
-      </strong>
-    </li>
-  
-    <li>
-      <a href="http://maintiendrai.github.io/tags/programming">
-        programming
-      </a>
-      <strong>
-        1
-      </strong>
-    </li>
-  
-    <li>
-      <a href="http://maintiendrai.github.io/tags/swift">
-        swift
-      </a>
-      <strong>
-        1
-      </strong>
-    </li>
-  
-    <li>
-      <a href="http://maintiendrai.github.io/tags/thinking">
-        thinking
-      </a>
-      <strong>
-        1
-      </strong>
-    </li>
-  
-    <li>
-      <a href="http://maintiendrai.github.io/tags/tools">
-        tools
-      </a>
-      <strong>
-        1
-      </strong>
-    </li>
-  
-  </ul>
+
+</div>
+
+</footer>
+
+    </div>
+    
+  </div>
 </div>
       
 <footer class="footer hidden-print">

@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>Tags  &middot; My New Hugo Site</title>
+  <title>Objective-C转向Swift若干tips  &middot; My New Hugo Site</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
@@ -14,22 +14,54 @@
 
 <meta name="description" content="" />
 
-<meta name="keywords" content="">
+<meta name="keywords" content="swift, ">
 
 
-<meta property="og:title" content="Tags  &middot; My New Hugo Site ">
+<meta property="og:title" content="Objective-C转向Swift若干tips  &middot; My New Hugo Site ">
 <meta property="og:site_name" content="My New Hugo Site"/>
-<meta property="og:url" content="http://maintiendrai.github.io/tags/" />
+<meta property="og:url" content="http://maintiendrai.github.io/post/2016-07-26-Objective-C%E8%BD%AC%E5%90%91Swift%E8%8B%A5%E5%B9%B2tips/" />
 <meta property="og:locale" content="en-us">
 
 
-<meta property="og:type" content="website" />
+<meta property="og:type" content="article" />
+<meta property="og:description" content=""/>
+<meta property="og:article:published_time" content="2016-07-26T12:09:09&#43;08:00" />
+<meta property="og:article:modified_time" content="2016-07-26T12:09:09&#43;08:00" />
+
+  
+    
+<meta property="og:article:tag" content="swift">
+    
+  
+
+  
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:creator" content="@" />
+<meta name="twitter:title" content="Objective-C转向Swift若干tips" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:url" content="http://maintiendrai.github.io/post/2016-07-26-Objective-C%E8%BD%AC%E5%90%91Swift%E8%8B%A5%E5%B9%B2tips/" />
+<meta name="twitter:domain" content="http://maintiendrai.github.io/">
+  
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "Objective-C转向Swift若干tips",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+?rel=author"
+    },
+    "datePublished": "2016-07-26",
+    "description": "",
+    "wordCount":  79 
+  }
+</script>
 
 
 
-<link href="http://maintiendrai.github.io/tags/index.xml" rel="alternate" type="application/rss+xml" title="Tags" />
-
-<link rel="canonical" href="http://maintiendrai.github.io/tags/" />
+<link rel="canonical" href="http://maintiendrai.github.io/post/2016-07-26-Objective-C%E8%BD%AC%E5%90%91Swift%E8%8B%A5%E5%B9%B2tips/" />
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/touch-icon-144-precomposed.png">
 <link rel="icon" href="/favicon.png">
 <meta name="generator" content="Hugo 0.16" />
@@ -139,107 +171,126 @@
 </header>
 
 
-<div id="main-content" class="container">
-  <header>
-    <h1>Tags
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <div class="text-center">
+
+    <h1>Objective-C转向Swift若干tips
 </h1>
 
-  </header>
-  <ul class="container content">
+    <div class="metas">
+<small>
+  <i class="fa fa-calendar"></i>
+  <time datetime="2016-07-26">26 Jul, 2016</time>
+</small>
+
+
+  <small>
+  &middot; Read in about 1 min
+  &middot; (79 Words)
+</small>
+
+
+<div class="margin-10">
+  <i class="fa fa-tags"></i>
   
+  <a href="http://maintiendrai.github.io/tags/swift" class="label label-primary">swift</a>
   
+
+
+</div>
+<br>
+</div>
+
+  </div>
+</div>
+
+      <div class="content">
   
-    <li>
-      <a href="http://maintiendrai.github.io/tags/git">
-        git
-      </a>
-      <strong>
-        2
-      </strong>
-    </li>
+
+<h2 id="objective-c转向swift若干tips">Objective-C转向Swift若干tips</h2>
+
+<ul>
+<li><p>Swift 的 playground 就像是一个可交互的文档，它是用来练手学swift的，写一句代码出一行结果（右侧），可以实时查看代码结果，是学习swift语言的利器</p></li>
+
+<li><p>不分头文件和实现文件，而是集合到.swift文件</p></li>
+
+<li><p>swift中无需使用代码分隔符，以行作为代码分隔，如一行内有多行代码，则各行代码之间同样需使用分号;分隔</p></li>
+
+<li><p>swift没有main函数，其代码是至上而下运行，第一行代码即为程序入口</p></li>
+
+<li><p>类型对象化（类似于java） Int、Float、Double、Bool、Character</p></li>
+
+<li><p>let 定义常量； len pi = 3.14</p></li>
+
+<li><p>var hello :NSString ?</p>
+
+<ul>
+<li><p>var 定义变量var hello :NSString = @“test”</p></li>
+
+<li><dl>
+<dd>指定变量类型</dd>
+</dl></li>
+
+<li><p>? 表示optional，即该变量可能为nil; 调用时必须加? 如 hello?.length</p></li>
+
+<li><p>! 表示该变量一定不为nil，否则crash</p></li>
+
+<li><p>@”hello”不存在了,变回了”hello” 如var hello :NSString = &ldquo;hello&rdquo;</p></li>
+</ul></li>
+
+<li><p>可以使用+来拼接字符串 &ldquo;hello&rdquo;+&ldquo;world&rdquo;</p></li>
+
+<li><p>使用()可以在字符串插入变量 let lang = &ldquo;swift&rdquo;; &ldquo;hello \(lang) world&rdquo;</p></li>
+
+<li><p>class 定义类</p></li>
+
+<li><p>func 定义函数</p>
+
+<p>func myTest(xxx …) -&gt; 返回类型</p></li>
+
+<li><p>println 带换行的print</p></li>
+
+<li><p>as 类型转换 “当作”</p></li>
+
+<li><p>where 关键字（可以作为过滤条件用于 for-in \ do-catch \ while \ if \ guard \ switch-case \ generics）</p></li>
+</ul>
+
+</div>
+
+
+      <footer>
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      
   
-    <li>
-      <a href="http://maintiendrai.github.io/tags/sip">
-        sip
-      </a>
-      <strong>
-        2
-      </strong>
-    </li>
+    <nav><ul class="pager">
+    
+        <li class="previous">
+          <a href="http://maintiendrai.github.io/post/2015-07-03-%E6%88%91%E7%9A%84git%E5%B7%A5%E4%BD%9C%E6%B5%81/" title="我的Git工作流">
+            <span aria-hidden="true">&larr;</span>Previous
+          </a>
+        </li>
+    
+
+    
+    </ul> </nav>
   
-    <li>
-      <a href="http://maintiendrai.github.io/tags/svn-git">
-        svn-git
-      </a>
-      <strong>
-        2
-      </strong>
-    </li>
+
+
+</div>
+
+  <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
   
-    <li>
-      <a href="http://maintiendrai.github.io/tags/dsm-git">
-        dsm-git
-      </a>
-      <strong>
-        1
-      </strong>
-    </li>
-  
-    <li>
-      <a href="http://maintiendrai.github.io/tags/focus-on">
-        focus-on
-      </a>
-      <strong>
-        1
-      </strong>
-    </li>
-  
-    <li>
-      <a href="http://maintiendrai.github.io/tags/openwrt-ddwrt">
-        openwrt-ddwrt
-      </a>
-      <strong>
-        1
-      </strong>
-    </li>
-  
-    <li>
-      <a href="http://maintiendrai.github.io/tags/programming">
-        programming
-      </a>
-      <strong>
-        1
-      </strong>
-    </li>
-  
-    <li>
-      <a href="http://maintiendrai.github.io/tags/swift">
-        swift
-      </a>
-      <strong>
-        1
-      </strong>
-    </li>
-  
-    <li>
-      <a href="http://maintiendrai.github.io/tags/thinking">
-        thinking
-      </a>
-      <strong>
-        1
-      </strong>
-    </li>
-  
-    <li>
-      <a href="http://maintiendrai.github.io/tags/tools">
-        tools
-      </a>
-      <strong>
-        1
-      </strong>
-    </li>
-  
-  </ul>
+
+</div>
+
+</footer>
+
+    </div>
+    
+  </div>
 </div>
       
 <footer class="footer hidden-print">

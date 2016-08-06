@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Openwrt Ddwrt on My New Hugo Site</title>
+    <link>http://maintiendrai.github.io/tags/openwrt-ddwrt/</link>
+    <description>Recent content in Openwrt Ddwrt on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 24 May 2015 12:09:09 +0800</lastBuildDate>
+    <atom:link href="http://maintiendrai.github.io/tags/openwrt-ddwrt/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>折腾路由器的一天</title>
+      <link>http://maintiendrai.github.io/post/2015-05-24-%E8%B7%AF%E7%94%B1%E5%99%A8%E6%8A%98%E8%85%BE/</link>
+      <pubDate>Sun, 24 May 2015 12:09:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/post/2015-05-24-%E8%B7%AF%E7%94%B1%E5%99%A8%E6%8A%98%E8%85%BE/</guid>
+      <description>&lt;p&gt;周末折腾了两天路由器。一个是自己买的netgear，一个是公司的测试部买的极路由2。项目组的人叫我帮忙把极路由给刷成openwrt
+说起极路由，用着挺不爽的，子网下的bonjour都搜不到。估计是端口被限制，sip呼叫也各种不靠谱，估计也是端口被限制。&lt;/p&gt;
+
+&lt;p&gt;记下流水账～&lt;/p&gt;
+
+&lt;p&gt;#极路由
+##降级
+我手头上的极路由2是9010版本。我发现极路由很鸡贼啊，不能直接刷其它系统的firmware.bin文件。我操～&lt;/p&gt;
+
+&lt;p&gt;搜了一下，可以降级到9006&lt;/p&gt;
+
+&lt;p&gt;我试了很多个rom，都不能成功。&lt;/p&gt;
+
+&lt;p&gt;后面我是用这个rom降级的&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://ur.ikcd.net/HC5761-sysupgrade-20140911-3d5f030b.bin&#34;&gt;极2 0.9006.2.6020s版固件&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;###刷机步骤：&lt;/p&gt;
+
+&lt;p&gt;1：拔掉路由电源&lt;/p&gt;
+
+&lt;p&gt;2：用网线将极路由黄色的 LAN 口与电脑网口相连&lt;/p&gt;
+
+&lt;p&gt;3：将电脑本地连接的 IP 设置为ip：192.168.1.88。子网掩码：255.255.255.0。网关空着，不用填写，不知道在哪里设置的，请看这里：win7win8：&lt;a href=&#34;http://jingyan.baidu.com/article/22fe7ced18876f3003617f5e.html&#34;&gt;http://jingyan.baidu.com/article/22fe7ced18876f3003617f5e.html&lt;/a&gt;  XP：&lt;a href=&#34;http://jingyan.baidu.com/article/77b8dc7fc0f5786174eab6af.html&#34;&gt;http://jingyan.baidu.com/article/77b8dc7fc0f5786174eab6af.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;4：根据操作系统，32位运行tftpd32, 64位运行tftpd64&lt;/p&gt;
+
+&lt;p&gt;5：用尖锐物按住极路由 RESET 不放，再给极路由插上电源&lt;/p&gt;
+
+&lt;p&gt;6：等待电脑上 tftpd 出现传输 recovery.bin 进度条完成后，松开 RESET（进度条很快的，几秒钟）&lt;/p&gt;
+
+&lt;p&gt;7：极路由面板灯进入跑马灯状态，所有灯轮流闪，跑完后，系统自动重启，刷机完成&lt;/p&gt;
+
+&lt;p&gt;8：改电脑本地连接属性的ip为自动获取，访问&lt;a href=&#34;http://192.168.199.1路由管理界面&#34;&gt;http://192.168.199.1路由管理界面&lt;/a&gt; 密码：admin&lt;/p&gt;
+
+&lt;p&gt;然后由于极路由它很鸡贼，还要去root它才能刷第三方的固件&lt;/p&gt;
+
+&lt;p&gt;##搜狐插件大法：极路由Root&lt;/p&gt;
+
+&lt;p&gt;极路由云插件“搜狐视频远程下载”使用了开源下载工具aria2，由于aria2主程序aria2c占用空间较大，因此被安装到了SD卡的usr/bin目录。aria2c在每次开机时运行，因此给极客们一个ROOT机会。ROOT的思路是：用自己的脚本文件替换aria2c文件，在脚本文件中加入启用dropber服务的指令。具体方法如下：&lt;/p&gt;
+
+&lt;p&gt;1、安装云插件“搜狐视频远程下载”，然后验证aria2c是否安装运行，验证方法：在PC机上运行下面的命令：&lt;/p&gt;
+
+&lt;p&gt;telnet 192.168.199.1 6800&lt;/p&gt;
+
+&lt;p&gt;如果能连接，说明aria2c已经运行。&lt;/p&gt;
+
+&lt;p&gt;2、关掉路由器，拔出SD卡，将SD卡插入SD读卡器。
+(由于极路由系统是基于openwrt再封一层，openwrt是linux的，所以SD卡是ext4的，只能mount在linux的机器上。mac os也不支持，后面的操作是在ubuntu下完成的)&lt;/p&gt;
+
+&lt;p&gt;3、Linux操作系统能自动加载USB SD读卡器驱动，一般情况下设备名为/dev/sdb，或者用dmesg命令查询驱动程序日志，从中发现设备名。SD卡有2个分区，第1个是大小为1GB的luks加密分区，第2个是正常的ext4分区。9006版固件的aria2c文件在第2分区，因此需要mount该分区，命令为：&lt;/p&gt;
+
+&lt;p&gt;mount -t ext4 /dev/sdb2 /mnt&lt;/p&gt;
+
+&lt;p&gt;4、aria2c文件在/mnt/usr/bin目录中，先换名，然后替换。&lt;/p&gt;
+
+&lt;p&gt;cd /mnt/usb/bin&lt;/p&gt;
+
+&lt;p&gt;mv aria2c aria2c.orig&lt;/p&gt;
+
+&lt;p&gt;然后用vi命令创建文件aria2c，内容为：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#!/bin/sh
+
+if [ &amp;quot;$1&amp;quot; = &amp;quot;ok&amp;quot; ]; then
+
+         rm -f /tmp/data/usr/bin/aria2c 
+
+         mv /tmp/data/usr/bin/aria2c.orig /tmp/data/usr/bin/aria2c 
+
+         exit 0
+
+fi
+
+sed -i &#39;s/1022/22/g&#39; /etc/config/dropbear 
+
+/etc/init.d/dropbear enable
+
+/etc/init.d/dropbear start
+
+/tmp/data/usr/bin/aria2c ok &amp;amp;&amp;gt;/dev/null 
+
+exit 0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;为新建的aria2c添加执行权限：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;chmod a+x aria2c
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;5、执行下面命令umount SD卡，拔出SD卡，插入路由器，路由器通电后即完成ROOT。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd / 
+
+umount /mnt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;6、SSH登录路由器后，执行下面的脚本进行ROOT保持，也就是下次自动升级固件时还能保持ROOT状态，脚本只需执行一次。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;echo &amp;quot;sed -i &#39;s/1022/22/g&#39; /etc/config/dropbear&amp;quot; &amp;gt;&amp;gt;/etc/rc.local 
+
+echo &#39;/etc/init.d/dropbear enable&#39; &amp;gt;&amp;gt;/etc/rc.local
+
+echo &#39;/etc/init.d/dropbear restart&#39; &amp;gt;&amp;gt;/etc/rc.local
+
+echo &#39;/etc/rc.local&#39; &amp;gt;/lib/upgrade/keep.d/base 
+
+echo &#39;/lib/upgrade/keep.d/base&#39; &amp;gt;&amp;gt;/lib/upgrade/keep.d/base 
+
+echo &#39;/etc/sysupgrade.conf&#39; &amp;gt;&amp;gt;/lib/upgrade/keep.d/base 
+
+echo &#39;/etc/rc.local&#39; &amp;gt;&amp;gt;/etc/sysupgrade.conf 
+
+echo &#39;/lib/upgrade/keep.d/base&#39; &amp;gt;&amp;gt;/etc/sysupgrade.conf 
+
+echo &#39;/etc/sysupgrade.conf&#39; &amp;gt;&amp;gt;/etc/sysupgrade.conf
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;##刷openwrt&lt;/p&gt;
+
+&lt;p&gt;我刷的是&lt;a href=&#34;https://github.com/rssnsj/openwrt-hc5x61&#34;&gt;https://github.com/rssnsj/openwrt-hc5x61&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/rssnsj/openwrt-hc5761/releases/latest&#34;&gt;https://github.com/rssnsj/openwrt-hc5761/releases/latest&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;#Netgear&lt;/p&gt;
+
+&lt;p&gt;还是刷netgear比较爽，没那么鸡贼。我拿到bin就直接刷ddwrt了&lt;/p&gt;
+
+&lt;p&gt;###遇到的问题
+1、The CGI script took too long to produce a response 报这个错
+固件有问题&lt;/p&gt;
+
+&lt;p&gt;2、在DD-WRT下，所有速率最高54M&lt;/p&gt;
+
+&lt;p&gt;此问题，在我刷回原厂ROM的时候，才得到答案。我安全设定方式选择TKIP兼容模式，提示我此模式下最大支持54M，而此前我并不知道。改成支持AES，速度即可提升了。&lt;/p&gt;
+
+&lt;p&gt;3、科学上网的方案
+DDWRT+autoddvpn+DNSMasq(Tomato+TomatoAutoVPN+DNSMasq是更好的选择，但是要刷Tomato,以后再试)&lt;/p&gt;
+
+&lt;p&gt;4、学到的命令
+nvram set http_lanport=12345
+nvram commit
+重启，12345就是你的端口&lt;/p&gt;
+
+&lt;p&gt;参考资料&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.iptvfans.cn/wiki/index.php/%E6%9E%81%E8%B7%AF%E7%94%B1&#34;&gt;http://www.iptvfans.cn/wiki/index.php/%E6%9E%81%E8%B7%AF%E7%94%B1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://hiwifiroot.lofter.com/post/1d0319c1_6596c99&#34;&gt;http://hiwifiroot.lofter.com/post/1d0319c1_6596c99&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://smileawei.com/hiwifi-1s-9006-root/&#34;&gt;http://smileawei.com/hiwifi-1s-9006-root/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://ju.outofmemory.cn/entry/117066&#34;&gt;http://ju.outofmemory.cn/entry/117066&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rssnsj/openwrt-hc5x61&#34;&gt;https://github.com/rssnsj/openwrt-hc5x61&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://linux.52zhe.info/read.php/286.htm?utm_source=tuicool&#34;&gt;http://linux.52zhe.info/read.php/286.htm?utm_source=tuicool&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ruby-china.org/topics/15250&#34;&gt;https://ruby-china.org/topics/15250&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Wireshark分析SIP协议  &middot; My New Hugo Site</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="description" content="" />
+
+<meta name="keywords" content="SIP, ">
+
+
+<meta property="og:title" content="Wireshark分析SIP协议  &middot; My New Hugo Site ">
+<meta property="og:site_name" content="My New Hugo Site"/>
+<meta property="og:url" content="http://maintiendrai.github.io/post/2014-09-19-wireshark-sip/" />
+<meta property="og:locale" content="en-us">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content=""/>
+<meta property="og:article:published_time" content="2014-09-19T12:09:09&#43;08:00" />
+<meta property="og:article:modified_time" content="2014-09-19T12:09:09&#43;08:00" />
+
+  
+    
+<meta property="og:article:tag" content="SIP">
+    
+  
+
+  
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:creator" content="@" />
+<meta name="twitter:title" content="Wireshark分析SIP协议" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:url" content="http://maintiendrai.github.io/post/2014-09-19-wireshark-sip/" />
+<meta name="twitter:domain" content="http://maintiendrai.github.io/">
+  
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "Wireshark分析SIP协议",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+?rel=author"
+    },
+    "datePublished": "2014-09-19",
+    "description": "",
+    "wordCount":  104 
+  }
+</script>
+
+
+
+<link rel="canonical" href="http://maintiendrai.github.io/post/2014-09-19-wireshark-sip/" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/touch-icon-144-precomposed.png">
+<link rel="icon" href="/favicon.png">
+<meta name="generator" content="Hugo 0.16" />
+
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+
+    <link rel="stylesheet" href="http://maintiendrai.github.io/css/bootswatch/default/bootstrap.min.css">
+
+
+<link rel="stylesheet" href="http://maintiendrai.github.io/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://maintiendrai.github.io/css/style.css">
+
+
+  <link rel="stylesheet" href="http://maintiendrai.github.io/css/highlight/default.css">
+
+
+</head>
+<body data-ng-app="myapp" data-ng-controller="MyController" data-ng-mouseleave="MouseLeave($event)">
+    <header id="main-header">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+          
+          
+            <a class="navbar-brand-img" href="http://maintiendrai.github.io/">
+          <img alt="" src="">
+            
+        </a>
+
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          
+          <li>
+
+            <a href="https://appernetic.io/app/#/about"
+            >
+
+            
+
+            About
+            </a>
+          </li>
+          
+          <li>
+
+            <a href="https://blog.appernetic.io/"
+            >
+
+            
+
+            Blog
+            </a>
+          </li>
+          
+          <li>
+
+            <a href="https://appernetic.io/app/#/dashboard/list/create"
+            >
+
+            
+
+            Dashboard
+            </a>
+          </li>
+          
+          <li>
+
+            <a href="http://maintiendrai.github.io/post"
+            >
+
+            
+
+            Posts
+            </a>
+          </li>
+          
+          <li>
+
+            <a href="http://maintiendrai.github.io/tags"
+            >
+
+            
+
+            Tags
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+      
+    </div>
+  </nav>
+
+</header>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <div class="text-center">
+
+    <h1>Wireshark分析SIP协议
+</h1>
+
+    <div class="metas">
+<small>
+  <i class="fa fa-calendar"></i>
+  <time datetime="2014-09-19">19 Sep, 2014</time>
+</small>
+
+
+  <small>
+  &middot; Read in about 1 min
+  &middot; (104 Words)
+</small>
+
+
+<div class="margin-10">
+  <i class="fa fa-tags"></i>
+  
+  <a href="http://maintiendrai.github.io/tags/sip" class="label label-primary">SIP</a>
+  
+
+
+</div>
+<br>
+</div>
+
+  </div>
+</div>
+
+      <div class="content">
+  
+
+<h2 id="overview">Overview</h2>
+
+<p>SIP 是VOIP目前非常流行的一种协议。有关协议的详细原理参照相关文档。</p>
+
+<p>SIP 组件
+1.User Agent
+UA 是 SIP 的基本组件，可分为 UAC（User Agent Client）和 UAS（User Agent Server）。
+发起呼叫的为 UAC（X-Lite:iP 192.168.61.221），接收呼叫的为 UAS（本文手机端选用LinPhone:iP）。很多设备都可做 UA，如 IP 电话、PC、路由器等。
+2.SIP server
+SIP server（本文选用Asterisk）实现了Proxy Server（代理服务器）、Redirect Server（重定向服务器）、注册服务器的功能（Registrar Server）、Location Server、Back-to-back user agent (B2BUA)
+、Presence Server。</p>
+
+<p>本文通过wireshark抓包分析SIP user agent（用户代理客户机，uac）与SIP serve之间的交互过程，在拨打SIP电话之前，先需要搭建相应的环境：</p>
+
+<hr />
+
+<h3 id="wireshark分析account注册过程">Wireshark分析Account注册过程</h3>
+
+<p>设置过滤条件，只catch从UAC（ip.addr == 192.168.61.221 &amp;&amp; sip）发出或接收的数据包。
+<img src="http://ww3.sinaimg.cn/large/637573b1jw1eklahsn3myj20vl0180t4.jpg" alt="Mou icon" />
+<img src="http://ww1.sinaimg.cn/large/637573b1jw1eklafbmponj20yn0bh77o.jpg" alt="Mou icon" />
+1.首先UAC向SIP serve(112.124.57.23)发出REGISTER信息</p>
+
+<pre><code>REGISTER:UA client 使用此 message 向 server 注册以标明自己的位置。
+</code></pre>
+
+<p>SIP电话的格式是：</p>
+
+<pre><code>sip:username@UAC_IP 
+sip:username@UAC_IP_DNS （如果网络中有DNS服务器，并配置了UAC_IP对应的域名UAC_IP_DNS ）
+</code></pre>
+
+<p>如上图所示，sip电话格式为：
+sip:100@112.124.57.23   或   sip:100@lilkr（配置了DNS服务器）
+2.sip server请求要求身份验证。
+<img src="http://ww1.sinaimg.cn/large/637573b1jw1eklajooh9aj20tx0bsdj6.jpg" alt="Mou icon" />
+3.重复1</p>
+
+<p>4.sip server响应，发送200 OK信息
+<img src="http://ww4.sinaimg.cn/large/637573b1jw1eklaid9b81j20xn0cpq6m.jpg" alt="Mou icon" />
+5.UAC向SIP server(112.124.57.23)发出SUBSCRIBE信息</p>
+
+<pre><code>SUBSCRIBE:告诉 server 一旦发生特定事件时，愿意接收一个通知。
+</code></pre>
+
+<p><img src="http://ww3.sinaimg.cn/large/637573b1jw1eklak5guwkj20wz0czn0t.jpg" alt="Mou icon" /></p>
+
+<h3 id="wireshark分析uac跟uas交互过程">Wireshark分析UAC跟UAS交互过程</h3>
+
+<p>1.UAC向UAS拨打电话，UAS拒绝
+<img src="http://ww2.sinaimg.cn/large/637573b1jw1eklaks830lj20xf05ttba.jpg" alt="Mou icon" /></p>
+
+<pre><code>INVITE:UAC 发送此信息用以邀请 UAS 加入会话（包择一对一通话或 conference），其实就是一个 call setup message。
+ACK:为 INVITE 回复一个确认信息。
+</code></pre>
+
+<p>SIP Response:</p>
+
+<p><img src="http://ww4.sinaimg.cn/large/637573b1jw1eklbanaxyaj20ae039aa7.jpg" alt="Mou icon" /></p>
+
+<p>UAS直接挂断，UAC收到486.然后UAC给Sip Server发一个ACK</p>
+
+<p>2.UAC向UAS拨打电话，UAC自己挂断
+<img src="http://ww1.sinaimg.cn/large/637573b1jw1eklalabfl5j20we06twhi.jpg" alt="Mou icon" /></p>
+
+<pre><code>CANCEL:用来中止一个还没建立（在建立过程当中）的呼叫。
+</code></pre>
+
+<p>SIP Response:</p>
+
+<p><img src="http://ww3.sinaimg.cn/large/637573b1jw1eklbbu5c1jj20aq02haa2.jpg" alt="Mou icon" /></p>
+
+<p>UAC直接挂断，给Sip Server发一个CANCEL，Sip Server给UAC反馈状态码487，并反馈状态码200.UAC再反馈一个ACK</p>
+
+<p>3.UAC向UAS拨打电话,进行通话
+<img src="http://ww4.sinaimg.cn/large/637573b1jw1eklam4mg8qj20yw09saf2.jpg" alt="Mou icon" />
+ACK之后为完全接通，对方挂断的话Sip Server重新向UAC发送INVITE</p>
+
+<p>VOIP整个Flow分析图：
+<img src="http://ww1.sinaimg.cn/large/637573b1jw1eklamkks4lj20wq0ffwk4.jpg" alt="Mou icon" /></p>
+
+</div>
+
+
+      <footer>
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      
+  
+    <nav><ul class="pager">
+    
+        <li class="previous">
+          <a href="http://maintiendrai.github.io/post/2014-07-01-syn-dsm-git-server/" title="群晖DSM上安装Git Server">
+            <span aria-hidden="true">&larr;</span>Previous
+          </a>
+        </li>
+    
+
+    
+      <li class="next">
+        <a href="http://maintiendrai.github.io/post/2014-09-20-wireshark-sdp-rtp/" title="Wireshark分析SIP交换中的SDP及RTP的工作过程">
+            Next <span aria-hidden="true">&rarr;</span>
+        </a>
+      </li>
+    
+    </ul> </nav>
+  
+
+
+</div>
+
+  <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+  
+
+</div>
+
+</footer>
+
+    </div>
+    
+  </div>
+</div>
+      
+<footer class="footer hidden-print">
+  <div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+           <div class="pull-left">
+  <a class="toplink" href="#">back to top</a>
+</div>
+<div class="pull-right">
+  
+  <a href="http://maintiendrai.github.io/license" >license</a>
+  
+</div>
+
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+              
+    
+<div class="container footline">
+    <small>
+</small>
+</div>
+
+
+    
+
+
+        </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+<script src="http://maintiendrai.github.io/js/jquery.min.js"></script>
+<script src="http://maintiendrai.github.io/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+<script src="/js/popover/angular-storage.min.js"></script>
+
+
+
+<script src="http://maintiendrai.github.io/js/highlight.pack.js"></script>
+<script src="http://maintiendrai.github.io/js/site.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script>
+var ENABLE_POPOVER = ""; 
+var EXPIRE_COOKIE = ""; 
+var SHOW_MODAL_TIMEOUT = ""; 
+var MOUSE_LEAVE = ""; 
+var MODAL_SIZE = ""; 
+var POST_URL = ""; 
+var SIGNUP_HEADER = "";
+var HEADER_IMAGE = "";
+var IMG_DESCRIPTION = "";
+var SIGNUP_TEXT = "";
+var INPUT_PLACEHOLDER = "";
+var SUBMIT_BUTTON = "";
+var SUCCESS_MESSAGE = "";
+var ERROR_MESSAGE = "";
+var OPTIN = "";
+var COOKIE_NAME = "";
+</script>
+<script src="/js/popover/angular-modal-service.min.js"></script>
+<script src="/js/angular-ismobile.min.js"></script>
+<script src="/js/popover/popover.min.js"></script>
+
+  </body>
+</html>
+
