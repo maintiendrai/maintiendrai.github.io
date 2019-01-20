@@ -43,5 +43,14 @@ develop 用户主要开发点
       <description>Hello</description>
     </item>
     
+    <item>
+      <title>Hello</title>
+      <link>http://maintiendrai.github.io/post/2018-09-25-hello-copy/</link>
+      <pubDate>Wed, 25 Sep 2013 12:09:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/post/2018-09-25-hello-copy/</guid>
+      <description>Hello</description>
+    </item>
+    
   </channel>
 </rss>
