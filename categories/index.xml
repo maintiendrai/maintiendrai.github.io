@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on 黑暗民谣</title>
+    <link>http://maintiendrai.github.io/categories/</link>
+    <description>Recent content in Categories on 黑暗民谣</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://maintiendrai.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Focus On</title>
+      <link>http://maintiendrai.github.io/categories/focus-on/</link>
+      <pubDate>Tue, 22 Apr 2014 12:09:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/categories/focus-on/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Programming</title>
+      <link>http://maintiendrai.github.io/categories/programming/</link>
+      <pubDate>Thu, 09 Oct 2014 12:09:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/categories/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Study</title>
+      <link>http://maintiendrai.github.io/categories/study/</link>
+      <pubDate>Sat, 19 Jan 2019 16:07:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/categories/study/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tools</title>
+      <link>http://maintiendrai.github.io/categories/tools/</link>
+      <pubDate>Fri, 03 Jul 2015 12:09:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/categories/tools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>折腾</title>
+      <link>http://maintiendrai.github.io/categories/%E6%8A%98%E8%85%BE/</link>
+      <pubDate>Tue, 01 Jul 2014 12:09:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/categories/%E6%8A%98%E8%85%BE/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

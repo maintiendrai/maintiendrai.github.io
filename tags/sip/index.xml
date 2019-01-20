@@ -7,7 +7,9 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 20 Sep 2014 12:09:09 +0800</lastBuildDate>
-    <atom:link href="http://maintiendrai.github.io/tags/sip/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://maintiendrai.github.io/tags/sip/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Wireshark分析SIP交换中的SDP及RTP的工作过程</title>
@@ -15,39 +17,13 @@
       <pubDate>Sat, 20 Sep 2014 12:09:09 +0800</pubDate>
       
       <guid>http://maintiendrai.github.io/post/2014-09-20-wireshark-sdp-rtp/</guid>
-      <description>
-
-&lt;h3 id=&#34;一-sip协议告知对方udp端口号-协商媒体类型&#34;&gt;一、SIP协议告知对方UDP端口号，协商媒体类型&lt;/h3&gt;
-
-&lt;p&gt;0.0  整个通信过程分析图&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://ww1.sinaimg.cn/large/637573b1gw1ekm90hpuo4j20kk0bbju3.jpg&#34; alt=&#34;Mou icon&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;1.1  主叫方发给被叫方的INVITE请求&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://ww4.sinaimg.cn/large/637573b1gw1ekm80zx8vrj20kj0a5jtn.jpg&#34; alt=&#34;Mou icon&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;1.2  被叫方回给主叫方的180消息&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://ww1.sinaimg.cn/large/637573b1gw1el653fadnzj20kk0aj76r.jpg&#34; alt=&#34;Mou icon&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;二-rtp媒体流&#34;&gt;二、RTP媒体流&lt;/h3&gt;
-
-&lt;p&gt;2.1  主叫方发给被叫方的一个RTP包，UDP端口号是SDP协商好的，包的序列号是0&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://ww4.sinaimg.cn/large/637573b1gw1ekm8m5uz36j20kk0al769.jpg&#34; alt=&#34;Mou icon&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;第二个RTP包，包的序列号是0，其它一样&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://ww2.sinaimg.cn/large/637573b1gw1ekm8owhyqqj20kk0abmz1.jpg&#34; alt=&#34;Mou icon&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;三-rtcp包&#34;&gt;三、RTCP包&lt;/h3&gt;
-
-&lt;p&gt;3.1  每发完一批RTP包的时候，就发一个RTCP包，告诉接收方我刚才发了多少RTP包，多少个字节&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://ww3.sinaimg.cn/large/637573b1gw1ekm8y9ou8tj20kk0abjtk.jpg&#34; alt=&#34;Mou icon&#34; /&gt;
-i&lt;/p&gt;
-</description>
+      <description>一、SIP协议告知对方UDP端口号，协商媒体类型 0.0 整个通信过程分析图
+1.1 主叫方发给被叫方的INVITE请求
+1.2 被叫方回给主叫方的180消息
+二、RTP媒体流 2.1 主叫方发给被叫方的一个RTP包，UDP端口号是SDP协商好的，包的序列号是0
+第二个RTP包，包的序列号是0，其它一样
+三、RTCP包 3.1 每发完一批RTP包的时候，就发一个RTCP包，告诉接收方我刚才发了多少RTP包，多少个字节
+i</description>
     </item>
     
     <item>
@@ -56,89 +32,12 @@ i&lt;/p&gt;
       <pubDate>Fri, 19 Sep 2014 12:09:09 +0800</pubDate>
       
       <guid>http://maintiendrai.github.io/post/2014-09-19-wireshark-sip/</guid>
-      <description>
-
-&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
-
-&lt;p&gt;SIP 是VOIP目前非常流行的一种协议。有关协议的详细原理参照相关文档。&lt;/p&gt;
-
-&lt;p&gt;SIP 组件
-1.User Agent
-UA 是 SIP 的基本组件，可分为 UAC（User Agent Client）和 UAS（User Agent Server）。
-发起呼叫的为 UAC（X-Lite:iP 192.168.61.221），接收呼叫的为 UAS（本文手机端选用LinPhone:iP）。很多设备都可做 UA，如 IP 电话、PC、路由器等。
-2.SIP server
-SIP server（本文选用Asterisk）实现了Proxy Server（代理服务器）、Redirect Server（重定向服务器）、注册服务器的功能（Registrar Server）、Location Server、Back-to-back user agent (B2BUA)
-、Presence Server。&lt;/p&gt;
-
-&lt;p&gt;本文通过wireshark抓包分析SIP user agent（用户代理客户机，uac）与SIP serve之间的交互过程，在拨打SIP电话之前，先需要搭建相应的环境：&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&#34;wireshark分析account注册过程&#34;&gt;Wireshark分析Account注册过程&lt;/h3&gt;
-
-&lt;p&gt;设置过滤条件，只catch从UAC（ip.addr == 192.168.61.221 &amp;amp;&amp;amp; sip）发出或接收的数据包。
-&lt;img src=&#34;http://ww3.sinaimg.cn/large/637573b1jw1eklahsn3myj20vl0180t4.jpg&#34; alt=&#34;Mou icon&#34; /&gt;
-&lt;img src=&#34;http://ww1.sinaimg.cn/large/637573b1jw1eklafbmponj20yn0bh77o.jpg&#34; alt=&#34;Mou icon&#34; /&gt;
-1.首先UAC向SIP serve(112.124.57.23)发出REGISTER信息&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;REGISTER:UA client 使用此 message 向 server 注册以标明自己的位置。
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;SIP电话的格式是：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sip:username@UAC_IP 
-sip:username@UAC_IP_DNS （如果网络中有DNS服务器，并配置了UAC_IP对应的域名UAC_IP_DNS ）
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;如上图所示，sip电话格式为：
-sip:100@112.124.57.23   或   sip:100@lilkr（配置了DNS服务器）
-2.sip server请求要求身份验证。
-&lt;img src=&#34;http://ww1.sinaimg.cn/large/637573b1jw1eklajooh9aj20tx0bsdj6.jpg&#34; alt=&#34;Mou icon&#34; /&gt;
-3.重复1&lt;/p&gt;
-
-&lt;p&gt;4.sip server响应，发送200 OK信息
-&lt;img src=&#34;http://ww4.sinaimg.cn/large/637573b1jw1eklaid9b81j20xn0cpq6m.jpg&#34; alt=&#34;Mou icon&#34; /&gt;
-5.UAC向SIP server(112.124.57.23)发出SUBSCRIBE信息&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;SUBSCRIBE:告诉 server 一旦发生特定事件时，愿意接收一个通知。
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://ww3.sinaimg.cn/large/637573b1jw1eklak5guwkj20wz0czn0t.jpg&#34; alt=&#34;Mou icon&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;wireshark分析uac跟uas交互过程&#34;&gt;Wireshark分析UAC跟UAS交互过程&lt;/h3&gt;
-
-&lt;p&gt;1.UAC向UAS拨打电话，UAS拒绝
-&lt;img src=&#34;http://ww2.sinaimg.cn/large/637573b1jw1eklaks830lj20xf05ttba.jpg&#34; alt=&#34;Mou icon&#34; /&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;INVITE:UAC 发送此信息用以邀请 UAS 加入会话（包择一对一通话或 conference），其实就是一个 call setup message。
-ACK:为 INVITE 回复一个确认信息。
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;SIP Response:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://ww4.sinaimg.cn/large/637573b1jw1eklbanaxyaj20ae039aa7.jpg&#34; alt=&#34;Mou icon&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;UAS直接挂断，UAC收到486.然后UAC给Sip Server发一个ACK&lt;/p&gt;
-
-&lt;p&gt;2.UAC向UAS拨打电话，UAC自己挂断
-&lt;img src=&#34;http://ww1.sinaimg.cn/large/637573b1jw1eklalabfl5j20we06twhi.jpg&#34; alt=&#34;Mou icon&#34; /&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;CANCEL:用来中止一个还没建立（在建立过程当中）的呼叫。
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;SIP Response:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://ww3.sinaimg.cn/large/637573b1jw1eklbbu5c1jj20aq02haa2.jpg&#34; alt=&#34;Mou icon&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;UAC直接挂断，给Sip Server发一个CANCEL，Sip Server给UAC反馈状态码487，并反馈状态码200.UAC再反馈一个ACK&lt;/p&gt;
-
-&lt;p&gt;3.UAC向UAS拨打电话,进行通话
-&lt;img src=&#34;http://ww4.sinaimg.cn/large/637573b1jw1eklam4mg8qj20yw09saf2.jpg&#34; alt=&#34;Mou icon&#34; /&gt;
-ACK之后为完全接通，对方挂断的话Sip Server重新向UAC发送INVITE&lt;/p&gt;
-
-&lt;p&gt;VOIP整个Flow分析图：
-&lt;img src=&#34;http://ww1.sinaimg.cn/large/637573b1jw1eklamkks4lj20wq0ffwk4.jpg&#34; alt=&#34;Mou icon&#34; /&gt;&lt;/p&gt;
-</description>
+      <description>Overview SIP 是VOIP目前非常流行的一种协议。有关协议的详细原理参照相关文档。
+SIP 组件 1.User Agent UA 是 SIP 的基本组件，可分为 UAC（User Agent Client）和 UAS（User Agent Server）。 发起呼叫的为 UAC（X-Lite:iP 192.168.61.221），接收呼叫的为 UAS（本文手机端选用LinPhone:iP）。很多设备都可做 UA，如 IP 电话、PC、路由器等。 2.SIP server SIP server（本文选用Asterisk）实现了Proxy Server（代理服务器）、Redirect Server（重定向服务器）、注册服务器的功能（Registrar Server）、Location Server、Back-to-back user agent (B2BUA) 、Presence Server。
+本文通过wireshark抓包分析SIP user agent（用户代理客户机，uac）与SIP serve之间的交互过程，在拨打SIP电话之前，先需要搭建相应的环境：
+Wireshark分析Account注册过程 设置过滤条件，只catch从UAC（ip.addr == 192.168.61.221 &amp;amp;&amp;amp; sip）发出或接收的数据包。 1.首先UAC向SIP serve(112.124.57.23)发出REGISTER信息
+REGISTER:UA client 使用此 message 向 server 注册以标明自己的位置。  SIP电话的格式是：
+sip:username@UAC_IP sip:username@UAC_IP_DNS （如果网络中有DNS服务器，并配置了UAC_IP对应的域名UAC_IP_DNS ）  如上图所示，sip电话格式为： sip:100@112.124.57.23 或 sip:100@lilkr（配置了DNS服务器） 2.sip server请求要求身份验证。 3.</description>
     </item>
     
   </channel>

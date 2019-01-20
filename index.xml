@@ -6,65 +6,47 @@
     <description>Recent content on 黑暗民谣</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 Jul 2016 12:09:09 +0800</lastBuildDate>
-    <atom:link href="http://maintiendrai.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 19 Jan 2019 16:07:09 +0800</lastBuildDate>
+    
+	<atom:link href="http://maintiendrai.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Rasa NLU天气Bot实现</title>
+      <link>http://maintiendrai.github.io/post/2019-01-19-weather-bot/</link>
+      <pubDate>Sat, 19 Jan 2019 16:07:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/post/2019-01-19-weather-bot/</guid>
+      <description>纯粹是给自己复习看系列 Dependency install pip install -r requirements.txt python -m spacy download en npm i -g rasa-nlu-trainer  Training a Rasa NLU model 手动编辑 mkdir data cd data vi data.json  在线编辑 rasa-nlu-trainer =&amp;gt; localhost:52526 cd .. modify config_spacy.json nlu_model.py
+python nlu_model.py =&amp;gt; training
+python nlu_model.py =&amp;gt; result
+Training a Rasa Core dialogue manangement model create weather_domain.yml
+modify actions.py
+cd data
+modify stroies.md
+on line training session cd .. modify train_init.</description>
+    </item>
     
     <item>
       <title>Objective-C转向Swift若干tips</title>
-      <link>http://maintiendrai.github.io/post/2016-07-26-Objective-C%E8%BD%AC%E5%90%91Swift%E8%8B%A5%E5%B9%B2tips/</link>
+      <link>http://maintiendrai.github.io/post/2016-07-26-objective-c%E8%BD%AC%E5%90%91swift%E8%8B%A5%E5%B9%B2tips/</link>
       <pubDate>Tue, 26 Jul 2016 12:09:09 +0800</pubDate>
       
-      <guid>http://maintiendrai.github.io/post/2016-07-26-Objective-C%E8%BD%AC%E5%90%91Swift%E8%8B%A5%E5%B9%B2tips/</guid>
-      <description>
-
-&lt;h2 id=&#34;objective-c转向swift若干tips&#34;&gt;Objective-C转向Swift若干tips&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Swift 的 playground 就像是一个可交互的文档，它是用来练手学swift的，写一句代码出一行结果（右侧），可以实时查看代码结果，是学习swift语言的利器&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;不分头文件和实现文件，而是集合到.swift文件&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;swift中无需使用代码分隔符，以行作为代码分隔，如一行内有多行代码，则各行代码之间同样需使用分号;分隔&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;swift没有main函数，其代码是至上而下运行，第一行代码即为程序入口&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;类型对象化（类似于java） Int、Float、Double、Bool、Character&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;let 定义常量； len pi = 3.14&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;var hello :NSString ?&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;var 定义变量var hello :NSString = @“test”&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;dl&gt;
-&lt;dd&gt;指定变量类型&lt;/dd&gt;
-&lt;/dl&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;? 表示optional，即该变量可能为nil; 调用时必须加? 如 hello?.length&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;! 表示该变量一定不为nil，否则crash&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;@”hello”不存在了,变回了”hello” 如var hello :NSString = &amp;ldquo;hello&amp;rdquo;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;可以使用+来拼接字符串 &amp;ldquo;hello&amp;rdquo;+&amp;ldquo;world&amp;rdquo;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;使用()可以在字符串插入变量 let lang = &amp;ldquo;swift&amp;rdquo;; &amp;ldquo;hello \(lang) world&amp;rdquo;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;class 定义类&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;func 定义函数&lt;/p&gt;
-
-&lt;p&gt;func myTest(xxx …) -&amp;gt; 返回类型&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;println 带换行的print&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;as 类型转换 “当作”&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;where 关键字（可以作为过滤条件用于 for-in \ do-catch \ while \ if \ guard \ switch-case \ generics）&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <guid>http://maintiendrai.github.io/post/2016-07-26-objective-c%E8%BD%AC%E5%90%91swift%E8%8B%A5%E5%B9%B2tips/</guid>
+      <description>Objective-C转向Swift若干tips  Swift 的 playground 就像是一个可交互的文档，它是用来练手学swift的，写一句代码出一行结果（右侧），可以实时查看代码结果，是学习swift语言的利器
+ 不分头文件和实现文件，而是集合到.swift文件
+ swift中无需使用代码分隔符，以行作为代码分隔，如一行内有多行代码，则各行代码之间同样需使用分号;分隔
+ swift没有main函数，其代码是至上而下运行，第一行代码即为程序入口
+ 类型对象化（类似于java） Int、Float、Double、Bool、Character
+ let 定义常量； len pi = 3.14
+ var hello :NSString ?
+ var 定义变量var hello :NSString = @“test”
+  指定变量类型  ? 表示optional，即该变量可能为nil; 调用时必须加? 如 hello?.length
+ ! 表示该变量一定不为nil，否则crash
+ @”hello”不存在了,变回了”hello” 如var hello :NSString = &amp;ldquo;hello&amp;rdquo;
+  可以使用+来拼接字符串 &amp;ldquo;hello&amp;rdquo;+&amp;ldquo;world&amp;rdquo;
+ 使用()可以在字符串插入变量 let lang = &amp;ldquo;swift&amp;rdquo;; &amp;ldquo;hello \(lang) world&amp;rdquo;
+ class 定义类</description>
     </item>
     
     <item>
@@ -73,109 +55,21 @@
       <pubDate>Fri, 03 Jul 2015 12:09:09 +0800</pubDate>
       
       <guid>http://maintiendrai.github.io/post/2015-07-03-%E6%88%91%E7%9A%84git%E5%B7%A5%E4%BD%9C%E6%B5%81/</guid>
-      <description>
-
-&lt;h1 id=&#34;git-data-stores&#34;&gt;Git data stores&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://ww2.sinaimg.cn/large/637573b1gw1etsbgs5we2j20dd0cnmyl.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;•   workspace - 对应本地目录，当有文件修改，则最新体现在workspace变化&lt;/p&gt;
-
-&lt;p&gt;•   index - 是索引文件，指定commit要提交的内容&lt;/p&gt;
-
-&lt;p&gt;•   commit - 提交到本地仓库&lt;/p&gt;
-
-&lt;p&gt;•   HEAD - 表示本地最新的一次commit&lt;/p&gt;
-
-&lt;p&gt;•   git diff - 比较workspace与index&lt;/p&gt;
-
-&lt;p&gt;•   git diff -cached - 比较index与commit&lt;/p&gt;
-
-&lt;p&gt;•   git diff HEAD - 比较workspace与commit&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://ww2.sinaimg.cn/large/637573b1gw1etsbhk7uycj20e50huwgq.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;git-工作流&#34;&gt;Git 工作流&lt;/h1&gt;
-
-&lt;p&gt;master 用于发布&lt;br /&gt;
-develop 用户主要开发点&lt;br /&gt;
-新功能hotfix，开个功能名的分支，这个分支不 push，写好后:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;(hotfix) $ git add .&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;(hotfix) $ git commit -m &amp;quot;...&amp;quot;&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;(hotfix) $ git checkout develop&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;(develop) $ git pull origin develop&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;(develop) $ git merge hotfix &lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;(develop) $ git push origin develop&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;自己合并到 develop 分支，合并只是简单的 merge 就好了&lt;/p&gt;
-
-&lt;h1 id=&#34;git-rebase&#34;&gt;git rebase&lt;/h1&gt;
-
-&lt;p&gt;两个人工作在一个特性分支上，push 的时候出现冲突，那么要用
-git pull
-还是
-git pull &amp;ndash;rebase
-呢？&lt;/p&gt;
-
-&lt;p&gt;以前我是用第一种方式，但是后来偏好
- pull &amp;ndash;rebase，
-因为这样可以得到一个线性的特性分支，虽然丢失了并行开发的信息，而且 commit 较多的话解决冲突会变麻烦（解决方案是频繁 rebase &amp;amp;&amp;amp; push）。
-保持线性的特性分支，查阅很多资料都只看见“管理者的喜好”这样的描述，而没有描述优缺点。
-多人协作，所以需要经常push到代码库备份。而这两个人如果经常 pull 的话，就会出现很多
-Merge branch &amp;lsquo;aaa&amp;rsquo; of git.xxx.xxx/xxx/xxx into aaa
-这样的 merge commit，这时候就会发现这些merge动作其实没有必要，这些 commit 在审阅代码的时候很干扰。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://ihower.tw/blog/wp-content/uploads/2010/02/git-merge.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;总结了一下：
-加上 rebase 的意思是，
-1. 把本地 repo. 从上次 pull 之后的变更暂存起來
-2. 回復到上次 pull 時的情況
-3. 套用远端的变更
-4. 最后再套用刚暂存下来的本地变更。
-詳細說明可以參考 [](&lt;a href=&#34;http://gitready.com/advanced/2009/02/11/pull-with-rebase.html&#34;&gt;http://gitready.com/advanced/2009/02/11/pull-with-rebase.html&lt;/a&gt; &amp;ldquo;pull with rebase&amp;rdquo;)。&lt;/p&gt;
-
-&lt;p&gt;用图说明下：&lt;/p&gt;
-
-&lt;p&gt;还没合并前：
-&lt;img src=&#34;http://gitbook.liuhui998.com/assets/images/figure/rebase1.png&#34; alt=&#34;&#34; /&gt;
-用git merge合并：
-&lt;img src=&#34;http://gitbook.liuhui998.com/assets/images/figure/rebase2.png&#34; alt=&#34;&#34; /&gt;
-用git rebase合并：
-&lt;img src=&#34;http://gitbook.liuhui998.com/assets/images/figure/rebase3.png&#34; alt=&#34;&#34; /&gt;
-当&amp;rsquo;mywork&amp;rsquo;分支更新之后，它会指向这些新创建的提交(commit),而那些老的提交会被丢弃。 如果运行垃圾收集命令(pruning garbage collection), 这些被丢弃的提交就会删除.
-&lt;img src=&#34;http://gitbook.liuhui998.com/assets/images/figure/rebase4.png&#34; alt=&#34;&#34; /&gt;
-最后是：
-现在我们可以看一下用合并(merge)和用rebase所产生的历史的区别：
-&lt;img src=&#34;http://gitbook.liuhui998.com/assets/images/figure/rebase5.png&#34; alt=&#34;&#34; /&gt;
-(rebase 时所谓的解决冲突，其实是直接修改你之前的变更內容，所以上图中变成 C5’ 跟 c6’ )&lt;/p&gt;
-
-&lt;p&gt;在rebase的过程中，也许会出现冲突(conflict). 在这种情况，Git会停止rebase并会让你去解决 冲突；在解决完冲突后，用&amp;rdquo;git-add&amp;rdquo;命令去更新这些内容的索引(index), 然后，你无需执行 git-commit,只要执行:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;$ git rebase --continue&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;这样git会继续应用(apply)余下的补丁。
-在任何时候，你可以用&amp;ndash;abort参数来终止rebase的行动，并且&amp;rdquo;mywork&amp;rdquo; 分支会回到rebase开始前的状态。&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;$ git rebase --abort&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;参考资料:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.osteele.com/posts/2008/05/my-git-workflow/#fn:1&#34;&gt;http://blog.osteele.com/posts/2008/05/my-git-workflow/#fn:1&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://gitbook.liuhui998.com/4_2.html&#34;&gt;http://gitbook.liuhui998.com/4_2.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://ihower.tw/blog/archives/3843&#34;&gt;https://ihower.tw/blog/archives/3843&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://getpocket.com/a/read/961298276&#34;&gt;https://getpocket.com/a/read/961298276&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.oschina.net/question/54371_59134&#34;&gt;http://www.oschina.net/question/54371_59134&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.nvie.com/posts/a-successful-git-branching-model/&#34;&gt;http://www.nvie.com/posts/a-successful-git-branching-model/&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+      <description>Git data stores • workspace - 对应本地目录，当有文件修改，则最新体现在workspace变化
+• index - 是索引文件，指定commit要提交的内容
+• commit - 提交到本地仓库
+• HEAD - 表示本地最新的一次commit
+• git diff - 比较workspace与index
+• git diff -cached - 比较index与commit
+• git diff HEAD - 比较workspace与commit
+Git 工作流 master 用于发布
+develop 用户主要开发点
+新功能hotfix，开个功能名的分支，这个分支不 push，写好后:
+(hotfix) $ git add .
+(hotfix) $ git commit -m &amp;quot;...&amp;quot;
+(hotfix) $ git checkout develop
+(develop) $ git pull origin develop
+(develop) $ git merge hotfix</description>
     </item>
     
     <item>
@@ -184,162 +78,36 @@ Merge branch &amp;lsquo;aaa&amp;rsquo; of git.xxx.xxx/xxx/xxx into aaa
       <pubDate>Sun, 24 May 2015 12:09:09 +0800</pubDate>
       
       <guid>http://maintiendrai.github.io/post/2015-05-24-%E8%B7%AF%E7%94%B1%E5%99%A8%E6%8A%98%E8%85%BE/</guid>
-      <description>&lt;p&gt;周末折腾了两天路由器。一个是自己买的netgear，一个是公司的测试部买的极路由2。项目组的人叫我帮忙把极路由给刷成openwrt
-说起极路由，用着挺不爽的，子网下的bonjour都搜不到。估计是端口被限制，sip呼叫也各种不靠谱，估计也是端口被限制。&lt;/p&gt;
-
-&lt;p&gt;记下流水账～&lt;/p&gt;
-
-&lt;p&gt;#极路由
-##降级
-我手头上的极路由2是9010版本。我发现极路由很鸡贼啊，不能直接刷其它系统的firmware.bin文件。我操～&lt;/p&gt;
-
-&lt;p&gt;搜了一下，可以降级到9006&lt;/p&gt;
-
-&lt;p&gt;我试了很多个rom，都不能成功。&lt;/p&gt;
-
-&lt;p&gt;后面我是用这个rom降级的&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://ur.ikcd.net/HC5761-sysupgrade-20140911-3d5f030b.bin&#34;&gt;极2 0.9006.2.6020s版固件&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;###刷机步骤：&lt;/p&gt;
-
-&lt;p&gt;1：拔掉路由电源&lt;/p&gt;
-
-&lt;p&gt;2：用网线将极路由黄色的 LAN 口与电脑网口相连&lt;/p&gt;
-
-&lt;p&gt;3：将电脑本地连接的 IP 设置为ip：192.168.1.88。子网掩码：255.255.255.0。网关空着，不用填写，不知道在哪里设置的，请看这里：win7win8：&lt;a href=&#34;http://jingyan.baidu.com/article/22fe7ced18876f3003617f5e.html&#34;&gt;http://jingyan.baidu.com/article/22fe7ced18876f3003617f5e.html&lt;/a&gt;  XP：&lt;a href=&#34;http://jingyan.baidu.com/article/77b8dc7fc0f5786174eab6af.html&#34;&gt;http://jingyan.baidu.com/article/77b8dc7fc0f5786174eab6af.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;4：根据操作系统，32位运行tftpd32, 64位运行tftpd64&lt;/p&gt;
-
-&lt;p&gt;5：用尖锐物按住极路由 RESET 不放，再给极路由插上电源&lt;/p&gt;
-
-&lt;p&gt;6：等待电脑上 tftpd 出现传输 recovery.bin 进度条完成后，松开 RESET（进度条很快的，几秒钟）&lt;/p&gt;
-
-&lt;p&gt;7：极路由面板灯进入跑马灯状态，所有灯轮流闪，跑完后，系统自动重启，刷机完成&lt;/p&gt;
-
-&lt;p&gt;8：改电脑本地连接属性的ip为自动获取，访问&lt;a href=&#34;http://192.168.199.1路由管理界面&#34;&gt;http://192.168.199.1路由管理界面&lt;/a&gt; 密码：admin&lt;/p&gt;
-
-&lt;p&gt;然后由于极路由它很鸡贼，还要去root它才能刷第三方的固件&lt;/p&gt;
-
-&lt;p&gt;##搜狐插件大法：极路由Root&lt;/p&gt;
-
-&lt;p&gt;极路由云插件“搜狐视频远程下载”使用了开源下载工具aria2，由于aria2主程序aria2c占用空间较大，因此被安装到了SD卡的usr/bin目录。aria2c在每次开机时运行，因此给极客们一个ROOT机会。ROOT的思路是：用自己的脚本文件替换aria2c文件，在脚本文件中加入启用dropber服务的指令。具体方法如下：&lt;/p&gt;
-
-&lt;p&gt;1、安装云插件“搜狐视频远程下载”，然后验证aria2c是否安装运行，验证方法：在PC机上运行下面的命令：&lt;/p&gt;
-
-&lt;p&gt;telnet 192.168.199.1 6800&lt;/p&gt;
-
-&lt;p&gt;如果能连接，说明aria2c已经运行。&lt;/p&gt;
-
-&lt;p&gt;2、关掉路由器，拔出SD卡，将SD卡插入SD读卡器。
-(由于极路由系统是基于openwrt再封一层，openwrt是linux的，所以SD卡是ext4的，只能mount在linux的机器上。mac os也不支持，后面的操作是在ubuntu下完成的)&lt;/p&gt;
-
-&lt;p&gt;3、Linux操作系统能自动加载USB SD读卡器驱动，一般情况下设备名为/dev/sdb，或者用dmesg命令查询驱动程序日志，从中发现设备名。SD卡有2个分区，第1个是大小为1GB的luks加密分区，第2个是正常的ext4分区。9006版固件的aria2c文件在第2分区，因此需要mount该分区，命令为：&lt;/p&gt;
-
-&lt;p&gt;mount -t ext4 /dev/sdb2 /mnt&lt;/p&gt;
-
-&lt;p&gt;4、aria2c文件在/mnt/usr/bin目录中，先换名，然后替换。&lt;/p&gt;
-
-&lt;p&gt;cd /mnt/usb/bin&lt;/p&gt;
-
-&lt;p&gt;mv aria2c aria2c.orig&lt;/p&gt;
-
-&lt;p&gt;然后用vi命令创建文件aria2c，内容为：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#!/bin/sh
-
-if [ &amp;quot;$1&amp;quot; = &amp;quot;ok&amp;quot; ]; then
-
-         rm -f /tmp/data/usr/bin/aria2c 
-
-         mv /tmp/data/usr/bin/aria2c.orig /tmp/data/usr/bin/aria2c 
-
-         exit 0
-
-fi
-
-sed -i &#39;s/1022/22/g&#39; /etc/config/dropbear 
-
-/etc/init.d/dropbear enable
-
-/etc/init.d/dropbear start
-
-/tmp/data/usr/bin/aria2c ok &amp;amp;&amp;gt;/dev/null 
-
-exit 0
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;为新建的aria2c添加执行权限：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;chmod a+x aria2c
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;5、执行下面命令umount SD卡，拔出SD卡，插入路由器，路由器通电后即完成ROOT。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cd / 
-
-umount /mnt
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;6、SSH登录路由器后，执行下面的脚本进行ROOT保持，也就是下次自动升级固件时还能保持ROOT状态，脚本只需执行一次。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;echo &amp;quot;sed -i &#39;s/1022/22/g&#39; /etc/config/dropbear&amp;quot; &amp;gt;&amp;gt;/etc/rc.local 
-
-echo &#39;/etc/init.d/dropbear enable&#39; &amp;gt;&amp;gt;/etc/rc.local
-
-echo &#39;/etc/init.d/dropbear restart&#39; &amp;gt;&amp;gt;/etc/rc.local
-
-echo &#39;/etc/rc.local&#39; &amp;gt;/lib/upgrade/keep.d/base 
-
-echo &#39;/lib/upgrade/keep.d/base&#39; &amp;gt;&amp;gt;/lib/upgrade/keep.d/base 
-
-echo &#39;/etc/sysupgrade.conf&#39; &amp;gt;&amp;gt;/lib/upgrade/keep.d/base 
-
-echo &#39;/etc/rc.local&#39; &amp;gt;&amp;gt;/etc/sysupgrade.conf 
-
-echo &#39;/lib/upgrade/keep.d/base&#39; &amp;gt;&amp;gt;/etc/sysupgrade.conf 
-
-echo &#39;/etc/sysupgrade.conf&#39; &amp;gt;&amp;gt;/etc/sysupgrade.conf
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;##刷openwrt&lt;/p&gt;
-
-&lt;p&gt;我刷的是&lt;a href=&#34;https://github.com/rssnsj/openwrt-hc5x61&#34;&gt;https://github.com/rssnsj/openwrt-hc5x61&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/rssnsj/openwrt-hc5761/releases/latest&#34;&gt;https://github.com/rssnsj/openwrt-hc5761/releases/latest&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;#Netgear&lt;/p&gt;
-
-&lt;p&gt;还是刷netgear比较爽，没那么鸡贼。我拿到bin就直接刷ddwrt了&lt;/p&gt;
-
-&lt;p&gt;###遇到的问题
-1、The CGI script took too long to produce a response 报这个错
-固件有问题&lt;/p&gt;
-
-&lt;p&gt;2、在DD-WRT下，所有速率最高54M&lt;/p&gt;
-
-&lt;p&gt;此问题，在我刷回原厂ROM的时候，才得到答案。我安全设定方式选择TKIP兼容模式，提示我此模式下最大支持54M，而此前我并不知道。改成支持AES，速度即可提升了。&lt;/p&gt;
-
-&lt;p&gt;3、科学上网的方案
-DDWRT+autoddvpn+DNSMasq(Tomato+TomatoAutoVPN+DNSMasq是更好的选择，但是要刷Tomato,以后再试)&lt;/p&gt;
-
-&lt;p&gt;4、学到的命令
-nvram set http_lanport=12345
-nvram commit
-重启，12345就是你的端口&lt;/p&gt;
-
-&lt;p&gt;参考资料&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.iptvfans.cn/wiki/index.php/%E6%9E%81%E8%B7%AF%E7%94%B1&#34;&gt;http://www.iptvfans.cn/wiki/index.php/%E6%9E%81%E8%B7%AF%E7%94%B1&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://hiwifiroot.lofter.com/post/1d0319c1_6596c99&#34;&gt;http://hiwifiroot.lofter.com/post/1d0319c1_6596c99&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://smileawei.com/hiwifi-1s-9006-root/&#34;&gt;http://smileawei.com/hiwifi-1s-9006-root/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://ju.outofmemory.cn/entry/117066&#34;&gt;http://ju.outofmemory.cn/entry/117066&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/rssnsj/openwrt-hc5x61&#34;&gt;https://github.com/rssnsj/openwrt-hc5x61&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://linux.52zhe.info/read.php/286.htm?utm_source=tuicool&#34;&gt;http://linux.52zhe.info/read.php/286.htm?utm_source=tuicool&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://ruby-china.org/topics/15250&#34;&gt;https://ruby-china.org/topics/15250&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+      <description>周末折腾了两天路由器。一个是自己买的netgear，一个是公司的测试部买的极路由2。项目组的人叫我帮忙把极路由给刷成openwrt 说起极路由，用着挺不爽的，子网下的bonjour都搜不到。估计是端口被限制，sip呼叫也各种不靠谱，估计也是端口被限制。
+记下流水账～
+#极路由 ##降级 我手头上的极路由2是9010版本。我发现极路由很鸡贼啊，不能直接刷其它系统的firmware.bin文件。我操～
+搜了一下，可以降级到9006
+我试了很多个rom，都不能成功。
+后面我是用这个rom降级的
+极2 0.9006.2.6020s版固件
+###刷机步骤：
+1：拔掉路由电源
+2：用网线将极路由黄色的 LAN 口与电脑网口相连
+3：将电脑本地连接的 IP 设置为ip：192.168.1.88。子网掩码：255.255.255.0。网关空着，不用填写，不知道在哪里设置的，请看这里：win7win8：http://jingyan.baidu.com/article/22fe7ced18876f3003617f5e.html XP：http://jingyan.baidu.com/article/77b8dc7fc0f5786174eab6af.html
+4：根据操作系统，32位运行tftpd32, 64位运行tftpd64
+5：用尖锐物按住极路由 RESET 不放，再给极路由插上电源
+6：等待电脑上 tftpd 出现传输 recovery.bin 进度条完成后，松开 RESET（进度条很快的，几秒钟）
+7：极路由面板灯进入跑马灯状态，所有灯轮流闪，跑完后，系统自动重启，刷机完成
+8：改电脑本地连接属性的ip为自动获取，访问http://192.168.199.1路由管理界面 密码：admin
+然后由于极路由它很鸡贼，还要去root它才能刷第三方的固件
+##搜狐插件大法：极路由Root
+极路由云插件“搜狐视频远程下载”使用了开源下载工具aria2，由于aria2主程序aria2c占用空间较大，因此被安装到了SD卡的usr/bin目录。aria2c在每次开机时运行，因此给极客们一个ROOT机会。ROOT的思路是：用自己的脚本文件替换aria2c文件，在脚本文件中加入启用dropber服务的指令。具体方法如下：
+1、安装云插件“搜狐视频远程下载”，然后验证aria2c是否安装运行，验证方法：在PC机上运行下面的命令：
+telnet 192.168.199.1 6800
+如果能连接，说明aria2c已经运行。
+2、关掉路由器，拔出SD卡，将SD卡插入SD读卡器。 (由于极路由系统是基于openwrt再封一层，openwrt是linux的，所以SD卡是ext4的，只能mount在linux的机器上。mac os也不支持，后面的操作是在ubuntu下完成的)
+3、Linux操作系统能自动加载USB SD读卡器驱动，一般情况下设备名为/dev/sdb，或者用dmesg命令查询驱动程序日志，从中发现设备名。SD卡有2个分区，第1个是大小为1GB的luks加密分区，第2个是正常的ext4分区。9006版固件的aria2c文件在第2分区，因此需要mount该分区，命令为：
+mount -t ext4 /dev/sdb2 /mnt
+4、aria2c文件在/mnt/usr/bin目录中，先换名，然后替换。
+cd /mnt/usb/bin
+mv aria2c aria2c.orig
+然后用vi命令创建文件aria2c，内容为：
+#!/bin/sh if [ &amp;quot;$1&amp;quot; = &amp;quot;ok&amp;quot; ]; then rm -f /tmp/data/usr/bin/aria2c mv /tmp/data/usr/bin/aria2c.</description>
     </item>
     
     <item>
@@ -348,81 +116,10 @@ nvram commit
       <pubDate>Tue, 12 May 2015 12:09:09 +0800</pubDate>
       
       <guid>http://maintiendrai.github.io/post/2015-05-12-svn-%E5%AE%8C%E7%BE%8E%E8%BF%81%E7%A7%BB%E8%87%B3-git/</guid>
-      <description>&lt;p&gt;##SVN完美迁移到Git&lt;/p&gt;
-
-&lt;p&gt;###前言
-SVN迁移到GIT，一般我们想到的是《Pro Git》上的git svn命令 它可以把SVN迁移到GIT，它可以支持双向提交，即提交到GIT的同时提交到SVN。但是这个可能是不完美的，因为SVN跟GIT毕竟不是一个东西，组织结构也不一样 github上面推荐svn2git工具。支持完美GIT，但是对SVN的双向commit有所欠缺&lt;/p&gt;
-
-&lt;p&gt;###Installation
-Make sure you have git, git-svn, and ruby installed. svn2git is a ruby wrapper around git&amp;rsquo;s native SVN support through git-svn. It is possible to have git installed without git-svn installed, so please do verify that you can run $ git svn successfully. For a Debian-based system, the installation of the prerequisites would look like:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ sudo apt-get install git-core git-svn ruby
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Once you have the necessary software on your system, you can install svn2git through rubygems, which will add the svn2git command to your PATH.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ sudo gem install svn2git
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;###Usage
-Initial Conversion
-编辑author.txt（具体路径待修改）&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ svn log --quiet svn://111.24.73.118/asterisk --username xxx --password xxx  | grep -E &amp;quot;r[0-9]+ \| .+ \|&amp;quot; | cut -d&#39;|&#39; -f2 | sed &#39;s/ //g&#39; | sort | uniq
-
-返回
-crm
-lfr
-ljp
-lwq
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;修改author.txt为（具体人不一样）&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;user = user &amp;lt;email@domain.cn&amp;gt;
-xxx = xxx &amp;lt;xxx@domain.cn&amp;gt;                                          
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;修改
-    修改svn2git的BUG&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ vim /Applications/Xcode.app/Contents/Developer/usr/share/git-core/perl/Git/SVN.pm +106
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;修改&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;     my $u = (::cmt_metadata(&amp;quot;$refname&amp;quot;))[0];                                 
-     $u =~ s!^\Q$url\E(/|$)!! or die                                          
-       &amp;quot;$refname: &#39;$url&#39; not found in &#39;$u&#39;\n&amp;quot;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;为&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;      my $u = (::cmt_metadata(&amp;quot;$refname&amp;quot;))[0];                                 
-    if(!$u) {                                                                
-        $u = $pathname;                                                      
-    }else {                                                                  
-        $u =~ s!^\Q$url\E(/|$)!! or die                                      
-        &amp;quot;$refname: &#39;$url&#39; not found in &#39;$u&#39;\n&amp;quot;;                              
-    }  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;迁移&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; $ svn2git https://192.168.60.200/svn/widisk/ --trunk trunk/widisk --branches branches --tags tags --authors authors.txt --verbose
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;到这步的时候，本地已经clone了SVN仓库，现在需要的就是提交到远程了。首先，关联github远程仓库，如下：&lt;/p&gt;
-
-&lt;p&gt;git remote add origin git@192.168.60.151:lilkr/widisk.git
-git push -u origin master
-现在所有的旧分支都变成真正的Git 分支，所有的旧标签也变成真正的Git 标签。最后，一项工作就是把新建的Git 服务器添加为远程服务器并且向它推送。为了让所有的分支和标签都得到上传，我们使用这条命令&lt;/p&gt;
-
-&lt;p&gt;git push &amp;ndash;all origin
-所有的分支和标签现在都应该整齐干净的躺在新的Git 服务器里了。&lt;/p&gt;
-
-&lt;p&gt;如果有其它问题，参见&lt;a href=&#34;https://github.com/nirvdrum/svn2git&#34;&gt;https://github.com/nirvdrum/svn2git&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>##SVN完美迁移到Git
+###前言 SVN迁移到GIT，一般我们想到的是《Pro Git》上的git svn命令 它可以把SVN迁移到GIT，它可以支持双向提交，即提交到GIT的同时提交到SVN。但是这个可能是不完美的，因为SVN跟GIT毕竟不是一个东西，组织结构也不一样 github上面推荐svn2git工具。支持完美GIT，但是对SVN的双向commit有所欠缺
+###Installation Make sure you have git, git-svn, and ruby installed. svn2git is a ruby wrapper around git&amp;rsquo;s native SVN support through git-svn. It is possible to have git installed without git-svn installed, so please do verify that you can run $ git svn successfully. For a Debian-based system, the installation of the prerequisites would look like:
+$ sudo apt-get install git-core git-svn ruby  Once you have the necessary software on your system, you can install svn2git through rubygems, which will add the svn2git command to your PATH.</description>
     </item>
     
     <item>
@@ -431,57 +128,12 @@ git push -u origin master
       <pubDate>Thu, 09 Oct 2014 12:09:09 +0800</pubDate>
       
       <guid>http://maintiendrai.github.io/post/2014-10-09-vim-geeknode/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;通过VIM写博客通过geeknote同步到evernote&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Vim/vim-markdown/markdown preview plus &amp;lt; -&amp;gt; GeekNote -&amp;gt; Evernote
-_
-不需要任何第三方服务器的方案，就是使用Vim编写markdown。
-给Vim配上markdown着色的插件vim-markdown。&lt;/p&gt;
-
-&lt;p&gt;mac os下默认的python是narrow build path&lt;/p&gt;
-
-&lt;p&gt;python 解决 narrow build path 导致的 ValueError: unichr() arg not in
-range(0x10000) (narrow Python build)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;./configure --enable-unicode=ucs4 --prefix=/usr
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;给chrome装上实时查看markdown效果的插件markdown preview plus，这插件非常好用！特
-别是开启了“Enable auto-reload”之后，每次用Vim保存文件时都能马上刷新。
-然后用类似上一个方案的用法使用GeekNote，生成富文本同步到Evernote。
-为了更方便的使用GeekNote，可以在Dropbox里新建一个evernotebank的文件夹，然后按照
-你想同步的notebook的名字新建同名文件夹；
-比如我在evernotebank里建立blog.chetui.org的文件夹，并在该目录下建立如下脚本，命
-名为sync：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#!/bin/bash
-
-allFiles() {
-    for file in $1/*
-    do
-        if [ -d $file ]; then
-            echo $file
-            /Users/lilkr/Tools/hack/geeknote/geeknote/gnsync.py --path $file --mask &amp;quot;*.md&amp;quot; --format markdown --logpath log--notebook &amp;quot;goandfight&amp;quot;
-            allFiles $file
-        fi
-    done
-}
-
-testdir=./louisa/_posts/
-allFiles $testdir
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;然后加入可执行权限：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;chmod +x sync
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;每次在该目录下写完md格式的文件，就跑一下./sync，就把富文本同步到Evernote里了。
-单向编辑的缺陷实在是很难解决，因为markdown生成富文本只能是单向的，而Evernote官方
-又没有打算内置markdown。&lt;/p&gt;
-</description>
+      <description>通过VIM写博客通过geeknote同步到evernote
+ Vim/vim-markdown/markdown preview plus &amp;lt; -&amp;gt; GeekNote -&amp;gt; Evernote _ 不需要任何第三方服务器的方案，就是使用Vim编写markdown。 给Vim配上markdown着色的插件vim-markdown。
+mac os下默认的python是narrow build path
+python 解决 narrow build path 导致的 ValueError: unichr() arg not in range(0x10000) (narrow Python build)
+./configure --enable-unicode=ucs4 --prefix=/usr  给chrome装上实时查看markdown效果的插件markdown preview plus，这插件非常好用！特 别是开启了“Enable auto-reload”之后，每次用Vim保存文件时都能马上刷新。 然后用类似上一个方案的用法使用GeekNote，生成富文本同步到Evernote。 为了更方便的使用GeekNote，可以在Dropbox里新建一个evernotebank的文件夹，然后按照 你想同步的notebook的名字新建同名文件夹； 比如我在evernotebank里建立blog.chetui.org的文件夹，并在该目录下建立如下脚本，命 名为sync：
+#!/bin/bash allFiles() { for file in $1/* do if [ -d $file ]; then echo $file /Users/lilkr/Tools/hack/geeknote/geeknote/gnsync.py --path $file --mask &amp;quot;*.md&amp;quot; --format markdown --logpath log--notebook &amp;quot;goandfight&amp;quot; allFiles $file fi done } testdir=.</description>
     </item>
     
     <item>
@@ -490,39 +142,13 @@ allFiles $testdir
       <pubDate>Sat, 20 Sep 2014 12:09:09 +0800</pubDate>
       
       <guid>http://maintiendrai.github.io/post/2014-09-20-wireshark-sdp-rtp/</guid>
-      <description>
-
-&lt;h3 id=&#34;一-sip协议告知对方udp端口号-协商媒体类型&#34;&gt;一、SIP协议告知对方UDP端口号，协商媒体类型&lt;/h3&gt;
-
-&lt;p&gt;0.0  整个通信过程分析图&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://ww1.sinaimg.cn/large/637573b1gw1ekm90hpuo4j20kk0bbju3.jpg&#34; alt=&#34;Mou icon&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;1.1  主叫方发给被叫方的INVITE请求&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://ww4.sinaimg.cn/large/637573b1gw1ekm80zx8vrj20kj0a5jtn.jpg&#34; alt=&#34;Mou icon&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;1.2  被叫方回给主叫方的180消息&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://ww1.sinaimg.cn/large/637573b1gw1el653fadnzj20kk0aj76r.jpg&#34; alt=&#34;Mou icon&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;二-rtp媒体流&#34;&gt;二、RTP媒体流&lt;/h3&gt;
-
-&lt;p&gt;2.1  主叫方发给被叫方的一个RTP包，UDP端口号是SDP协商好的，包的序列号是0&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://ww4.sinaimg.cn/large/637573b1gw1ekm8m5uz36j20kk0al769.jpg&#34; alt=&#34;Mou icon&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;第二个RTP包，包的序列号是0，其它一样&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://ww2.sinaimg.cn/large/637573b1gw1ekm8owhyqqj20kk0abmz1.jpg&#34; alt=&#34;Mou icon&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;三-rtcp包&#34;&gt;三、RTCP包&lt;/h3&gt;
-
-&lt;p&gt;3.1  每发完一批RTP包的时候，就发一个RTCP包，告诉接收方我刚才发了多少RTP包，多少个字节&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://ww3.sinaimg.cn/large/637573b1gw1ekm8y9ou8tj20kk0abjtk.jpg&#34; alt=&#34;Mou icon&#34; /&gt;
-i&lt;/p&gt;
-</description>
+      <description>一、SIP协议告知对方UDP端口号，协商媒体类型 0.0 整个通信过程分析图
+1.1 主叫方发给被叫方的INVITE请求
+1.2 被叫方回给主叫方的180消息
+二、RTP媒体流 2.1 主叫方发给被叫方的一个RTP包，UDP端口号是SDP协商好的，包的序列号是0
+第二个RTP包，包的序列号是0，其它一样
+三、RTCP包 3.1 每发完一批RTP包的时候，就发一个RTCP包，告诉接收方我刚才发了多少RTP包，多少个字节
+i</description>
     </item>
     
     <item>
@@ -531,89 +157,12 @@ i&lt;/p&gt;
       <pubDate>Fri, 19 Sep 2014 12:09:09 +0800</pubDate>
       
       <guid>http://maintiendrai.github.io/post/2014-09-19-wireshark-sip/</guid>
-      <description>
-
-&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
-
-&lt;p&gt;SIP 是VOIP目前非常流行的一种协议。有关协议的详细原理参照相关文档。&lt;/p&gt;
-
-&lt;p&gt;SIP 组件
-1.User Agent
-UA 是 SIP 的基本组件，可分为 UAC（User Agent Client）和 UAS（User Agent Server）。
-发起呼叫的为 UAC（X-Lite:iP 192.168.61.221），接收呼叫的为 UAS（本文手机端选用LinPhone:iP）。很多设备都可做 UA，如 IP 电话、PC、路由器等。
-2.SIP server
-SIP server（本文选用Asterisk）实现了Proxy Server（代理服务器）、Redirect Server（重定向服务器）、注册服务器的功能（Registrar Server）、Location Server、Back-to-back user agent (B2BUA)
-、Presence Server。&lt;/p&gt;
-
-&lt;p&gt;本文通过wireshark抓包分析SIP user agent（用户代理客户机，uac）与SIP serve之间的交互过程，在拨打SIP电话之前，先需要搭建相应的环境：&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&#34;wireshark分析account注册过程&#34;&gt;Wireshark分析Account注册过程&lt;/h3&gt;
-
-&lt;p&gt;设置过滤条件，只catch从UAC（ip.addr == 192.168.61.221 &amp;amp;&amp;amp; sip）发出或接收的数据包。
-&lt;img src=&#34;http://ww3.sinaimg.cn/large/637573b1jw1eklahsn3myj20vl0180t4.jpg&#34; alt=&#34;Mou icon&#34; /&gt;
-&lt;img src=&#34;http://ww1.sinaimg.cn/large/637573b1jw1eklafbmponj20yn0bh77o.jpg&#34; alt=&#34;Mou icon&#34; /&gt;
-1.首先UAC向SIP serve(112.124.57.23)发出REGISTER信息&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;REGISTER:UA client 使用此 message 向 server 注册以标明自己的位置。
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;SIP电话的格式是：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sip:username@UAC_IP 
-sip:username@UAC_IP_DNS （如果网络中有DNS服务器，并配置了UAC_IP对应的域名UAC_IP_DNS ）
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;如上图所示，sip电话格式为：
-sip:100@112.124.57.23   或   sip:100@lilkr（配置了DNS服务器）
-2.sip server请求要求身份验证。
-&lt;img src=&#34;http://ww1.sinaimg.cn/large/637573b1jw1eklajooh9aj20tx0bsdj6.jpg&#34; alt=&#34;Mou icon&#34; /&gt;
-3.重复1&lt;/p&gt;
-
-&lt;p&gt;4.sip server响应，发送200 OK信息
-&lt;img src=&#34;http://ww4.sinaimg.cn/large/637573b1jw1eklaid9b81j20xn0cpq6m.jpg&#34; alt=&#34;Mou icon&#34; /&gt;
-5.UAC向SIP server(112.124.57.23)发出SUBSCRIBE信息&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;SUBSCRIBE:告诉 server 一旦发生特定事件时，愿意接收一个通知。
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://ww3.sinaimg.cn/large/637573b1jw1eklak5guwkj20wz0czn0t.jpg&#34; alt=&#34;Mou icon&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;wireshark分析uac跟uas交互过程&#34;&gt;Wireshark分析UAC跟UAS交互过程&lt;/h3&gt;
-
-&lt;p&gt;1.UAC向UAS拨打电话，UAS拒绝
-&lt;img src=&#34;http://ww2.sinaimg.cn/large/637573b1jw1eklaks830lj20xf05ttba.jpg&#34; alt=&#34;Mou icon&#34; /&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;INVITE:UAC 发送此信息用以邀请 UAS 加入会话（包择一对一通话或 conference），其实就是一个 call setup message。
-ACK:为 INVITE 回复一个确认信息。
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;SIP Response:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://ww4.sinaimg.cn/large/637573b1jw1eklbanaxyaj20ae039aa7.jpg&#34; alt=&#34;Mou icon&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;UAS直接挂断，UAC收到486.然后UAC给Sip Server发一个ACK&lt;/p&gt;
-
-&lt;p&gt;2.UAC向UAS拨打电话，UAC自己挂断
-&lt;img src=&#34;http://ww1.sinaimg.cn/large/637573b1jw1eklalabfl5j20we06twhi.jpg&#34; alt=&#34;Mou icon&#34; /&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;CANCEL:用来中止一个还没建立（在建立过程当中）的呼叫。
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;SIP Response:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://ww3.sinaimg.cn/large/637573b1jw1eklbbu5c1jj20aq02haa2.jpg&#34; alt=&#34;Mou icon&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;UAC直接挂断，给Sip Server发一个CANCEL，Sip Server给UAC反馈状态码487，并反馈状态码200.UAC再反馈一个ACK&lt;/p&gt;
-
-&lt;p&gt;3.UAC向UAS拨打电话,进行通话
-&lt;img src=&#34;http://ww4.sinaimg.cn/large/637573b1jw1eklam4mg8qj20yw09saf2.jpg&#34; alt=&#34;Mou icon&#34; /&gt;
-ACK之后为完全接通，对方挂断的话Sip Server重新向UAC发送INVITE&lt;/p&gt;
-
-&lt;p&gt;VOIP整个Flow分析图：
-&lt;img src=&#34;http://ww1.sinaimg.cn/large/637573b1jw1eklamkks4lj20wq0ffwk4.jpg&#34; alt=&#34;Mou icon&#34; /&gt;&lt;/p&gt;
-</description>
+      <description>Overview SIP 是VOIP目前非常流行的一种协议。有关协议的详细原理参照相关文档。
+SIP 组件 1.User Agent UA 是 SIP 的基本组件，可分为 UAC（User Agent Client）和 UAS（User Agent Server）。 发起呼叫的为 UAC（X-Lite:iP 192.168.61.221），接收呼叫的为 UAS（本文手机端选用LinPhone:iP）。很多设备都可做 UA，如 IP 电话、PC、路由器等。 2.SIP server SIP server（本文选用Asterisk）实现了Proxy Server（代理服务器）、Redirect Server（重定向服务器）、注册服务器的功能（Registrar Server）、Location Server、Back-to-back user agent (B2BUA) 、Presence Server。
+本文通过wireshark抓包分析SIP user agent（用户代理客户机，uac）与SIP serve之间的交互过程，在拨打SIP电话之前，先需要搭建相应的环境：
+Wireshark分析Account注册过程 设置过滤条件，只catch从UAC（ip.addr == 192.168.61.221 &amp;amp;&amp;amp; sip）发出或接收的数据包。 1.首先UAC向SIP serve(112.124.57.23)发出REGISTER信息
+REGISTER:UA client 使用此 message 向 server 注册以标明自己的位置。  SIP电话的格式是：
+sip:username@UAC_IP sip:username@UAC_IP_DNS （如果网络中有DNS服务器，并配置了UAC_IP对应的域名UAC_IP_DNS ）  如上图所示，sip电话格式为： sip:100@112.124.57.23 或 sip:100@lilkr（配置了DNS服务器） 2.sip server请求要求身份验证。 3.</description>
     </item>
     
     <item>
@@ -622,94 +171,19 @@ ACK之后为完全接通，对方挂断的话Sip Server重新向UAC发送INVITE&
       <pubDate>Tue, 01 Jul 2014 12:09:09 +0800</pubDate>
       
       <guid>http://maintiendrai.github.io/post/2014-07-01-syn-dsm-git-server/</guid>
-      <description>&lt;p&gt;给WD、TOSHIBA开发的无线硬盘APP，也给自己公司开发的WiDiSK无线硬盘APP。都是基于WebDAV的。想知道别人的NAS的APP做的怎么样本来想用旧台式机装黑群晖，但是考虑到功率的问题，我还是选择了群晖的 nas 解决方案以及附带的 DSM 系统。并在手机上装APP进行体验。&lt;/p&gt;
-
-&lt;p&gt;群晖 nas 的系统 DSM 是基于 Linux 的，因此你也可以把 nas 看作一台小型的 Linux 服务器。DSM 提供了很多实用的套件供你开发 nas 的潜力，包括 PHP、Python、MySQL、Wordpress 等，同时也支持 Git 服务器。&lt;/p&gt;
-
-&lt;p&gt;今天这篇文章就讲讲如何使用群晖 nas 搭建私有 git 服务器。&lt;/p&gt;
-
-&lt;p&gt;###为什么要搭建私有 git 服务器&lt;/p&gt;
-
-&lt;p&gt;这个不多说了，不想搭就不用来看这文章了
-以前用gitlab在ubuntu上搭过git服务器。&lt;/p&gt;
-
-&lt;p&gt;###nas 搭建 git 服务器&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;进入 DSM 系统的『套件中心』，安装 Git Server&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;创建一名用户，名为『git』（名称随意，但是叫 git 比较好，该用户仅有 git shell 的执行权限，除此之外无任何权限）在用户界面创建新用户git，没有特殊权限，放到users组即可&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;在『控制面板』- 『终端机』中开启 SSH 登录功能&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;用ssh的root用户登录到群晖&lt;/p&gt;
-
-&lt;p&gt;vi /etc/passwd 文件
-修改git用户的home目录&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;/var/services/homes/git to /volume1/git
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;修改登录后的 shell&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;/sbin/nologin to /bin/ash
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;修改git用户home目录的权限为777&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;chmod 777 /volume1/git/
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;再在/volume1/git/创建一个.ssh文件夹,还是权限777&lt;/p&gt;
-
-&lt;p&gt;将你Mac当前用户下的.ss/id_rsa.pub中的内容copy / paste到群晖上面~git/.ssh/authorized_keys里面&lt;/p&gt;
-
-&lt;p&gt;切换为git用户:(测试一下)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;su – git
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;On Mac:(测试一下)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;ssh git@192.168.199.118 ls /etc/shells
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;输出正常的话就可以成功ssh了&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;创建一个git仓库&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;su - git
-pwd  /volume1/git
-mkdir repositories
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;在 repositories 文件夹中创建一个新的文件夹，作为某一个项目的 base，我们叫他 wifidisk&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;mkdir wifidisk
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;已经在本地初始化好了项目&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cd wifidisk
-git init --bare .git
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;回到本地，然后在本地使用如下命令加本地代码 push 到 git 服务器&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git remote add nas ssh://git@192.168.199.118/volume1/git/repositories/ihome/.git
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;遗憾的是没有gitlab那样的web控制台&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;参考资料&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;http://undefinedblog.com/deploy-private-git-server-on-synology-nas/&#34;&gt;http://undefinedblog.com/deploy-private-git-server-on-synology-nas/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.feeltrue.cn/wordpress/?p=17&#34;&gt;http://www.feeltrue.cn/wordpress/?p=17&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.cnblogs.com/softman11/p/3443229.html&#34;&gt;http://www.cnblogs.com/softman11/p/3443229.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+      <description>给WD、TOSHIBA开发的无线硬盘APP，也给自己公司开发的WiDiSK无线硬盘APP。都是基于WebDAV的。想知道别人的NAS的APP做的怎么样本来想用旧台式机装黑群晖，但是考虑到功率的问题，我还是选择了群晖的 nas 解决方案以及附带的 DSM 系统。并在手机上装APP进行体验。
+群晖 nas 的系统 DSM 是基于 Linux 的，因此你也可以把 nas 看作一台小型的 Linux 服务器。DSM 提供了很多实用的套件供你开发 nas 的潜力，包括 PHP、Python、MySQL、Wordpress 等，同时也支持 Git 服务器。
+今天这篇文章就讲讲如何使用群晖 nas 搭建私有 git 服务器。
+###为什么要搭建私有 git 服务器
+这个不多说了，不想搭就不用来看这文章了 以前用gitlab在ubuntu上搭过git服务器。
+###nas 搭建 git 服务器
+ 进入 DSM 系统的『套件中心』，安装 Git Server
+ 创建一名用户，名为『git』（名称随意，但是叫 git 比较好，该用户仅有 git shell 的执行权限，除此之外无任何权限）在用户界面创建新用户git，没有特殊权限，放到users组即可
+ 在『控制面板』- 『终端机』中开启 SSH 登录功能
+ 用ssh的root用户登录到群晖
+vi /etc/passwd 文件 修改git用户的home目录
+/var/services/homes/git to /volume1/git  修改登录后的 shell
+/sbin/nologin to /bin/ash  修改git用户home目录的权限为777</description>
     </item>
     
     <item>
@@ -718,150 +192,11 @@ git init --bare .git
       <pubDate>Tue, 22 Apr 2014 12:09:09 +0800</pubDate>
       
       <guid>http://maintiendrai.github.io/post/2014-04-22-sinus-headache-cure/</guid>
-      <description>
-
-&lt;p&gt;被蝶窦炎困扰11年了，蝶窦炎导致头痛真是让人。网上找了篇文章，貌似还挺靠谱的。分享给与我一样受到鼻窦炎困扰的朋友，文章的题目是：治疗窦性头痛的家庭秘方&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.buzzle.com/articles/sinus-headache-home-remedies.html&#34;&gt;http://www.buzzle.com/articles/sinus-headache-home-remedies.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;warm-water&#34;&gt;Warm Water&lt;/h3&gt;
-
-&lt;p&gt;The simplest of home remedies is to drink a lot of warm water. I will suggest, whenever you drink water, drink only warm water. If possible, you can drink hot water as well. It will help in minimizing the symptoms sooner.&lt;/p&gt;
-
-&lt;h3 id=&#34;温水&#34;&gt;温水&lt;/h3&gt;
-
-&lt;p&gt;最简单的偏方是喝大量的热水。 我建议,每当你喝水,只喝温水。 如果可能的话,你可以喝热水。 这将有助于减少症状。&lt;/p&gt;
-
-&lt;h3 id=&#34;vitamin-c&#34;&gt;Vitamin C&lt;/h3&gt;
-
-&lt;p&gt;In case of a common cold or sinusitis, doctors always advice to increase the consumption of food rich in Vitamin C. Vitamin C is rich in antioxidants, which help fight sinus infection itself and boost the immune system of the body. Vitamin C rich food include strawberries, gooseberry, cauliflower, broccoli, pineapples, oranges, lemon and pomegranates. All these foods are easy to procure and easy to include in your diet. If you are a tea drinker, then you can try lemon tea or lemon green tea.&lt;/p&gt;
-
-&lt;h3 id=&#34;维生素c&#34;&gt;维生素C&lt;/h3&gt;
-
-&lt;p&gt;对于普通感冒或鼻窦炎,医生总是建议食用富含维生素C的食物。维生素C富含抗氧化剂,帮助对抗窦感染自己,提高身体的免疫系统。 维生素C丰富的食物包括草莓、醋栗、菜花、西兰花、菠萝、橙子、柠檬和石榴。 所有的这些食物都容易在你的饮食中获取。 如果你喜欢喝茶,那么你可以试试柠檬茶或柠檬绿茶。&lt;/p&gt;
-
-&lt;h3 id=&#34;hot-and-cold-compress&#34;&gt;Hot and Cold Compress&lt;/h3&gt;
-
-&lt;p&gt;Alternate hot and cold compresses on the sinus areas help in relieving blocked sinuses. Warm compress should be placed for three minutes and cold compress should be placed immediately for 30 seconds. This alternate compress remedy should be repeated 3 to 5 times in a day for fast relief from blocked sinuses and headache.&lt;/p&gt;
-
-&lt;h3 id=&#34;热的和冷的压缩&#34;&gt;热的和冷的压缩&lt;/h3&gt;
-
-&lt;p&gt;热敷和冷敷交替有助于缓解阻塞鼻窦窦区域。 温敷应放置三分钟和冷敷应立即放置30秒。 这个替代补救措施应该在一天内重复3 - 5次的快速缓解阻塞鼻窦和头痛。&lt;/p&gt;
-
-&lt;h3 id=&#34;house-ventilation&#34;&gt;House Ventilation&lt;/h3&gt;
-
-&lt;p&gt;To keep the house warm, we often tend to seal up the house, although this makes the house energy-efficient, it also leads to the house becoming a breeding ground for different microbes, which often leads to aggravating the condition. Therefore, it is important that you ventilate your house well all the time and let some fresh air into the house often.&lt;/p&gt;
-
-&lt;h3 id=&#34;房子通风&#34;&gt;房子通风&lt;/h3&gt;
-
-&lt;p&gt;保持房子温暖,我们常常倾向于密封的房子,尽管这使得房子更节能,但它导致了房子成为不同微生物的滋生,这常常会加重病情。 因此,重要的是,你的房子要通风好,经常让一些新鲜空气进屋里。&lt;/p&gt;
-
-&lt;h3 id=&#34;humidify-the-nasal-passages&#34;&gt;Humidify the Nasal Passages&lt;/h3&gt;
-
-&lt;p&gt;There is a misconception, that dry air is better to heal sinus infection. However, it is far from truth, as it is actually the humid air, which helps in healing the condition faster. When the air is dry it irritates the nasal passages and they are then inflamed. You can either use a humidifier or a vaporizer. If you do not have any one of them, then you can take long hot showers a couple of times a day.&lt;/p&gt;
-
-&lt;h3 id=&#34;使鼻腔湿润&#34;&gt;使鼻腔湿润&lt;/h3&gt;
-
-&lt;p&gt;有一种误解,干燥的空气更好治疗鼻窦感染。 然而,这个远离真理,因为它实际上是潮湿的空气,这有助于在它的治愈。 当空气干燥时它会刺激鼻腔和发炎。 您可以使用加湿器或汽化器。 如果你没有任何其中之一,那么你可以花很长时间每天热水淋浴几次。&lt;/p&gt;
-
-&lt;h3 id=&#34;warm-soups&#34;&gt;Warm Soups&lt;/h3&gt;
-
-&lt;p&gt;Make warm soups a part of your diet. Warm soup will help you to get rid of nasal congestion. You can add a generous amount of pepper to your soup. If you like it, you can try adding pepper to your tea as well. Drink your tea as warm as possible.&lt;/p&gt;
-
-&lt;h3 id=&#34;温暖的汤&#34;&gt;温暖的汤&lt;/h3&gt;
-
-&lt;p&gt;让温暖的汤你的饮食的一部分。 温暖的汤会帮助你摆脱鼻塞。 您可以添加一个慷慨的辣椒汤。 如果你喜欢它,你也可以尝试在你的茶里添加辣椒。 喝你的茶保证尽可能的温暖。&lt;/p&gt;
-
-&lt;h3 id=&#34;spicy-food&#34;&gt;Spicy Food&lt;/h3&gt;
-
-&lt;p&gt;Since you have sinus, food probably does not taste, the best. Therefore, you can try a spicy Mexican or Thai meal. The spicy meal will help in clearing out nasal blockages. Once the blockages are cleared your headache will also be cured.&lt;/p&gt;
-
-&lt;h3 id=&#34;辣的食物&#34;&gt;辣的食物&lt;/h3&gt;
-
-&lt;p&gt;因为你的鼻窦炎,食品可能没有味道,最好的。 因此,你可以试着辛辣的泰国或墨西哥餐。 辣粉将帮助清理鼻腔阻塞。 一旦堵塞清理你的头痛也将被治愈。&lt;/p&gt;
-
-&lt;h3 id=&#34;well-balanced-diet&#34;&gt;Well-Balanced Diet&lt;/h3&gt;
-
-&lt;p&gt;Although one does not feel like eating, when one is suffering from cold and headache, it is important that one has a well-balanced diet. Having a well-balanced diet ensures the body&amp;rsquo;s immunity is at its best and the body is able to fight the infection better.&lt;/p&gt;
-
-&lt;h3 id=&#34;均衡的饮食&#34;&gt;均衡的饮食&lt;/h3&gt;
-
-&lt;p&gt;虽然当一个人患有感冒和头痛会不太想进食,但是一个有一个均衡的饮食是很重要的。 有一个均衡的饮食可以确保身体的免疫力是最好的,身体能够更好的抵御感染。&lt;/p&gt;
-
-&lt;h3 id=&#34;ginger&#34;&gt;Ginger&lt;/h3&gt;
-
-&lt;p&gt;Ginger helps in sinus headache relief, as it has anti-inflammatory properties. The medicinal properties of ginger also include pain relief and relief from headaches. You can add ginger to your tea as well.&lt;/p&gt;
-
-&lt;h3 id=&#34;姜&#34;&gt;姜&lt;/h3&gt;
-
-&lt;p&gt;姜有助于窦头痛缓解,因为它有消炎的作用。 姜的药用价值也包括止痛和缓解头痛。 你可以添加姜茶。&lt;/p&gt;
-
-&lt;h3 id=&#34;steam&#34;&gt;Steam&lt;/h3&gt;
-
-&lt;p&gt;You can boil water in a saucepan and inhale the steam. If you are not allergic to eucalyptus and it is readily available at home, add a couple of drops of eucalyptus oil to your steamed water. The other way of using eucalyptus oil, is to dab some on your forehead. Be careful as the vapors are strong. If you are trying it for the first time, then do not be generous with the quantity of eucalyptus oil. Peppermint oil can also be added to the steam water for quick relief. Like eucalyptus oil, peppermint oil will also help to relieve nasal congestion and calm the mucous membrane. The other option is to mix apple cider vinegar and water together. Use this mixture for your steam inhalation. This will help you to get rid of your headache.&lt;/p&gt;
-
-&lt;p&gt;你可以在一个平底锅煮水,吸入蒸汽。 如果你对桉树不过敏,是现成的在家里,添加几滴桉树油蒸水。 使用其他方式把桉树油涂一些在你的额头。 小心蒸汽强劲。 如果你是第一次尝试,然后不要食用太多桉树油。 薄荷油也可以被添加到蒸汽水快速救援。 如桉树油,薄荷油也将有助于缓解鼻塞,平静的粘膜。 另一种选择是苹果醋和水混合在一起。 使用这种混合蒸汽吸入。 这将帮助你摆脱你的头疼。&lt;/p&gt;
-
-&lt;h3 id=&#34;saline-spray&#34;&gt;Saline Spray&lt;/h3&gt;
-
-&lt;p&gt;If the nasal passages are congested and you are finding it difficult to breathe, then you can make use of a nasal saline spray, to get rid of nasal congestion. Make a spray using warm water and salt and spray it into both the nostrils. It will help in moistening the nasal cavity and relieve congestion.&lt;/p&gt;
-
-&lt;h3 id=&#34;盐水喷雾&#34;&gt;盐水喷雾&lt;/h3&gt;
-
-&lt;p&gt;如果鼻腔充血,你发现很难呼吸,然后你就可以利用鼻盐水喷雾,摆脱鼻塞。 做一个喷雾使用温水和盐从两个鼻孔喷进去。 它将帮助滋润鼻腔,缓解交通拥堵。&lt;/p&gt;
-
-&lt;h3 id=&#34;neti-pot&#34;&gt;Neti Pot&lt;/h3&gt;
-
-&lt;p&gt;Using Neti pot will help in clearing the sinuses, which in turn will help to reduce headache. Combine a teaspoon of salt with half teaspoon of baking soda with 1 pint of lukewarm water. Pour the water solution in the Neti pot. Now take the Neti pot in your hand, tilt your head, so that it is at a 45 degree angle. The opening of the Neti pot should be placed on the opening of the top nostril. Now gently pour the contents into the nostril cavity and slowly it will make its way out of the other nostril. Once the saline water is over, blow both the nostril, so any remaining bits of saline water comes out of it. Repeat the same procedure on the other nostril as well. At the end, blow both the nostrils, so that mucus also comes out and the nasal passage is clear.&lt;/p&gt;
-
-&lt;h3 id=&#34;洗鼻壶&#34;&gt;洗鼻壶&lt;/h3&gt;
-
-&lt;p&gt;使用洗鼻壶将有助于清除鼻窦,这反过来将有助于减少头痛。 把一茶匙盐和半茶匙小苏打1品脱温水。 洗鼻壶把水倒的解决方案。现在洗鼻壶在你的手,倾斜你的头,在45度角。 的洗鼻壶应该放置在开放的鼻孔。 现在轻轻地把内容倒进鼻孔腔,慢慢地会使摆脱另一个鼻孔。 一旦咸水,吹两鼻孔,所以任何剩余的盐水出来。 另鼻孔重复相同的过程。 最后,吹两个鼻孔,粘液也出来和鼻腔通道是明确的。&lt;/p&gt;
-
-&lt;h3 id=&#34;jalapeno-peppers&#34;&gt;Jalapeno Peppers&lt;/h3&gt;
-
-&lt;p&gt;I know this sinus headache home remedy is a little jarring, but it will help you nevertheless in draining the sinuses. Once your sinus is drained, it will be provide instant sinus headache relief. Jalapeño pepper is the answer. Eating a jalapeño pepper drains sinuses within minutes of eating and provides relief from headaches.&lt;/p&gt;
-
-&lt;h3 id=&#34;墨西哥胡椒&#34;&gt;墨西哥胡椒&lt;/h3&gt;
-
-&lt;p&gt;我知道这窦性头痛的家庭治疗方法是有点刺耳,但它将帮助你在鼻窦排水。 一旦你的窦消耗殆尽,它将提供即时窦头痛缓解。 答案是墨西哥辣椒。 墨西哥胡椒吃下水道鼻窦吃后几分钟内,并提供缓解头痛。&lt;/p&gt;
-
-&lt;h3 id=&#34;cinnamon&#34;&gt;Cinnamon&lt;/h3&gt;
-
-&lt;p&gt;Cinnamon is a herb which helps a great deal in a sinus headache cure. Mix one tablespoon of powdered cinnamon with water and apply the paste on your forehead for quick relief from your sinus headache. So that the skin does not burn add half teaspoon of sandalwood powder to the mixture, before applying.&lt;/p&gt;
-
-&lt;h3 id=&#34;肉桂&#34;&gt;肉桂&lt;/h3&gt;
-
-&lt;p&gt;肉桂是草这有助于在窦性头痛的治疗。 将一汤匙肉桂粉和水混合,额头上的粘贴申请快速缓解你的窦性头痛。 这样皮肤不烧加半茶匙檀香木粉混合物,在应用之前。&lt;/p&gt;
-
-&lt;h3 id=&#34;hot-footbath&#34;&gt;Hot Footbath&lt;/h3&gt;
-
-&lt;p&gt;The next sinus headache home remedy can sound a little funny. Nevertheless it brings sinus headache relief. A hot footbath with a cold compress on the forehead, will relieve you of your painful sinus headache.&lt;/p&gt;
-
-&lt;h3 id=&#34;热洗脚&#34;&gt;热洗脚&lt;/h3&gt;
-
-&lt;p&gt;下一次窦头痛补救可以听起来有点好笑。 然而它将窦头痛缓解。 热洗脚冷压缩的额头,窦性头痛会减轻你的痛苦。&lt;/p&gt;
-
-&lt;h3 id=&#34;irritants&#34;&gt;Irritants&lt;/h3&gt;
-
-&lt;p&gt;We knowingly or unknowingly come in contact with a number of irritants, like cigarette smoke, hairspray, different cleaning products, room fresheners, etc. The fumes from this product cause the condition to flare up. Therefore, it is recommended that one stays away from these irritants as far as possible.&lt;/p&gt;
-
-&lt;h3 id=&#34;刺激物&#34;&gt;刺激物&lt;/h3&gt;
-
-&lt;p&gt;我们有意或无意接触刺激物,像香烟,发胶,不同的清洁产品,房间清新剂等。烟雾从这个产品导致状态爆发。 因此,建议尽量远离这些刺激物。&lt;/p&gt;
-
-&lt;h3 id=&#34;pressure-point&#34;&gt;Pressure Point&lt;/h3&gt;
-
-&lt;p&gt;Last but not the least, you can use sinus pressure relief techniques, to rid yourself of the nagging headache. One such technique to relieve sinus pressure is to apply pressure on the point where the thumb and index finger of your hands meet. Apply as much pressure as possible. This will bring instant relief from your headache.&lt;/p&gt;
-
-&lt;h3 id=&#34;压力点&#34;&gt;压力点&lt;/h3&gt;
-
-&lt;p&gt;最后但也是很重要的,您可以使用窦减压技术,摆脱自己的唠叨头痛。 这样一个技术来缓解鼻窦压力施压的双手的拇指和食指。 申请尽可能多的压力。 这将带来即时减轻你的头疼。&lt;/p&gt;
-
-&lt;p&gt;I have also heard about sinus wash as one of the sinus headache remedies, but it is best done under medical supervision. I will however suggest you speak with your health care provider before you use any of these sinus headache home remedies. Do you want to know what works the best with me in case of a sinus headache? It is good sleep. Nothing can be as soothing as a good sleep.&lt;/p&gt;
-
-&lt;p&gt;我还听说窦洗的窦性头痛的治疗方法,但最好是在医疗监督下完成的。 然而我将建议你之前和你的卫生保健提供者使用这些窦头痛的补救措施。 你想知道什么工作最好的对于窦头痛吗? 这是良好的睡眠。 没有什么可以舒缓的作为一个良好的睡眠。&lt;/p&gt;
-</description>
+      <description>被蝶窦炎困扰11年了，蝶窦炎导致头痛真是让人。网上找了篇文章，貌似还挺靠谱的。分享给与我一样受到鼻窦炎困扰的朋友，文章的题目是：治疗窦性头痛的家庭秘方
+http://www.buzzle.com/articles/sinus-headache-home-remedies.html
+Warm Water The simplest of home remedies is to drink a lot of warm water. I will suggest, whenever you drink water, drink only warm water. If possible, you can drink hot water as well. It will help in minimizing the symptoms sooner.
+温水 最简单的偏方是喝大量的热水。 我建议,每当你喝水,只喝温水。 如果可能的话,你可以喝热水。 这将有助于减少症状。
+Vitamin C In case of a common cold or sinusitis, doctors always advice to increase the consumption of food rich in Vitamin C.</description>
     </item>
     
     <item>
@@ -870,21 +205,9 @@ git init --bare .git
       <pubDate>Mon, 20 Jan 2014 12:09:09 +0800</pubDate>
       
       <guid>http://maintiendrai.github.io/post/2014-01-20-ability-enhancement/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;问题:提升问题分析解决的能力，我这边根据自己的情况总结几点，可做参考：&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;问题定位:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;1.遇到问题可以自己稍微考虑下或查找官方API，而不是直接去Google；有些问题的解决有时候是因为API没研究透，没站在开发人员设计接口的角度上面考虑他们接口的设计以及属性的设置，一个问题解决出来后会想到头文件的有些接口设计是有它道理的。还是要多站在提供接口的开发者的高度上面，才能更好地解决问题。还有就是自己开发库的时候，没能更清晰地想好设计好所需要的类跟接口，只有有更清晰的想法，才能设计出更精简的库，而不是拿别人的库文件来改，感觉总是不够精简，有很多冗余的东西。&lt;/li&gt;
-&lt;li&gt;2.遇到问题先理一理逻辑，从逻辑上考虑是否会发生该情况，而不是仅仅根据几个打印就断定原因；&lt;/li&gt;
-&lt;li&gt;3.解决问题优先从本质上入手；&lt;/li&gt;
-&lt;li&gt;4.平时要注重提升下基础知识的积累，多写代码，对代码适当重构，多积累，多看书，多自己实现一些底层的东西，一个好的基础将有助于更快地分析解决问题；&lt;/li&gt;
-&lt;li&gt;5.实在分析不出原因，可以Google，找出解决方案后，自己也应该稍加考虑，并将此解决方案转化为自己的经验库；&lt;/li&gt;
-&lt;li&gt;6.多看书&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description> 问题:提升问题分析解决的能力，我这边根据自己的情况总结几点，可做参考：
+ 问题定位:
+ 1.遇到问题可以自己稍微考虑下或查找官方API，而不是直接去Google；有些问题的解决有时候是因为API没研究透，没站在开发人员设计接口的角度上面考虑他们接口的设计以及属性的设置，一个问题解决出来后会想到头文件的有些接口设计是有它道理的。还是要多站在提供接口的开发者的高度上面，才能更好地解决问题。还有就是自己开发库的时候，没能更清晰地想好设计好所需要的类跟接口，只有有更清晰的想法，才能设计出更精简的库，而不是拿别人的库文件来改，感觉总是不够精简，有很多冗余的东西。 2.遇到问题先理一理逻辑，从逻辑上考虑是否会发生该情况，而不是仅仅根据几个打印就断定原因； 3.解决问题优先从本质上入手； 4.平时要注重提升下基础知识的积累，多写代码，对代码适当重构，多积累，多看书，多自己实现一些底层的东西，一个好的基础将有助于更快地分析解决问题； 5.实在分析不出原因，可以Google，找出解决方案后，自己也应该稍加考虑，并将此解决方案转化为自己的经验库； 6.多看书  </description>
     </item>
     
     <item>
@@ -893,68 +216,14 @@ git init --bare .git
       <pubDate>Sat, 12 Oct 2013 12:09:09 +0800</pubDate>
       
       <guid>http://maintiendrai.github.io/post/2013-10-12-git-svn/</guid>
-      <description>&lt;p&gt;###迁移SVN到git
-关于在VCS中SVN和Git之间的迁移（Clone）这个部分网上已经有大批的文章介绍，而且都非常不错，能够满足我们的常见的需求，这里介绍的是我自己整理的一些技巧和使用中出现的一些问题和疑问。
-阅读本篇文章，请先有一些Git和SVN的使用经验。&lt;/p&gt;
-
-&lt;p&gt;首先需要读取这个软件创建时的版本号&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;svn log https://192.168.60.200/svn/wifidisk|tail -4|head -1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;得到了如下信息，获得一个版本号 1&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;r1 | plugin-master | 2010-12-03 20:12:29 +0800 (五, 03 12 2010) | 1 line
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;开始clone代码&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git svn clone https://192.168.60.200/svn/wifidisk -s r1:HEAD wifidisk
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;注：&lt;/strong&gt; -s 参数是表面使用的是svn标准命名方法，即 trunk，tags，branches，这个参数有时很重要，建议使用，命令后面还可以加个文件夹名字作为clone后的目录，如果没有默认是当前路径。
-git svn fetch 这个步骤，可能碰到只想从某个版本开始进行fetch，那么请需要 –r 参数。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;注：&lt;/strong&gt; 1 是你想要从这个版本开始fetch，如何查看这个版本号，你可以使用 svn 命令（windows下需要安装Subversion Client，e.g. sliksvn），简单使用就是 svn log svn_url ,这个时候，你可能看到整屏在刷新，没关系，看到log就行。当然更简单的就是使用TortoiseSVN-&amp;gt; Show log。&lt;/p&gt;
-
-&lt;p&gt;到这步的时候，本地已经clone了SVN仓库，现在需要的就是提交到远程了。首先，关联github远程仓库，如下：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git remote add origin git@192.168.60.151:lilkr/wifidisk.git
-git push -u origin master
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;###导入tag跟branch&lt;/p&gt;
-
-&lt;p&gt;你还需要一点post-import（导入后） 清理工作。最起码的，应该清理一下git svn 创
-建的那些怪异的索引结构。首先要移动标签，把它们从奇怪的远程分支变成实际的标签，然
-后把剩下的分支移动到本地。
-要把标签变成合适的Git 标签，运行
-将原本以tag/ 开头的远程分支的索引变成真正的（轻巧的）标签。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cp -Rf .git/refs/remotes/tags/* .git/refs/tags/
-rm -Rf .git/refs/remotes/tags
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;把refs/remotes 下面剩下的索引变成本地分支：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cp -Rf .git/refs/remotes/* .git/refs/heads/
-rm -Rf .git/refs/remotes
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;现在所有的旧分支都变成真正的Git 分支，所有的旧标签也变成真正的Git 标签。最后，一项工作就是把新建的Git 服务器添加为远程服务器并且向它推送。为了让所有的分支和标签都得到上传，我们使用这条命令&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git push origin –all
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;所有的分支和标签现在都应该整齐干净的躺在新的Git 服务器里了。&lt;/p&gt;
-
-&lt;p&gt;资料&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.blogjava.net/lishunli/archive/2012/01/15/368562.html&#34;&gt;http://www.blogjava.net/lishunli/archive/2012/01/15/368562.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.ooso.net/archives/576&#34;&gt;http://www.ooso.net/archives/576&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+      <description>###迁移SVN到git 关于在VCS中SVN和Git之间的迁移（Clone）这个部分网上已经有大批的文章介绍，而且都非常不错，能够满足我们的常见的需求，这里介绍的是我自己整理的一些技巧和使用中出现的一些问题和疑问。 阅读本篇文章，请先有一些Git和SVN的使用经验。
+首先需要读取这个软件创建时的版本号
+svn log https://192.168.60.200/svn/wifidisk|tail -4|head -1  得到了如下信息，获得一个版本号 1
+r1 | plugin-master | 2010-12-03 20:12:29 +0800 (五, 03 12 2010) | 1 line  开始clone代码
+git svn clone https://192.168.60.200/svn/wifidisk -s r1:HEAD wifidisk  注： -s 参数是表面使用的是svn标准命名方法，即 trunk，tags，branches，这个参数有时很重要，建议使用，命令后面还可以加个文件夹名字作为clone后的目录，如果没有默认是当前路径。 git svn fetch 这个步骤，可能碰到只想从某个版本开始进行fetch，那么请需要 –r 参数。
+注： 1 是你想要从这个版本开始fetch，如何查看这个版本号，你可以使用 svn 命令（windows下需要安装Subversion Client，e.g. sliksvn），简单使用就是 svn log svn_url ,这个时候，你可能看到整屏在刷新，没关系，看到log就行。当然更简单的就是使用TortoiseSVN-&amp;gt; Show log。
+到这步的时候，本地已经clone了SVN仓库，现在需要的就是提交到远程了。首先，关联github远程仓库，如下：
+git remote add origin git@192.168.60.151:lilkr/wifidisk.git git push -u origin master  ###导入tag跟branch</description>
     </item>
     
     <item>
@@ -963,9 +232,7 @@ rm -Rf .git/refs/remotes
       <pubDate>Wed, 25 Sep 2013 12:09:09 +0800</pubDate>
       
       <guid>http://maintiendrai.github.io/post/2013-09-25-hello/</guid>
-      <description>&lt;p&gt;ii
-Hello0&lt;/p&gt;
-</description>
+      <description>Hello</description>
     </item>
     
     <item>
@@ -974,33 +241,14 @@ Hello0&lt;/p&gt;
       <pubDate>Fri, 25 Sep 2009 12:09:09 +0800</pubDate>
       
       <guid>http://maintiendrai.github.io/post/2009-09-25-aws-wordpress/</guid>
-      <description>&lt;p&gt;&lt;img  width=&#34;400&#34; height=&#34;147&#34; src=&#34;http://articles.csdn.net/uploads/allimg/120323/112_120323105235_1.jpg&#34;/&gt;&lt;/p&gt;
-
-&lt;p&gt;朋友告诉我亚马逊有个免费一年的Linux主机，AWS，速度还不错，叫我试一下。只不过要先支付1美金。感觉跟VPS差不多。那我就试一下。在天朝，80端口被电信各个运营商给限了，自己有台服务器都要先备案，才能正常使用80端口。不折腾了，先这样吧。&lt;/p&gt;
-
-&lt;p&gt;做一件事情之前，总是要先找文档，看了亚马逊的文档，又不是母语，想快点，就找到了一个中文的BLOG，我就很信任地大干了起来。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;http://quanzhibaba.com/archives/315 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;STEP1没啥问题&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;STEP2也没什么问题。我也选择了最基本的选项：“Basic 32-bit Amazon Linux AMI 1.0.” （话说在COMMUNITY AMI这地方点下去，是能选择UBUNTU的）嗯，但是我毕竟还是选了AMI的，貌似是REDHAT的系统。&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;STEP3安装编译PHP的时候，作者是这么做的：sudo yum install php。编译少了其它的一些项，给我后续的工作制造了不少的麻烦，正确应该这样 yum install php libmcrypt libmcrypt-devel php-mcrypt php-mbstring 。&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;STEP4这里我特地分段了，
-作者居然把mysql托管到了RDS，其实数据库是不用托管的，直接在AMI里面安装就可以了，我照着作者的方法做了，结果托管后，按流量收费，被扣了4美元，血琳琳的教训啊。&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;接着看比较完整的文档吧。这文章写得比较严谨。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;http://calebogden.com/wordpress-on-linux-in-the-amazon-cloud-with-mac/ 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Thanks to @calebogden ， 当然还有@quanzhibaba。&lt;/p&gt;
-</description>
+      <description>朋友告诉我亚马逊有个免费一年的Linux主机，AWS，速度还不错，叫我试一下。只不过要先支付1美金。感觉跟VPS差不多。那我就试一下。在天朝，80端口被电信各个运营商给限了，自己有台服务器都要先备案，才能正常使用80端口。不折腾了，先这样吧。
+做一件事情之前，总是要先找文档，看了亚马逊的文档，又不是母语，想快点，就找到了一个中文的BLOG，我就很信任地大干了起来。
+http://quanzhibaba.com/archives/315   STEP1没啥问题
+ STEP2也没什么问题。我也选择了最基本的选项：“Basic 32-bit Amazon Linux AMI 1.0.” （话说在COMMUNITY AMI这地方点下去，是能选择UBUNTU的）嗯，但是我毕竟还是选了AMI的，貌似是REDHAT的系统。
+ STEP3安装编译PHP的时候，作者是这么做的：sudo yum install php。编译少了其它的一些项，给我后续的工作制造了不少的麻烦，正确应该这样 yum install php libmcrypt libmcrypt-devel php-mcrypt php-mbstring 。
+ STEP4这里我特地分段了， 作者居然把mysql托管到了RDS，其实数据库是不用托管的，直接在AMI里面安装就可以了，我照着作者的方法做了，结果托管后，按流量收费，被扣了4美元，血琳琳的教训啊。
+  接着看比较完整的文档吧。这文章写得比较严谨。
+http://calebogden.com/wordpress-on-linux-in-the-amazon-cloud-with-mac/  Thanks to @calebogden ， 当然还有@quanzhibaba。</description>
     </item>
     
   </channel>

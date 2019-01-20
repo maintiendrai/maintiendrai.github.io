@@ -7,7 +7,9 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 09 Oct 2014 12:09:09 +0800</lastBuildDate>
-    <atom:link href="http://maintiendrai.github.io/tags/tools/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://maintiendrai.github.io/tags/tools/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Vim写博客同步到evernote</title>
@@ -15,57 +17,12 @@
       <pubDate>Thu, 09 Oct 2014 12:09:09 +0800</pubDate>
       
       <guid>http://maintiendrai.github.io/post/2014-10-09-vim-geeknode/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;通过VIM写博客通过geeknote同步到evernote&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Vim/vim-markdown/markdown preview plus &amp;lt; -&amp;gt; GeekNote -&amp;gt; Evernote
-_
-不需要任何第三方服务器的方案，就是使用Vim编写markdown。
-给Vim配上markdown着色的插件vim-markdown。&lt;/p&gt;
-
-&lt;p&gt;mac os下默认的python是narrow build path&lt;/p&gt;
-
-&lt;p&gt;python 解决 narrow build path 导致的 ValueError: unichr() arg not in
-range(0x10000) (narrow Python build)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;./configure --enable-unicode=ucs4 --prefix=/usr
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;给chrome装上实时查看markdown效果的插件markdown preview plus，这插件非常好用！特
-别是开启了“Enable auto-reload”之后，每次用Vim保存文件时都能马上刷新。
-然后用类似上一个方案的用法使用GeekNote，生成富文本同步到Evernote。
-为了更方便的使用GeekNote，可以在Dropbox里新建一个evernotebank的文件夹，然后按照
-你想同步的notebook的名字新建同名文件夹；
-比如我在evernotebank里建立blog.chetui.org的文件夹，并在该目录下建立如下脚本，命
-名为sync：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#!/bin/bash
-
-allFiles() {
-    for file in $1/*
-    do
-        if [ -d $file ]; then
-            echo $file
-            /Users/lilkr/Tools/hack/geeknote/geeknote/gnsync.py --path $file --mask &amp;quot;*.md&amp;quot; --format markdown --logpath log--notebook &amp;quot;goandfight&amp;quot;
-            allFiles $file
-        fi
-    done
-}
-
-testdir=./louisa/_posts/
-allFiles $testdir
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;然后加入可执行权限：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;chmod +x sync
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;每次在该目录下写完md格式的文件，就跑一下./sync，就把富文本同步到Evernote里了。
-单向编辑的缺陷实在是很难解决，因为markdown生成富文本只能是单向的，而Evernote官方
-又没有打算内置markdown。&lt;/p&gt;
-</description>
+      <description>通过VIM写博客通过geeknote同步到evernote
+ Vim/vim-markdown/markdown preview plus &amp;lt; -&amp;gt; GeekNote -&amp;gt; Evernote _ 不需要任何第三方服务器的方案，就是使用Vim编写markdown。 给Vim配上markdown着色的插件vim-markdown。
+mac os下默认的python是narrow build path
+python 解决 narrow build path 导致的 ValueError: unichr() arg not in range(0x10000) (narrow Python build)
+./configure --enable-unicode=ucs4 --prefix=/usr  给chrome装上实时查看markdown效果的插件markdown preview plus，这插件非常好用！特 别是开启了“Enable auto-reload”之后，每次用Vim保存文件时都能马上刷新。 然后用类似上一个方案的用法使用GeekNote，生成富文本同步到Evernote。 为了更方便的使用GeekNote，可以在Dropbox里新建一个evernotebank的文件夹，然后按照 你想同步的notebook的名字新建同名文件夹； 比如我在evernotebank里建立blog.chetui.org的文件夹，并在该目录下建立如下脚本，命 名为sync：
+#!/bin/bash allFiles() { for file in $1/* do if [ -d $file ]; then echo $file /Users/lilkr/Tools/hack/geeknote/geeknote/gnsync.py --path $file --mask &amp;quot;*.md&amp;quot; --format markdown --logpath log--notebook &amp;quot;goandfight&amp;quot; allFiles $file fi done } testdir=.</description>
     </item>
     
   </channel>
