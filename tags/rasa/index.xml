@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rasa on 黑暗民谣</title>
+    <link>http://maintiendrai.github.io/tags/rasa/</link>
+    <description>Recent content in Rasa on 黑暗民谣</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 19 Jan 2019 16:07:09 +0800</lastBuildDate>
+    
+	<atom:link href="http://maintiendrai.github.io/tags/rasa/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Rasa NLU天气Bot实现</title>
+      <link>http://maintiendrai.github.io/post/2019-01-19-weather-bot/</link>
+      <pubDate>Sat, 19 Jan 2019 16:07:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/post/2019-01-19-weather-bot/</guid>
+      <description>纯粹是给自己复习看系列 Dependency install pip install -r requirements.txt python -m spacy download en npm i -g rasa-nlu-trainer  Training a Rasa NLU model 手动编辑 mkdir data cd data vi data.json  在线编辑 rasa-nlu-trainer =&amp;gt; localhost:52526
+cd .. modify config_spacy.json nlu_model.py
+python nlu_model.py =&amp;gt; training
+python nlu_model.py =&amp;gt; result
+Training a Rasa Core dialogue manangement model create weather_domain.yml
+modify actions.py
+cd data
+modify stroies.md
+on line training session cd .. modify train_init.</description>
+    </item>
+    
+  </channel>
+</rss>

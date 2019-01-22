@@ -107,7 +107,13 @@
   </url>
   
   <url>
-    <loc>http://maintiendrai.github.io/tags/nlp-nlu-rasa/</loc>
+    <loc>http://maintiendrai.github.io/tags/nlp/</loc>
+    <lastmod>2019-01-19T16:07:09+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://maintiendrai.github.io/tags/nlu/</loc>
     <lastmod>2019-01-19T16:07:09+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -133,6 +139,12 @@
   <url>
     <loc>http://maintiendrai.github.io/categories/programming/</loc>
     <lastmod>2014-10-09T12:09:09+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://maintiendrai.github.io/tags/rasa/</loc>
+    <lastmod>2019-01-19T16:07:09+08:00</lastmod>
     <priority>0</priority>
   </url>
   

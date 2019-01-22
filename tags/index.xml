@@ -39,11 +39,20 @@
     </item>
     
     <item>
-      <title>Nlp Nlu Rasa</title>
-      <link>http://maintiendrai.github.io/tags/nlp-nlu-rasa/</link>
+      <title>Nlp</title>
+      <link>http://maintiendrai.github.io/tags/nlp/</link>
       <pubDate>Sat, 19 Jan 2019 16:07:09 +0800</pubDate>
       
-      <guid>http://maintiendrai.github.io/tags/nlp-nlu-rasa/</guid>
+      <guid>http://maintiendrai.github.io/tags/nlp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nlu</title>
+      <link>http://maintiendrai.github.io/tags/nlu/</link>
+      <pubDate>Sat, 19 Jan 2019 16:07:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/tags/nlu/</guid>
       <description></description>
     </item>
     
@@ -62,6 +71,15 @@
       <pubDate>Fri, 25 Sep 2009 12:09:09 +0800</pubDate>
       
       <guid>http://maintiendrai.github.io/tags/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rasa</title>
+      <link>http://maintiendrai.github.io/tags/rasa/</link>
+      <pubDate>Sat, 19 Jan 2019 16:07:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/tags/rasa/</guid>
       <description></description>
     </item>
     
