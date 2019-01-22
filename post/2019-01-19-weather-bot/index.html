@@ -55,7 +55,7 @@
     },
     "datePublished": "2019-01-19",
     "description": "",
-    "wordCount": 100
+    "wordCount": 110
   }
 </script>
 
@@ -189,7 +189,7 @@
 
   <small>
   &middot; Read in about 1 min
-  &middot; (100 Words)
+  &middot; (110 Words)
 </small>
 
 
@@ -230,8 +230,9 @@ vi data.json
 
 <h3 id="在线编辑">在线编辑</h3>
 
-<p>rasa-nlu-trainer =&gt; localhost:52526
-<img src="http://maintiendrai.wei-ju.com.cn/maintiendrai/20190119nlu1.png" alt="" /></p>
+<p>rasa-nlu-trainer =&gt; localhost:52526</p>
+
+<p><img src="http://maintiendrai.wei-ju.com.cn/maintiendrai/20190119nlu1.png" alt="" /></p>
 
 <p>cd ..
 modify config_spacy.json
@@ -239,15 +240,15 @@ nlu_model.py</p>
 
 <p>python nlu_model.py =&gt; training</p>
 
-<p><img src="media/15479106364854.jpg" alt="-w525" /></p>
+<p><img src="http://maintiendrai.wei-ju.com.cn/maintiendrai/20190121bot2.png" alt="" /></p>
 
 <p>python nlu_model.py =&gt; result</p>
 
-<p><img src="media/15479116807322.jpg" alt="-w1440" /></p>
+<p><img src="http://maintiendrai.wei-ju.com.cn/maintiendrai/20190121bot3.png" alt="" /></p>
 
 <h2 id="training-a-rasa-core-dialogue-manangement-model">Training a Rasa Core dialogue manangement model</h2>
 
-<p><img src="media/BA66F6FBAA8B05F9CA3B0B02DE0D4512.jpg" alt="BA66F6FBAA8B05F9CA3B0B02DE0D4512" /></p>
+<p><img src="http://maintiendrai.wei-ju.com.cn/maintiendrai/20190121bot4.png" alt="" /></p>
 
 <p>create weather_domain.yml</p>
 
@@ -263,15 +264,16 @@ modify train_init.py</p>
 
 <p>python train_init.py</p>
 
-<p><img src="media/15479129482623.jpg" alt="-w540" /></p>
+<p><img src="http://maintiendrai.wei-ju.com.cn/maintiendrai/20190121bot5.png" alt="" /></p>
 
 <p>modify train_online.py
 python train_online.py</p>
 
-<p><img src="media/15479137474417.jpg" alt="-w702" />
-<img src="media/15479138487136.jpg" alt="-w733" /></p>
+<p><img src="http://maintiendrai.wei-ju.com.cn/maintiendrai/20190121bot6.png" alt="" /></p>
 
-<p><img src="media/15479139211926.jpg" alt="-w644" /></p>
+<p><img src="http://maintiendrai.wei-ju.com.cn/maintiendrai/20190121bot7.png" alt="" /></p>
+
+<p><img src="http://maintiendrai.wei-ju.com.cn/maintiendrai/20190121bot8.png" alt="" /></p>
 
 <p>两种训练方式，生成md文件，md文件里面内容不够多，就去拷贝</p>
 
@@ -281,7 +283,7 @@ python train_online.py</p>
 
 <p>踩坑。。。</p>
 
-<p><img src="media/15479162610273.jpg" alt="-w1190" /></p>
+<p><img src="http://maintiendrai.wei-ju.com.cn/maintiendrai/20190121bot9.png" alt="" /></p>
 
 <h2 id="weather-bot-slack-integration">Weather bot Slack integration</h2>
 
@@ -289,7 +291,18 @@ python train_online.py</p>
 modify rasa_slack_connector.py
 modify run_app.py</p>
 
-<p><img src="media/15479555587205.jpg" alt="-w1208" /></p>
+<p><img src="http://maintiendrai.wei-ju.com.cn/maintiendrai/20190121bot10.png" alt="" /></p>
+
+<h2 id="weather-bot-telegram-integration">Weather bot Telegram integration</h2>
+
+<p>申请Bot的Token、ID</p>
+
+<p>ngrok http port</p>
+
+<p>页面注册
+<code>https://api.telegram.org/bot{token}/setWebhook?url={url}/{token}</code></p>
+
+<p><img src="http://maintiendrai.wei-ju.com.cn/maintiendrai/20190122bot1.png" alt="" /></p>
 
 <h2 id="参考">参考</h2>
 
