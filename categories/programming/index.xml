@@ -75,15 +75,6 @@ sip:username@UAC_IP sip:username@UAC_IP_DNS （如果网络中有DNS服务器，
     </item>
     
     <item>
-      <title>Hello</title>
-      <link>http://maintiendrai.github.io/post/2018-09-25-hello-copy/</link>
-      <pubDate>Wed, 25 Sep 2013 12:09:09 +0800</pubDate>
-      
-      <guid>http://maintiendrai.github.io/post/2018-09-25-hello-copy/</guid>
-      <description>Hello</description>
-    </item>
-    
-    <item>
       <title>Hosting wordpress in the amazon ec2 cloud with linux using mac</title>
       <link>http://maintiendrai.github.io/post/2009-09-25-aws-wordpress/</link>
       <pubDate>Fri, 25 Sep 2009 12:09:09 +0800</pubDate>

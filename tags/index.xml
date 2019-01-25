@@ -6,17 +6,26 @@
     <description>Recent content in Tags on 黑暗民谣</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Jul 2014 12:09:09 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 24 May 2015 12:09:09 +0800</lastBuildDate>
     
 	<atom:link href="http://maintiendrai.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Dsm Git</title>
-      <link>http://maintiendrai.github.io/tags/dsm-git/</link>
+      <title>Ddwrt</title>
+      <link>http://maintiendrai.github.io/tags/ddwrt/</link>
+      <pubDate>Sun, 24 May 2015 12:09:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/tags/ddwrt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dsm</title>
+      <link>http://maintiendrai.github.io/tags/dsm/</link>
       <pubDate>Tue, 01 Jul 2014 12:09:09 +0800</pubDate>
       
-      <guid>http://maintiendrai.github.io/tags/dsm-git/</guid>
+      <guid>http://maintiendrai.github.io/tags/dsm/</guid>
       <description></description>
     </item>
     
@@ -57,11 +66,11 @@
     </item>
     
     <item>
-      <title>Openwrt Ddwrt</title>
-      <link>http://maintiendrai.github.io/tags/openwrt-ddwrt/</link>
+      <title>Openwrt</title>
+      <link>http://maintiendrai.github.io/tags/openwrt/</link>
       <pubDate>Sun, 24 May 2015 12:09:09 +0800</pubDate>
       
-      <guid>http://maintiendrai.github.io/tags/openwrt-ddwrt/</guid>
+      <guid>http://maintiendrai.github.io/tags/openwrt/</guid>
       <description></description>
     </item>
     
@@ -93,11 +102,11 @@
     </item>
     
     <item>
-      <title>Svn Git</title>
-      <link>http://maintiendrai.github.io/tags/svn-git/</link>
+      <title>Svn</title>
+      <link>http://maintiendrai.github.io/tags/svn/</link>
       <pubDate>Tue, 12 May 2015 12:09:09 +0800</pubDate>
       
-      <guid>http://maintiendrai.github.io/tags/svn-git/</guid>
+      <guid>http://maintiendrai.github.io/tags/svn/</guid>
       <description></description>
     </item>
     

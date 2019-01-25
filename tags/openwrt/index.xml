@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Openwrt on 黑暗民谣</title>
+    <link>http://maintiendrai.github.io/tags/openwrt/</link>
+    <description>Recent content in Openwrt on 黑暗民谣</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 24 May 2015 12:09:09 +0800</lastBuildDate>
+    
+	<atom:link href="http://maintiendrai.github.io/tags/openwrt/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>折腾路由器的一天</title>
+      <link>http://maintiendrai.github.io/post/2015-05-24-%E8%B7%AF%E7%94%B1%E5%99%A8%E6%8A%98%E8%85%BE/</link>
+      <pubDate>Sun, 24 May 2015 12:09:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/post/2015-05-24-%E8%B7%AF%E7%94%B1%E5%99%A8%E6%8A%98%E8%85%BE/</guid>
+      <description>周末折腾了两天路由器。一个是自己买的netgear，一个是公司的测试部买的极路由2。项目组的人叫我帮忙把极路由给刷成openwrt 说起极路由，用着挺不爽的，子网下的bonjour都搜不到。估计是端口被限制，sip呼叫也各种不靠谱，估计也是端口被限制。
+记下流水账～
+#极路由 ##降级 我手头上的极路由2是9010版本。我发现极路由很鸡贼啊，不能直接刷其它系统的firmware.bin文件。我操～
+搜了一下，可以降级到9006
+我试了很多个rom，都不能成功。
+后面我是用这个rom降级的
+极2 0.9006.2.6020s版固件
+###刷机步骤：
+1：拔掉路由电源
+2：用网线将极路由黄色的 LAN 口与电脑网口相连
+3：将电脑本地连接的 IP 设置为ip：192.168.1.88。子网掩码：255.255.255.0。网关空着，不用填写，不知道在哪里设置的，请看这里：win7win8：http://jingyan.baidu.com/article/22fe7ced18876f3003617f5e.html XP：http://jingyan.baidu.com/article/77b8dc7fc0f5786174eab6af.html
+4：根据操作系统，32位运行tftpd32, 64位运行tftpd64
+5：用尖锐物按住极路由 RESET 不放，再给极路由插上电源
+6：等待电脑上 tftpd 出现传输 recovery.bin 进度条完成后，松开 RESET（进度条很快的，几秒钟）
+7：极路由面板灯进入跑马灯状态，所有灯轮流闪，跑完后，系统自动重启，刷机完成
+8：改电脑本地连接属性的ip为自动获取，访问http://192.168.199.1路由管理界面 密码：admin
+然后由于极路由它很鸡贼，还要去root它才能刷第三方的固件
+##搜狐插件大法：极路由Root
+极路由云插件“搜狐视频远程下载”使用了开源下载工具aria2，由于aria2主程序aria2c占用空间较大，因此被安装到了SD卡的usr/bin目录。aria2c在每次开机时运行，因此给极客们一个ROOT机会。ROOT的思路是：用自己的脚本文件替换aria2c文件，在脚本文件中加入启用dropber服务的指令。具体方法如下：
+1、安装云插件“搜狐视频远程下载”，然后验证aria2c是否安装运行，验证方法：在PC机上运行下面的命令：
+telnet 192.168.199.1 6800
+如果能连接，说明aria2c已经运行。
+2、关掉路由器，拔出SD卡，将SD卡插入SD读卡器。 (由于极路由系统是基于openwrt再封一层，openwrt是linux的，所以SD卡是ext4的，只能mount在linux的机器上。mac os也不支持，后面的操作是在ubuntu下完成的)
+3、Linux操作系统能自动加载USB SD读卡器驱动，一般情况下设备名为/dev/sdb，或者用dmesg命令查询驱动程序日志，从中发现设备名。SD卡有2个分区，第1个是大小为1GB的luks加密分区，第2个是正常的ext4分区。9006版固件的aria2c文件在第2分区，因此需要mount该分区，命令为：
+mount -t ext4 /dev/sdb2 /mnt
+4、aria2c文件在/mnt/usr/bin目录中，先换名，然后替换。
+cd /mnt/usb/bin
+mv aria2c aria2c.orig
+然后用vi命令创建文件aria2c，内容为：
+#!/bin/sh if [ &amp;quot;$1&amp;quot; = &amp;quot;ok&amp;quot; ]; then rm -f /tmp/data/usr/bin/aria2c mv /tmp/data/usr/bin/aria2c.</description>
+    </item>
+    
+  </channel>
+</rss>
