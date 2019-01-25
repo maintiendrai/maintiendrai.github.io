@@ -18,14 +18,7 @@
       
       <guid>http://maintiendrai.github.io/post/2019-01-19-weather-bot/</guid>
       <description>纯粹是给自己复习看系列 Dependency install pip install -r requirements.txt python -m spacy download en npm i -g rasa-nlu-trainer  Training a Rasa NLU model 手动编辑 mkdir data cd data vi data.json  在线编辑 rasa-nlu-trainer =&amp;gt; localhost:52526
-cd .. modify config_spacy.json nlu_model.py
-python nlu_model.py =&amp;gt; training
-python nlu_model.py =&amp;gt; result
-Training a Rasa Core dialogue manangement model create weather_domain.yml
-modify actions.py
-cd data
-modify stroies.md
-on line training session cd .. modify train_init.</description>
+cd .. modify config_spacy.json nlu_model.py python nlu_model.py =&amp;gt; training  python nlu_model.py =&amp;gt; result  Training a Rasa Core dialogue manangement model create weather_domain.yml modify actions.py cd data modify stroies.md on line training session cd .</description>
     </item>
     
   </channel>

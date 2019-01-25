@@ -59,7 +59,7 @@
     },
     "datePublished": "2019-01-19",
     "description": "",
-    "wordCount": 110
+    "wordCount": 111
   }
 </script>
 
@@ -193,7 +193,7 @@
 
   <small>
   &middot; Read in about 1 min
-  &middot; (110 Words)
+  &middot; (111 Words)
 </small>
 
 
@@ -240,48 +240,52 @@ vi data.json
 
 <p>rasa-nlu-trainer =&gt; localhost:52526</p>
 
-<p><img src="http://maintiendrai.wei-ju.com.cn/maintiendrai/20190119nlu1.png" alt="" /></p>
+<p><img src="http://maintiendrai.wei-ju.com.cn/maintiendrai/20190119nlu1.png" width="70%" height="70%"></p>
 
-<p>cd ..
+<pre><code>cd .. 
 modify config_spacy.json
-nlu_model.py</p>
+nlu_model.py
+python nlu_model.py =&gt; training
+</code></pre>
 
-<p>python nlu_model.py =&gt; training</p>
+<p><img src="http://maintiendrai.wei-ju.com.cn/maintiendrai/20190121bot2.png" width="70%" height="70%"></p>
 
-<p><img src="http://maintiendrai.wei-ju.com.cn/maintiendrai/20190121bot2.png" alt="" /></p>
-
-<p>python nlu_model.py =&gt; result</p>
+<pre><code>python nlu_model.py =&gt; result
+</code></pre>
 
 <p><img src="http://maintiendrai.wei-ju.com.cn/maintiendrai/20190121bot3.png" alt="" /></p>
 
 <h2 id="training-a-rasa-core-dialogue-manangement-model">Training a Rasa Core dialogue manangement model</h2>
 
-<p><img src="http://maintiendrai.wei-ju.com.cn/maintiendrai/20190121bot4.png" alt="" /></p>
+<p><img src="http://maintiendrai.wei-ju.com.cn/maintiendrai/20190121bot4.png" width="70%" height="70%"></p>
 
-<p>create weather_domain.yml</p>
+<pre><code>create weather_domain.yml
 
-<p>modify actions.py</p>
+modify actions.py
 
-<p>cd data</p>
+cd data
 
-<p>modify stroies.md</p>
+modify stroies.md
 
-<p>on line training session
+on line training session
 cd ..
-modify train_init.py</p>
+modify train_init.py
 
-<p>python train_init.py</p>
+python train_init.py
 
-<p><img src="http://maintiendrai.wei-ju.com.cn/maintiendrai/20190121bot5.png" alt="" /></p>
+</code></pre>
 
-<p>modify train_online.py
-python train_online.py</p>
+<p><img src="http://maintiendrai.wei-ju.com.cn/maintiendrai/20190121bot5.png" width="70%" height="70%"></p>
 
-<p><img src="http://maintiendrai.wei-ju.com.cn/maintiendrai/20190121bot6.png" alt="" /></p>
+<pre><code>modify train_online.py
+python train_online.py
+</code></pre>
 
-<p><img src="http://maintiendrai.wei-ju.com.cn/maintiendrai/20190121bot7.png" alt="" /></p>
+<p><img src="http://maintiendrai.wei-ju.com.cn/maintiendrai/20190121bot6.png" height="70%"></p>
 
-<p><img src="http://maintiendrai.wei-ju.com.cn/maintiendrai/20190121bot8.png" alt="" /></p>
+<p><img src="http://maintiendrai.wei-ju.com.cn/maintiendrai/20190121bot7.png" height="70%"></p>
+
+<p><img src="http://maintiendrai.wei-ju.com.cn/maintiendrai/20190121bot8.png" height="70%"></p>
 
 <p>两种训练方式，生成md文件，md文件里面内容不够多，就去拷贝</p>
 
@@ -299,7 +303,7 @@ python train_online.py</p>
 modify rasa_slack_connector.py
 modify run_app.py</p>
 
-<p><img src="http://maintiendrai.wei-ju.com.cn/maintiendrai/20190121bot10.png" alt="" /></p>
+<p><img src="http://maintiendrai.wei-ju.com.cn/maintiendrai/20190121bot10.png" height="70%"></p>
 
 <h2 id="weather-bot-telegram-integration">Weather bot Telegram integration</h2>
 
@@ -319,6 +323,7 @@ modify run_app.py</p>
 <li><a href="https://jpboost.com/2018/02/06/creating-a-chatbot-with-rasa-nlu-and-rasa-core/">https://jpboost.com/2018/02/06/creating-a-chatbot-with-rasa-nlu-and-rasa-core/</a></li>
 <li><a href="https://github.com/scikit-learn/scikit-learn/pull/9816/files/effbd45198c3300018403a218f1ad85858ac82dc#diff-1e175ddb0d84aad0a578d34553f6f9c6">https://github.com/scikit-learn/scikit-learn/pull/9816/files/effbd45198c3300018403a218f1ad85858ac82dc#diff-1e175ddb0d84aad0a578d34553f6f9c6</a></li>
 <li><a href="https://github.com/scikit-learn/scikit-learn/issues/10449">https://github.com/scikit-learn/scikit-learn/issues/10449</a></li>
+<li><a href="https://core.telegram.org/bots/api#sendmessage">https://core.telegram.org/bots/api#sendmessage</a></li>
 </ul>
 
 </div>
