@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tools on 黑暗民谣</title>
@@ -6,11 +6,7 @@
     <description>Recent content in Tools on 黑暗民谣</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Oct 2014 12:09:09 +0800</lastBuildDate>
-    
-	<atom:link href="http://maintiendrai.github.io/tags/tools/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 09 Oct 2014 12:09:09 +0800</lastBuildDate><atom:link href="http://maintiendrai.github.io/tags/tools/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Vim写博客同步到evernote</title>
       <link>http://maintiendrai.github.io/post/2014-10-09-vim-geeknode/</link>
@@ -18,10 +14,10 @@
       
       <guid>http://maintiendrai.github.io/post/2014-10-09-vim-geeknode/</guid>
       <description>通过VIM写博客通过geeknote同步到evernote
- Vim/vim-markdown/markdown preview plus &amp;lt; -&amp;gt; GeekNote -&amp;gt; Evernote _ 不需要任何第三方服务器的方案，就是使用Vim编写markdown。 给Vim配上markdown着色的插件vim-markdown。
+Vim/vim-markdown/markdown preview plus &amp;lt; -&amp;gt; GeekNote -&amp;gt; Evernote _ 不需要任何第三方服务器的方案，就是使用Vim编写markdown。 给Vim配上markdown着色的插件vim-markdown。
 mac os下默认的python是narrow build path
 python 解决 narrow build path 导致的 ValueError: unichr() arg not in range(0x10000) (narrow Python build)
-./configure --enable-unicode=ucs4 --prefix=/usr  给chrome装上实时查看markdown效果的插件markdown preview plus，这插件非常好用！特 别是开启了“Enable auto-reload”之后，每次用Vim保存文件时都能马上刷新。 然后用类似上一个方案的用法使用GeekNote，生成富文本同步到Evernote。 为了更方便的使用GeekNote，可以在Dropbox里新建一个evernotebank的文件夹，然后按照 你想同步的notebook的名字新建同名文件夹； 比如我在evernotebank里建立blog.chetui.org的文件夹，并在该目录下建立如下脚本，命 名为sync：
+./configure --enable-unicode=ucs4 --prefix=/usr 给chrome装上实时查看markdown效果的插件markdown preview plus，这插件非常好用！特 别是开启了“Enable auto-reload”之后，每次用Vim保存文件时都能马上刷新。 然后用类似上一个方案的用法使用GeekNote，生成富文本同步到Evernote。 为了更方便的使用GeekNote，可以在Dropbox里新建一个evernotebank的文件夹，然后按照 你想同步的notebook的名字新建同名文件夹； 比如我在evernotebank里建立blog.chetui.org的文件夹，并在该目录下建立如下脚本，命 名为sync：
 #!/bin/bash allFiles() { for file in $1/* do if [ -d $file ]; then echo $file /Users/lilkr/Tools/hack/geeknote/geeknote/gnsync.py --path $file --mask &amp;quot;*.md&amp;quot; --format markdown --logpath log--notebook &amp;quot;goandfight&amp;quot; allFiles $file fi done } testdir=.</description>
     </item>
     

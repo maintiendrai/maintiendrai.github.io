@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Programming on 黑暗民谣</title>
@@ -6,11 +6,7 @@
     <description>Recent content in Programming on 黑暗民谣</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Oct 2014 12:09:09 +0800</lastBuildDate>
-    
-	<atom:link href="http://maintiendrai.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 09 Oct 2014 12:09:09 +0800</lastBuildDate><atom:link href="http://maintiendrai.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Vim写博客同步到evernote</title>
       <link>http://maintiendrai.github.io/post/2014-10-09-vim-geeknode/</link>
@@ -18,10 +14,10 @@
       
       <guid>http://maintiendrai.github.io/post/2014-10-09-vim-geeknode/</guid>
       <description>通过VIM写博客通过geeknote同步到evernote
- Vim/vim-markdown/markdown preview plus &amp;lt; -&amp;gt; GeekNote -&amp;gt; Evernote _ 不需要任何第三方服务器的方案，就是使用Vim编写markdown。 给Vim配上markdown着色的插件vim-markdown。
+Vim/vim-markdown/markdown preview plus &amp;lt; -&amp;gt; GeekNote -&amp;gt; Evernote _ 不需要任何第三方服务器的方案，就是使用Vim编写markdown。 给Vim配上markdown着色的插件vim-markdown。
 mac os下默认的python是narrow build path
 python 解决 narrow build path 导致的 ValueError: unichr() arg not in range(0x10000) (narrow Python build)
-./configure --enable-unicode=ucs4 --prefix=/usr  给chrome装上实时查看markdown效果的插件markdown preview plus，这插件非常好用！特 别是开启了“Enable auto-reload”之后，每次用Vim保存文件时都能马上刷新。 然后用类似上一个方案的用法使用GeekNote，生成富文本同步到Evernote。 为了更方便的使用GeekNote，可以在Dropbox里新建一个evernotebank的文件夹，然后按照 你想同步的notebook的名字新建同名文件夹； 比如我在evernotebank里建立blog.chetui.org的文件夹，并在该目录下建立如下脚本，命 名为sync：
+./configure --enable-unicode=ucs4 --prefix=/usr 给chrome装上实时查看markdown效果的插件markdown preview plus，这插件非常好用！特 别是开启了“Enable auto-reload”之后，每次用Vim保存文件时都能马上刷新。 然后用类似上一个方案的用法使用GeekNote，生成富文本同步到Evernote。 为了更方便的使用GeekNote，可以在Dropbox里新建一个evernotebank的文件夹，然后按照 你想同步的notebook的名字新建同名文件夹； 比如我在evernotebank里建立blog.chetui.org的文件夹，并在该目录下建立如下脚本，命 名为sync：
 #!/bin/bash allFiles() { for file in $1/* do if [ -d $file ]; then echo $file /Users/lilkr/Tools/hack/geeknote/geeknote/gnsync.py --path $file --mask &amp;quot;*.md&amp;quot; --format markdown --logpath log--notebook &amp;quot;goandfight&amp;quot; allFiles $file fi done } testdir=.</description>
     </item>
     
@@ -47,11 +43,12 @@ i</description>
       
       <guid>http://maintiendrai.github.io/post/2014-09-19-wireshark-sip/</guid>
       <description>Overview SIP 是VOIP目前非常流行的一种协议。有关协议的详细原理参照相关文档。
-SIP 组件 1.User Agent UA 是 SIP 的基本组件，可分为 UAC（User Agent Client）和 UAS（User Agent Server）。 发起呼叫的为 UAC（X-Lite:iP 192.168.61.221），接收呼叫的为 UAS（本文手机端选用LinPhone:iP）。很多设备都可做 UA，如 IP 电话、PC、路由器等。 2.SIP server SIP server（本文选用Asterisk）实现了Proxy Server（代理服务器）、Redirect Server（重定向服务器）、注册服务器的功能（Registrar Server）、Location Server、Back-to-back user agent (B2BUA) 、Presence Server。
+SIP 组件 1.User Agent UA 是 SIP 的基本组件，可分为 UAC（User Agent Client）和 UAS（User Agent Server）。 发起呼叫的为 UAC（X-Lite:iP 192.168.61.221），接收呼叫的为 UAS（本文手机端选用LinPhone:iP）。很多设备都可做 UA，如 IP 电话、PC、路由器等。 2.SIP server SIP server（本文选用Asterisk）实现了Proxy Server（代理服务器）、Redirect Server（重定向服务器）、注册服务器的功能（Registrar Server）、Location Server、Back-to-back user agent (B2BUA)、Presence Server。
 本文通过wireshark抓包分析SIP user agent（用户代理客户机，uac）与SIP serve之间的交互过程，在拨打SIP电话之前，先需要搭建相应的环境：
 Wireshark分析Account注册过程 设置过滤条件，只catch从UAC（ip.addr == 192.168.61.221 &amp;amp;&amp;amp; sip）发出或接收的数据包。 1.首先UAC向SIP serve(112.124.57.23)发出REGISTER信息
-REGISTER:UA client 使用此 message 向 server 注册以标明自己的位置。  SIP电话的格式是：
-sip:username@UAC_IP sip:username@UAC_IP_DNS （如果网络中有DNS服务器，并配置了UAC_IP对应的域名UAC_IP_DNS ）  如上图所示，sip电话格式为： sip:100@112.124.57.23 或 sip:100@lilkr（配置了DNS服务器） 2.sip server请求要求身份验证。 3.</description>
+REGISTER:UA client 使用此 message 向 server 注册以标明自己的位置。SIP电话的格式是：
+sip:username@UAC_IP sip:username@UAC_IP_DNS （如果网络中有DNS服务器，并配置了UAC_IP对应的域名UAC_IP_DNS ） 如上图所示，sip电话格式为： sip:100@112.124.57.23 或 sip:100@lilkr（配置了DNS服务器） 2.sip server请求要求身份验证。 3.重复1
+4.sip server响应，发送200 OK信息 5.</description>
     </item>
     
     <item>
@@ -61,8 +58,8 @@ sip:username@UAC_IP sip:username@UAC_IP_DNS （如果网络中有DNS服务器，
       
       <guid>http://maintiendrai.github.io/post/2014-01-20-ability-enhancement/</guid>
       <description> 问题:提升问题分析解决的能力，我这边根据自己的情况总结几点，可做参考：
- 问题定位:
- 1.遇到问题可以自己稍微考虑下或查找官方API，而不是直接去Google；有些问题的解决有时候是因为API没研究透，没站在开发人员设计接口的角度上面考虑他们接口的设计以及属性的设置，一个问题解决出来后会想到头文件的有些接口设计是有它道理的。还是要多站在提供接口的开发者的高度上面，才能更好地解决问题。还有就是自己开发库的时候，没能更清晰地想好设计好所需要的类跟接口，只有有更清晰的想法，才能设计出更精简的库，而不是拿别人的库文件来改，感觉总是不够精简，有很多冗余的东西。 2.遇到问题先理一理逻辑，从逻辑上考虑是否会发生该情况，而不是仅仅根据几个打印就断定原因； 3.解决问题优先从本质上入手； 4.平时要注重提升下基础知识的积累，多写代码，对代码适当重构，多积累，多看书，多自己实现一些底层的东西，一个好的基础将有助于更快地分析解决问题； 5.实在分析不出原因，可以Google，找出解决方案后，自己也应该稍加考虑，并将此解决方案转化为自己的经验库； 6.多看书  </description>
+问题定位:
+1.遇到问题可以自己稍微考虑下或查找官方API，而不是直接去Google；有些问题的解决有时候是因为API没研究透，没站在开发人员设计接口的角度上面考虑他们接口的设计以及属性的设置，一个问题解决出来后会想到头文件的有些接口设计是有它道理的。还是要多站在提供接口的开发者的高度上面，才能更好地解决问题。还有就是自己开发库的时候，没能更清晰地想好设计好所需要的类跟接口，只有有更清晰的想法，才能设计出更精简的库，而不是拿别人的库文件来改，感觉总是不够精简，有很多冗余的东西。 2.遇到问题先理一理逻辑，从逻辑上考虑是否会发生该情况，而不是仅仅根据几个打印就断定原因； 3.解决问题优先从本质上入手； 4.平时要注重提升下基础知识的积累，多写代码，对代码适当重构，多积累，多看书，多自己实现一些底层的东西，一个好的基础将有助于更快地分析解决问题； 5.实在分析不出原因，可以Google，找出解决方案后，自己也应该稍加考虑，并将此解决方案转化为自己的经验库； 6.多看书 </description>
     </item>
     
     <item>
@@ -82,12 +79,12 @@ sip:username@UAC_IP sip:username@UAC_IP_DNS （如果网络中有DNS服务器，
       <guid>http://maintiendrai.github.io/post/2009-09-25-aws-wordpress/</guid>
       <description>朋友告诉我亚马逊有个免费一年的Linux主机，AWS，速度还不错，叫我试一下。只不过要先支付1美金。感觉跟VPS差不多。那我就试一下。在天朝，80端口被电信各个运营商给限了，自己有台服务器都要先备案，才能正常使用80端口。不折腾了，先这样吧。
 做一件事情之前，总是要先找文档，看了亚马逊的文档，又不是母语，想快点，就找到了一个中文的BLOG，我就很信任地大干了起来。
-http://quanzhibaba.com/archives/315   STEP1没啥问题
- STEP2也没什么问题。我也选择了最基本的选项：“Basic 32-bit Amazon Linux AMI 1.0.” （话说在COMMUNITY AMI这地方点下去，是能选择UBUNTU的）嗯，但是我毕竟还是选了AMI的，貌似是REDHAT的系统。
- STEP3安装编译PHP的时候，作者是这么做的：sudo yum install php。编译少了其它的一些项，给我后续的工作制造了不少的麻烦，正确应该这样 yum install php libmcrypt libmcrypt-devel php-mcrypt php-mbstring 。
- STEP4这里我特地分段了， 作者居然把mysql托管到了RDS，其实数据库是不用托管的，直接在AMI里面安装就可以了，我照着作者的方法做了，结果托管后，按流量收费，被扣了4美元，血琳琳的教训啊。
-  接着看比较完整的文档吧。这文章写得比较严谨。
-http://calebogden.com/wordpress-on-linux-in-the-amazon-cloud-with-mac/  Thanks to @calebogden ， 当然还有@quanzhibaba。</description>
+http://quanzhibaba.com/archives/315 STEP1没啥问题
+STEP2也没什么问题。我也选择了最基本的选项：“Basic 32-bit Amazon Linux AMI 1.0.” （话说在COMMUNITY AMI这地方点下去，是能选择UBUNTU的）嗯，但是我毕竟还是选了AMI的，貌似是REDHAT的系统。
+STEP3安装编译PHP的时候，作者是这么做的：sudo yum install php。编译少了其它的一些项，给我后续的工作制造了不少的麻烦，正确应该这样 yum install php libmcrypt libmcrypt-devel php-mcrypt php-mbstring 。
+STEP4这里我特地分段了， 作者居然把mysql托管到了RDS，其实数据库是不用托管的，直接在AMI里面安装就可以了，我照着作者的方法做了，结果托管后，按流量收费，被扣了4美元，血琳琳的教训啊。
+接着看比较完整的文档吧。这文章写得比较严谨。
+http://calebogden.com/wordpress-on-linux-in-the-amazon-cloud-with-mac/ Thanks to @calebogden ， 当然还有@quanzhibaba。</description>
     </item>
     
   </channel>

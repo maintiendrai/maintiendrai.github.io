@@ -1,387 +1,213 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!doctype html>
+<html lang="en">
+
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>SVN迁移到Git的过程  &middot; 黑暗民谣</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-<meta name="description" content="" />
-
-<meta name="keywords" content="SVN, GIT, ">
-
-
-<meta property="og:title" content="SVN迁移到Git的过程  &middot; 黑暗民谣 ">
-<meta property="og:site_name" content="黑暗民谣"/>
-<meta property="og:url" content="http://maintiendrai.github.io/post/2013-10-12-git-svn/" />
-<meta property="og:locale" content="en-us">
-
-
-<meta property="og:type" content="article" />
-<meta property="og:description" content=""/>
-<meta property="og:article:published_time" content="2013-10-12T12:09:09&#43;08:00" />
-<meta property="og:article:modified_time" content="2013-10-12T12:09:09&#43;08:00" />
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
-    
-<meta property="og:article:tag" content="SVN">
-    
-<meta property="og:article:tag" content="GIT">
-    
+  <meta name="generator" content="Hugo 0.104.1" />
+
   
 
   
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="@" />
-<meta name="twitter:creator" content="@" />
-<meta name="twitter:title" content="SVN迁移到Git的过程" />
-<meta name="twitter:description" content="" />
-<meta name="twitter:url" content="http://maintiendrai.github.io/post/2013-10-12-git-svn/" />
-<meta name="twitter:domain" content="http://maintiendrai.github.io/">
+  <link rel="apple-touch-icon" sizes="180x180" href="http://maintiendrai.github.io/apple-touch-icon.png">
+
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="http://maintiendrai.github.io/favicon-32x32.png">
+
+  
+  <link rel="icon" type="image/png" sizes="16x16" href="http://maintiendrai.github.io/favicon-16x16.png">
+
+  
+  <link rel="manifest" href="http://maintiendrai.github.io/site.webmanifest">
+
+  
+  <link rel="mask-icon" href="http://maintiendrai.github.io/safari-pinned-tab.svg" color="">
+
+  <meta name="msapplication-TileColor" content="">
+
+  <meta name="theme-color" content="">
+
+  
+  <link rel="stylesheet" href="http://maintiendrai.github.io/css/bootstrap.min.css" />
+
+  
+  <title>SVN迁移到Git的过程 | 黑暗民谣</title>
   
 
-<script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "Article",
-    "headline": "SVN迁移到Git的过程",
-    "author": {
-      "@type": "Person",
-      "name": "http://profiles.google.com/+?rel=author"
-    },
-    "datePublished": "2013-10-12",
-    "description": "",
-    "wordCount": 107
+  <style>
+body {
+  min-width: 300px;
+}
+
+.custom-navbar {
+  margin-bottom: 1em;
+  height: 60px;
+}
+
+.custom-navbar a {
+  display: inline-block; 
+  padding: 18px 0;
+  margin-right: 1em; 
+  font-weight: bold; 
+}
+
+.custom-navbar a:hover,
+.custom-navbar a:focus {
+  text-decoration: none; 
+}
+
+@media print {
+  .custom-navbar {
+    display: none;
   }
-</script>
+}
+
+article {
+  padding-bottom: 1em;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+body {
+  background-color: #fff;
+}
 
 
 
-<link rel="canonical" href="http://maintiendrai.github.io/post/2013-10-12-git-svn/" />
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/touch-icon-144-precomposed.png">
-<link rel="icon" href="/favicon.png">
-<meta name="generator" content="Hugo 0.53" />
-
-  <!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
+body {
+  color: #212529;
+}
 
 
 
-    <link rel="stylesheet" href="http://maintiendrai.github.io/css/bootswatch/default/bootstrap.min.css">
+a {
+  color: #007bff;
+}
 
 
-<link rel="stylesheet" href="http://maintiendrai.github.io/css/font-awesome.min.css">
-<link rel="stylesheet" href="http://maintiendrai.github.io/css/style.css">
+
+a:hover,
+a:focus {
+  color: #0056b3;
+}
 
 
-  <link rel="stylesheet" href="http://maintiendrai.github.io/css/highlight/default.css">
+
+.custom-navbar {
+  background-color: #212529;
+}
 
 
+
+.custom-navbar a {
+  color: rgba(255,255,255,.75);
+}
+
+
+
+.custom-navbar a:hover,
+.custom-navbar a:focus {
+  color: rgba(255,255,255,1);
+}
+
+
+
+.container {
+  max-width: 800px;
+}
+
+
+
+
+
+</style>
 </head>
-<body data-ng-app="myapp" data-ng-controller="MyController" data-ng-mouseleave="MouseLeave($event)">
-    <header id="main-header">
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
 
-          
-          
-            <a class="navbar-brand-img" href="http://maintiendrai.github.io/">
-          <img alt="" src="">
-            
-        </a>
-
-      </div>
-      <div id="navbar" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
-          
-          <li>
-
-            <a href="http://maintiendrai.com/app/#/about"
-            >
-
-            
-
-            About
-            </a>
-          </li>
-          
-          <li>
-
-            <a href="http://maintiendrai.com/"
-            >
-
-            
-
-            Blog
-            </a>
-          </li>
-          
-          <li>
-
-            <a href="http://maintiendrai.com/app/#/dashboard/list/create"
-            >
-
-            
-
-            Dashboard
-            </a>
-          </li>
-          
-          <li>
-
-            <a href="http://maintiendrai.github.io/post"
-            >
-
-            
-
-            Posts
-            </a>
-          </li>
-          
-          <li>
-
-            <a href="http://maintiendrai.github.io/tags"
-            >
-
-            
-
-            Tags
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-      
-    </div>
-  </nav>
-
-</header>
-
-
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-  <div class="text-center">
-
-    <h1>SVN迁移到Git的过程
-</h1>
-
-    <div class="metas">
-<small>
-  <i class="fa fa-calendar"></i>
-  <time datetime="2013-10-12">12 Oct, 2013</time>
-</small>
-
-
-  <small>
-  &middot; Read in about 1 min
-  &middot; (107 Words)
-</small>
-
-
-<div class="margin-10">
-  <i class="fa fa-tags"></i>
-  
-  <a href="http://maintiendrai.github.io/tags/svn" class="label label-primary">SVN</a>
-  
-  <a href="http://maintiendrai.github.io/tags/git" class="label label-primary">GIT</a>
-  
-
-
-</div>
-<br>
-</div>
-
+<body>
+  <nav class="custom-navbar">
+  <div class="container">
+    
   </div>
-</div>
+</nav>
+  
+  <div class="container">
+    <article>
+      <h1>SVN迁移到Git的过程</h1>
+<p>
+  <small class="text-secondary">
+  
+  
+  October 12, 2013
+  </small>
+  
 
-      <div class="content">
-  <p>###迁移SVN到git
+<small><code><a href="http://maintiendrai.github.io/tags/svn">SVN</a></code></small>
+
+
+<small><code><a href="http://maintiendrai.github.io/tags/git">GIT</a></code></small>
+
+  
+
+<small><code><a href="http://maintiendrai.github.io/categories/tools">Tools</a></code></small>
+
+
+</p>
+<p>###迁移SVN到git
 关于在VCS中SVN和Git之间的迁移（Clone）这个部分网上已经有大批的文章介绍，而且都非常不错，能够满足我们的常见的需求，这里介绍的是我自己整理的一些技巧和使用中出现的一些问题和疑问。
 阅读本篇文章，请先有一些Git和SVN的使用经验。</p>
-
 <p>首先需要读取这个软件创建时的版本号</p>
-
 <pre><code>svn log https://192.168.60.200/svn/wifidisk|tail -4|head -1
 </code></pre>
-
 <p>得到了如下信息，获得一个版本号 1</p>
-
 <pre><code>r1 | plugin-master | 2010-12-03 20:12:29 +0800 (五, 03 12 2010) | 1 line
 </code></pre>
-
 <p>开始clone代码</p>
-
 <pre><code>git svn clone https://192.168.60.200/svn/wifidisk -s r1:HEAD wifidisk
 </code></pre>
-
 <p><strong>注：</strong> -s 参数是表面使用的是svn标准命名方法，即 trunk，tags，branches，这个参数有时很重要，建议使用，命令后面还可以加个文件夹名字作为clone后的目录，如果没有默认是当前路径。
 git svn fetch 这个步骤，可能碰到只想从某个版本开始进行fetch，那么请需要 –r 参数。</p>
-
 <p><strong>注：</strong> 1 是你想要从这个版本开始fetch，如何查看这个版本号，你可以使用 svn 命令（windows下需要安装Subversion Client，e.g. sliksvn），简单使用就是 svn log svn_url ,这个时候，你可能看到整屏在刷新，没关系，看到log就行。当然更简单的就是使用TortoiseSVN-&gt; Show log。</p>
-
 <p>到这步的时候，本地已经clone了SVN仓库，现在需要的就是提交到远程了。首先，关联github远程仓库，如下：</p>
-
 <pre><code>git remote add origin git@192.168.60.151:lilkr/wifidisk.git
 git push -u origin master
 </code></pre>
-
 <p>###导入tag跟branch</p>
-
 <p>你还需要一点post-import（导入后） 清理工作。最起码的，应该清理一下git svn 创
 建的那些怪异的索引结构。首先要移动标签，把它们从奇怪的远程分支变成实际的标签，然
 后把剩下的分支移动到本地。
 要把标签变成合适的Git 标签，运行
 将原本以tag/ 开头的远程分支的索引变成真正的（轻巧的）标签。</p>
-
 <pre><code>cp -Rf .git/refs/remotes/tags/* .git/refs/tags/
 rm -Rf .git/refs/remotes/tags
 </code></pre>
-
 <p>把refs/remotes 下面剩下的索引变成本地分支：</p>
-
 <pre><code>cp -Rf .git/refs/remotes/* .git/refs/heads/
 rm -Rf .git/refs/remotes
 </code></pre>
-
 <p>现在所有的旧分支都变成真正的Git 分支，所有的旧标签也变成真正的Git 标签。最后，一项工作就是把新建的Git 服务器添加为远程服务器并且向它推送。为了让所有的分支和标签都得到上传，我们使用这条命令</p>
-
 <pre><code>git push origin –all
 </code></pre>
-
 <p>所有的分支和标签现在都应该整齐干净的躺在新的Git 服务器里了。</p>
-
 <p>资料</p>
-
 <ol>
 <li><a href="http://www.blogjava.net/lishunli/archive/2012/01/15/368562.html">http://www.blogjava.net/lishunli/archive/2012/01/15/368562.html</a></li>
 <li><a href="http://www.ooso.net/archives/576">http://www.ooso.net/archives/576</a></li>
 </ol>
 
-</div>
-
-
-      <footer>
-  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      
-  
-    <nav><ul class="pager">
-    
-        <li class="previous">
-          <a href="http://maintiendrai.github.io/post/2013-09-25-hello/" title="Hello">
-            <span aria-hidden="true">&larr;</span>Previous
-          </a>
-        </li>
-    
-
-    
-      <li class="next">
-        <a href="http://maintiendrai.github.io/post/2014-01-20-ability-enhancement/" title="问题分析">
-            Next <span aria-hidden="true">&rarr;</span>
-        </a>
-      </li>
-    
-    </ul> </nav>
-  
-
-
-</div>
-
-  <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-  
-
-</div>
-
-</footer>
-
-    </div>
-    
+    </article>
   </div>
-</div>
-      
-<footer class="footer hidden-print">
-  <div class="container">
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-           <div class="pull-left">
-  <a class="toplink" href="#">back to top</a>
-</div>
-<div class="pull-right">
+
   
-  <a href="http://maintiendrai.github.io/license" >license</a>
   
-</div>
+  
 
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-              
-    
-<div class="container footline">
-    <small>
-</small>
-</div>
+  
 
+  
+</body>
 
-    
-
-
-        </div>
-    </div>
-  </div>
-</footer>
-
-    
-
-<script src="http://maintiendrai.github.io/js/jquery.min.js"></script>
-<script src="http://maintiendrai.github.io/js/bootstrap.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
-<script src="/js/popover/angular-storage.min.js"></script>
-
-
-
-<script src="http://maintiendrai.github.io/js/highlight.pack.js"></script>
-<script src="http://maintiendrai.github.io/js/site.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-
-
-<script>
-var ENABLE_POPOVER =  null ; 
-var EXPIRE_COOKIE =  null ; 
-var SHOW_MODAL_TIMEOUT =  null ; 
-var MOUSE_LEAVE =  null ; 
-var MODAL_SIZE =  null ; 
-var POST_URL =  null ; 
-var SIGNUP_HEADER =  null ;
-var HEADER_IMAGE =  null ;
-var IMG_DESCRIPTION =  null ;
-var SIGNUP_TEXT =  null ;
-var INPUT_PLACEHOLDER =  null ;
-var SUBMIT_BUTTON =  null ;
-var SUCCESS_MESSAGE =  null ;
-var ERROR_MESSAGE =  null ;
-var OPTIN =  null ;
-var COOKIE_NAME =  null ;
-</script>
-<script src="/js/popover/angular-modal-service.min.js"></script>
-<script src="/js/angular-ismobile.min.js"></script>
-<script src="/js/popover/popover.min.js"></script>
-
-  </body>
 </html>
-

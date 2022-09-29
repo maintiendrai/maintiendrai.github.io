@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on 黑暗民谣</title>
@@ -6,25 +6,13 @@
     <description>Recent content in Categories on 黑暗民谣</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    
-	<atom:link href="http://maintiendrai.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 29 Sep 2021 12:09:09 +0800</lastBuildDate><atom:link href="http://maintiendrai.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Focus On</title>
-      <link>http://maintiendrai.github.io/categories/focus-on/</link>
-      <pubDate>Tue, 22 Apr 2014 12:09:09 +0800</pubDate>
+      <title>Docs</title>
+      <link>http://maintiendrai.github.io/categories/docs/</link>
+      <pubDate>Wed, 29 Sep 2021 12:09:09 +0800</pubDate>
       
-      <guid>http://maintiendrai.github.io/categories/focus-on/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Programming</title>
-      <link>http://maintiendrai.github.io/categories/programming/</link>
-      <pubDate>Thu, 09 Oct 2014 12:09:09 +0800</pubDate>
-      
-      <guid>http://maintiendrai.github.io/categories/programming/</guid>
+      <guid>http://maintiendrai.github.io/categories/docs/</guid>
       <description></description>
     </item>
     
@@ -47,11 +35,29 @@
     </item>
     
     <item>
+      <title>Programming</title>
+      <link>http://maintiendrai.github.io/categories/programming/</link>
+      <pubDate>Thu, 09 Oct 2014 12:09:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/categories/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>折腾</title>
       <link>http://maintiendrai.github.io/categories/%E6%8A%98%E8%85%BE/</link>
       <pubDate>Tue, 01 Jul 2014 12:09:09 +0800</pubDate>
       
       <guid>http://maintiendrai.github.io/categories/%E6%8A%98%E8%85%BE/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Focus on</title>
+      <link>http://maintiendrai.github.io/categories/focus-on/</link>
+      <pubDate>Tue, 22 Apr 2014 12:09:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/categories/focus-on/</guid>
       <description></description>
     </item>
     

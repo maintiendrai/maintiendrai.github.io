@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NLP Anaconda on 黑暗民谣</title>
+    <link>http://maintiendrai.github.io/tags/nlp-anaconda/</link>
+    <description>Recent content in NLP Anaconda on 黑暗民谣</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 05 Jan 2019 16:07:09 +0800</lastBuildDate><atom:link href="http://maintiendrai.github.io/tags/nlp-anaconda/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NLP Develop Environment</title>
+      <link>http://maintiendrai.github.io/post/2019-01-05-nl-environment/</link>
+      <pubDate>Sat, 05 Jan 2019 16:07:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/post/2019-01-05-nl-environment/</guid>
+      <description>Anaconda 常用工具包 包含了Python和相关的配套工具 Conda包管理和环境管理。 常见的包 beautifulsoup4 : 网络爬虫工具 bzip2 : 压缩包 conda : 管理工具 hdf5 : 常见加密方式 jieba : 分词工具 nltk : 自然语言处理包 pip : 插件管理 scipy : 科学计算包 numpy : 数学公式 matplotlib : 图形化展示包 scikit-learn : 机器学习的包 Anaconda是打包的集合，预装conda、python、packages等 配置Python3环境(SublimeText3) SublimeREPL安装 快捷键配置 Python3 路径更改
+vi /Users/maintiendrai/Library/Application\ Support/Sublime\ Text\ 3/Packages/SublimeREPL/config/Python/Main.sublime-menu
+[ { // 运行 python &amp;#34;keys&amp;#34;:[&amp;#34;ctrl+shift+r&amp;#34;], &amp;#34;caption&amp;#34;: &amp;#34;SublimeREPL: Python - RUN current file&amp;#34;, &amp;#34;command&amp;#34;: &amp;#34;run_existing_window_command&amp;#34;, &amp;#34;args&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;repl_python_run&amp;#34;, &amp;#34;file&amp;#34;: &amp;#34;config/Python/Main.sublime-menu&amp;#34; } }, { //开打 IDLE &amp;#34;keys&amp;#34;:[&amp;#34;ctrl+shift+o&amp;#34;], &amp;#34;caption&amp;#34;: &amp;#34;SublimeREPL: Python&amp;#34;, &amp;#34;command&amp;#34;: &amp;#34;run_existing_window_command&amp;#34;, &amp;#34;args&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;repl_python&amp;#34;, &amp;#34;file&amp;#34;: &amp;#34;config/Python/Main.</description>
+    </item>
+    
+  </channel>
+</rss>

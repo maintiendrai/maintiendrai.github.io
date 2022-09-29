@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ddwrt on 黑暗民谣</title>
+    <title>DDWRT on 黑暗民谣</title>
     <link>http://maintiendrai.github.io/tags/ddwrt/</link>
-    <description>Recent content in Ddwrt on 黑暗民谣</description>
+    <description>Recent content in DDWRT on 黑暗民谣</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 May 2015 12:09:09 +0800</lastBuildDate>
-    
-	<atom:link href="http://maintiendrai.github.io/tags/ddwrt/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 24 May 2015 12:09:09 +0800</lastBuildDate><atom:link href="http://maintiendrai.github.io/tags/ddwrt/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>折腾路由器的一天</title>
       <link>http://maintiendrai.github.io/post/2015-05-24-%E8%B7%AF%E7%94%B1%E5%99%A8%E6%8A%98%E8%85%BE/</link>
@@ -23,7 +19,7 @@
 搜了一下，可以降级到9006
 我试了很多个rom，都不能成功。
 后面我是用这个rom降级的
-极2 0.9006.2.6020s版固件
+极2	0.9006.2.6020s版固件
 ###刷机步骤：
 1：拔掉路由电源
 2：用网线将极路由黄色的 LAN 口与电脑网口相连

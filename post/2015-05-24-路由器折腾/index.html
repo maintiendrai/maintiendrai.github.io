@@ -1,279 +1,194 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!doctype html>
+<html lang="en">
+
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>折腾路由器的一天  &middot; 黑暗民谣</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-<meta name="description" content="" />
-
-<meta name="keywords" content="OPENWRT, DDWRT, ">
-
-
-<meta property="og:title" content="折腾路由器的一天  &middot; 黑暗民谣 ">
-<meta property="og:site_name" content="黑暗民谣"/>
-<meta property="og:url" content="http://maintiendrai.github.io/post/2015-05-24-%E8%B7%AF%E7%94%B1%E5%99%A8%E6%8A%98%E8%85%BE/" />
-<meta property="og:locale" content="en-us">
-
-
-<meta property="og:type" content="article" />
-<meta property="og:description" content=""/>
-<meta property="og:article:published_time" content="2015-05-24T12:09:09&#43;08:00" />
-<meta property="og:article:modified_time" content="2015-05-24T12:09:09&#43;08:00" />
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
-    
-<meta property="og:article:tag" content="OPENWRT">
-    
-<meta property="og:article:tag" content="DDWRT">
-    
+  <meta name="generator" content="Hugo 0.104.1" />
+
   
 
   
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="@" />
-<meta name="twitter:creator" content="@" />
-<meta name="twitter:title" content="折腾路由器的一天" />
-<meta name="twitter:description" content="" />
-<meta name="twitter:url" content="http://maintiendrai.github.io/post/2015-05-24-%E8%B7%AF%E7%94%B1%E5%99%A8%E6%8A%98%E8%85%BE/" />
-<meta name="twitter:domain" content="http://maintiendrai.github.io/">
+  <link rel="apple-touch-icon" sizes="180x180" href="http://maintiendrai.github.io/apple-touch-icon.png">
+
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="http://maintiendrai.github.io/favicon-32x32.png">
+
+  
+  <link rel="icon" type="image/png" sizes="16x16" href="http://maintiendrai.github.io/favicon-16x16.png">
+
+  
+  <link rel="manifest" href="http://maintiendrai.github.io/site.webmanifest">
+
+  
+  <link rel="mask-icon" href="http://maintiendrai.github.io/safari-pinned-tab.svg" color="">
+
+  <meta name="msapplication-TileColor" content="">
+
+  <meta name="theme-color" content="">
+
+  
+  <link rel="stylesheet" href="http://maintiendrai.github.io/css/bootstrap.min.css" />
+
+  
+  <title>折腾路由器的一天 | 黑暗民谣</title>
   
 
-<script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "Article",
-    "headline": "折腾路由器的一天",
-    "author": {
-      "@type": "Person",
-      "name": "http://profiles.google.com/+?rel=author"
-    },
-    "datePublished": "2015-05-24",
-    "description": "",
-    "wordCount": 169
+  <style>
+body {
+  min-width: 300px;
+}
+
+.custom-navbar {
+  margin-bottom: 1em;
+  height: 60px;
+}
+
+.custom-navbar a {
+  display: inline-block; 
+  padding: 18px 0;
+  margin-right: 1em; 
+  font-weight: bold; 
+}
+
+.custom-navbar a:hover,
+.custom-navbar a:focus {
+  text-decoration: none; 
+}
+
+@media print {
+  .custom-navbar {
+    display: none;
   }
-</script>
+}
+
+article {
+  padding-bottom: 1em;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+body {
+  background-color: #fff;
+}
 
 
 
-<link rel="canonical" href="http://maintiendrai.github.io/post/2015-05-24-%E8%B7%AF%E7%94%B1%E5%99%A8%E6%8A%98%E8%85%BE/" />
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/touch-icon-144-precomposed.png">
-<link rel="icon" href="/favicon.png">
-<meta name="generator" content="Hugo 0.53" />
-
-  <!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
+body {
+  color: #212529;
+}
 
 
 
-    <link rel="stylesheet" href="http://maintiendrai.github.io/css/bootswatch/default/bootstrap.min.css">
+a {
+  color: #007bff;
+}
 
 
-<link rel="stylesheet" href="http://maintiendrai.github.io/css/font-awesome.min.css">
-<link rel="stylesheet" href="http://maintiendrai.github.io/css/style.css">
+
+a:hover,
+a:focus {
+  color: #0056b3;
+}
 
 
-  <link rel="stylesheet" href="http://maintiendrai.github.io/css/highlight/default.css">
+
+.custom-navbar {
+  background-color: #212529;
+}
 
 
+
+.custom-navbar a {
+  color: rgba(255,255,255,.75);
+}
+
+
+
+.custom-navbar a:hover,
+.custom-navbar a:focus {
+  color: rgba(255,255,255,1);
+}
+
+
+
+.container {
+  max-width: 800px;
+}
+
+
+
+
+
+</style>
 </head>
-<body data-ng-app="myapp" data-ng-controller="MyController" data-ng-mouseleave="MouseLeave($event)">
-    <header id="main-header">
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
 
-          
-          
-            <a class="navbar-brand-img" href="http://maintiendrai.github.io/">
-          <img alt="" src="">
-            
-        </a>
-
-      </div>
-      <div id="navbar" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
-          
-          <li>
-
-            <a href="http://maintiendrai.com/app/#/about"
-            >
-
-            
-
-            About
-            </a>
-          </li>
-          
-          <li>
-
-            <a href="http://maintiendrai.com/"
-            >
-
-            
-
-            Blog
-            </a>
-          </li>
-          
-          <li>
-
-            <a href="http://maintiendrai.com/app/#/dashboard/list/create"
-            >
-
-            
-
-            Dashboard
-            </a>
-          </li>
-          
-          <li>
-
-            <a href="http://maintiendrai.github.io/post"
-            >
-
-            
-
-            Posts
-            </a>
-          </li>
-          
-          <li>
-
-            <a href="http://maintiendrai.github.io/tags"
-            >
-
-            
-
-            Tags
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-      
-    </div>
-  </nav>
-
-</header>
-
-
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-  <div class="text-center">
-
-    <h1>折腾路由器的一天
-</h1>
-
-    <div class="metas">
-<small>
-  <i class="fa fa-calendar"></i>
-  <time datetime="2015-05-24">24 May, 2015</time>
-</small>
-
-
-  <small>
-  &middot; Read in about 1 min
-  &middot; (169 Words)
-</small>
-
-
-<div class="margin-10">
-  <i class="fa fa-tags"></i>
-  
-  <a href="http://maintiendrai.github.io/tags/openwrt" class="label label-primary">OPENWRT</a>
-  
-  <a href="http://maintiendrai.github.io/tags/ddwrt" class="label label-primary">DDWRT</a>
-  
-
-
-</div>
-<br>
-</div>
-
+<body>
+  <nav class="custom-navbar">
+  <div class="container">
+    
   </div>
-</div>
+</nav>
+  
+  <div class="container">
+    <article>
+      <h1>折腾路由器的一天</h1>
+<p>
+  <small class="text-secondary">
+  
+  
+  May 24, 2015
+  </small>
+  
 
-      <div class="content">
-  <p>周末折腾了两天路由器。一个是自己买的netgear，一个是公司的测试部买的极路由2。项目组的人叫我帮忙把极路由给刷成openwrt
+<small><code><a href="http://maintiendrai.github.io/tags/openwrt">OPENWRT</a></code></small>
+
+
+<small><code><a href="http://maintiendrai.github.io/tags/ddwrt">DDWRT</a></code></small>
+
+  
+
+<small><code><a href="http://maintiendrai.github.io/categories/tools">Tools</a></code></small>
+
+
+</p>
+<p>周末折腾了两天路由器。一个是自己买的netgear，一个是公司的测试部买的极路由2。项目组的人叫我帮忙把极路由给刷成openwrt
 说起极路由，用着挺不爽的，子网下的bonjour都搜不到。估计是端口被限制，sip呼叫也各种不靠谱，估计也是端口被限制。</p>
-
 <p>记下流水账～</p>
-
 <p>#极路由
 ##降级
 我手头上的极路由2是9010版本。我发现极路由很鸡贼啊，不能直接刷其它系统的firmware.bin文件。我操～</p>
-
 <p>搜了一下，可以降级到9006</p>
-
 <p>我试了很多个rom，都不能成功。</p>
-
 <p>后面我是用这个rom降级的</p>
-
-<p><a href="http://ur.ikcd.net/HC5761-sysupgrade-20140911-3d5f030b.bin">极2 0.9006.2.6020s版固件</a></p>
-
+<p><a href="http://ur.ikcd.net/HC5761-sysupgrade-20140911-3d5f030b.bin">极2	0.9006.2.6020s版固件</a></p>
 <p>###刷机步骤：</p>
-
 <p>1：拔掉路由电源</p>
-
 <p>2：用网线将极路由黄色的 LAN 口与电脑网口相连</p>
-
-<p>3：将电脑本地连接的 IP 设置为ip：192.168.1.88。子网掩码：255.255.255.0。网关空着，不用填写，不知道在哪里设置的，请看这里：win7win8：<a href="http://jingyan.baidu.com/article/22fe7ced18876f3003617f5e.html">http://jingyan.baidu.com/article/22fe7ced18876f3003617f5e.html</a>  XP：<a href="http://jingyan.baidu.com/article/77b8dc7fc0f5786174eab6af.html">http://jingyan.baidu.com/article/77b8dc7fc0f5786174eab6af.html</a></p>
-
+<p>3：将电脑本地连接的 IP 设置为ip：192.168.1.88。子网掩码：255.255.255.0。网关空着，不用填写，不知道在哪里设置的，请看这里：win7win8：http://jingyan.baidu.com/article/22fe7ced18876f3003617f5e.html  XP：http://jingyan.baidu.com/article/77b8dc7fc0f5786174eab6af.html</p>
 <p>4：根据操作系统，32位运行tftpd32, 64位运行tftpd64</p>
-
 <p>5：用尖锐物按住极路由 RESET 不放，再给极路由插上电源</p>
-
 <p>6：等待电脑上 tftpd 出现传输 recovery.bin 进度条完成后，松开 RESET（进度条很快的，几秒钟）</p>
-
 <p>7：极路由面板灯进入跑马灯状态，所有灯轮流闪，跑完后，系统自动重启，刷机完成</p>
-
-<p>8：改电脑本地连接属性的ip为自动获取，访问<a href="http://192.168.199.1路由管理界面">http://192.168.199.1路由管理界面</a> 密码：admin</p>
-
+<p>8：改电脑本地连接属性的ip为自动获取，访问http://192.168.199.1路由管理界面 密码：admin</p>
 <p>然后由于极路由它很鸡贼，还要去root它才能刷第三方的固件</p>
-
 <p>##搜狐插件大法：极路由Root</p>
-
 <p>极路由云插件“搜狐视频远程下载”使用了开源下载工具aria2，由于aria2主程序aria2c占用空间较大，因此被安装到了SD卡的usr/bin目录。aria2c在每次开机时运行，因此给极客们一个ROOT机会。ROOT的思路是：用自己的脚本文件替换aria2c文件，在脚本文件中加入启用dropber服务的指令。具体方法如下：</p>
-
 <p>1、安装云插件“搜狐视频远程下载”，然后验证aria2c是否安装运行，验证方法：在PC机上运行下面的命令：</p>
-
 <p>telnet 192.168.199.1 6800</p>
-
 <p>如果能连接，说明aria2c已经运行。</p>
-
 <p>2、关掉路由器，拔出SD卡，将SD卡插入SD读卡器。
 (由于极路由系统是基于openwrt再封一层，openwrt是linux的，所以SD卡是ext4的，只能mount在linux的机器上。mac os也不支持，后面的操作是在ubuntu下完成的)</p>
-
 <p>3、Linux操作系统能自动加载USB SD读卡器驱动，一般情况下设备名为/dev/sdb，或者用dmesg命令查询驱动程序日志，从中发现设备名。SD卡有2个分区，第1个是大小为1GB的luks加密分区，第2个是正常的ext4分区。9006版固件的aria2c文件在第2分区，因此需要mount该分区，命令为：</p>
-
 <p>mount -t ext4 /dev/sdb2 /mnt</p>
-
 <p>4、aria2c文件在/mnt/usr/bin目录中，先换名，然后替换。</p>
-
 <p>cd /mnt/usb/bin</p>
-
 <p>mv aria2c aria2c.orig</p>
-
 <p>然后用vi命令创建文件aria2c，内容为：</p>
-
 <pre><code>#!/bin/sh
 
 if [ &quot;$1&quot; = &quot;ok&quot; ]; then
@@ -296,21 +211,15 @@ sed -i 's/1022/22/g' /etc/config/dropbear
 
 exit 0
 </code></pre>
-
 <p>为新建的aria2c添加执行权限：</p>
-
 <pre><code>chmod a+x aria2c
 </code></pre>
-
 <p>5、执行下面命令umount SD卡，拔出SD卡，插入路由器，路由器通电后即完成ROOT。</p>
-
 <pre><code>cd / 
 
 umount /mnt
 </code></pre>
-
 <p>6、SSH登录路由器后，执行下面的脚本进行ROOT保持，也就是下次自动升级固件时还能保持ROOT状态，脚本只需执行一次。</p>
-
 <pre><code>echo &quot;sed -i 's/1022/22/g' /etc/config/dropbear&quot; &gt;&gt;/etc/rc.local 
 
 echo '/etc/init.d/dropbear enable' &gt;&gt;/etc/rc.local
@@ -329,35 +238,23 @@ echo '/lib/upgrade/keep.d/base' &gt;&gt;/etc/sysupgrade.conf
 
 echo '/etc/sysupgrade.conf' &gt;&gt;/etc/sysupgrade.conf
 </code></pre>
-
 <p>##刷openwrt</p>
-
-<p>我刷的是<a href="https://github.com/rssnsj/openwrt-hc5x61">https://github.com/rssnsj/openwrt-hc5x61</a></p>
-
+<p>我刷的是https://github.com/rssnsj/openwrt-hc5x61</p>
 <p><a href="https://github.com/rssnsj/openwrt-hc5761/releases/latest">https://github.com/rssnsj/openwrt-hc5761/releases/latest</a></p>
-
 <p>#Netgear</p>
-
 <p>还是刷netgear比较爽，没那么鸡贼。我拿到bin就直接刷ddwrt了</p>
-
 <p>###遇到的问题
 1、The CGI script took too long to produce a response 报这个错
 固件有问题</p>
-
 <p>2、在DD-WRT下，所有速率最高54M</p>
-
 <p>此问题，在我刷回原厂ROM的时候，才得到答案。我安全设定方式选择TKIP兼容模式，提示我此模式下最大支持54M，而此前我并不知道。改成支持AES，速度即可提升了。</p>
-
 <p>3、科学上网的方案
 DDWRT+autoddvpn+DNSMasq(Tomato+TomatoAutoVPN+DNSMasq是更好的选择，但是要刷Tomato,以后再试)</p>
-
 <p>4、学到的命令
 nvram set http_lanport=12345
 nvram commit
 重启，12345就是你的端口</p>
-
 <p>参考资料</p>
-
 <ol>
 <li><a href="http://www.iptvfans.cn/wiki/index.php/%E6%9E%81%E8%B7%AF%E7%94%B1">http://www.iptvfans.cn/wiki/index.php/%E6%9E%81%E8%B7%AF%E7%94%B1</a></li>
 <li><a href="http://hiwifiroot.lofter.com/post/1d0319c1_6596c99">http://hiwifiroot.lofter.com/post/1d0319c1_6596c99</a></li>
@@ -368,114 +265,16 @@ nvram commit
 <li><a href="https://ruby-china.org/topics/15250">https://ruby-china.org/topics/15250</a></li>
 </ol>
 
-</div>
-
-
-      <footer>
-  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      
-  
-    <nav><ul class="pager">
-    
-        <li class="previous">
-          <a href="http://maintiendrai.github.io/post/2015-05-12-svn-%E5%AE%8C%E7%BE%8E%E8%BF%81%E7%A7%BB%E8%87%B3-git/" title="SVN迁移到Git的过程(svn2git)">
-            <span aria-hidden="true">&larr;</span>Previous
-          </a>
-        </li>
-    
-
-    
-      <li class="next">
-        <a href="http://maintiendrai.github.io/post/2015-07-03-%E6%88%91%E7%9A%84git%E5%B7%A5%E4%BD%9C%E6%B5%81/" title="我的Git工作流">
-            Next <span aria-hidden="true">&rarr;</span>
-        </a>
-      </li>
-    
-    </ul> </nav>
-  
-
-
-</div>
-
-  <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-  
-
-</div>
-
-</footer>
-
-    </div>
-    
+    </article>
   </div>
-</div>
-      
-<footer class="footer hidden-print">
-  <div class="container">
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-           <div class="pull-left">
-  <a class="toplink" href="#">back to top</a>
-</div>
-<div class="pull-right">
+
   
-  <a href="http://maintiendrai.github.io/license" >license</a>
   
-</div>
+  
 
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-              
-    
-<div class="container footline">
-    <small>
-</small>
-</div>
+  
 
+  
+</body>
 
-    
-
-
-        </div>
-    </div>
-  </div>
-</footer>
-
-    
-
-<script src="http://maintiendrai.github.io/js/jquery.min.js"></script>
-<script src="http://maintiendrai.github.io/js/bootstrap.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
-<script src="/js/popover/angular-storage.min.js"></script>
-
-
-
-<script src="http://maintiendrai.github.io/js/highlight.pack.js"></script>
-<script src="http://maintiendrai.github.io/js/site.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-
-
-<script>
-var ENABLE_POPOVER =  null ; 
-var EXPIRE_COOKIE =  null ; 
-var SHOW_MODAL_TIMEOUT =  null ; 
-var MOUSE_LEAVE =  null ; 
-var MODAL_SIZE =  null ; 
-var POST_URL =  null ; 
-var SIGNUP_HEADER =  null ;
-var HEADER_IMAGE =  null ;
-var IMG_DESCRIPTION =  null ;
-var SIGNUP_TEXT =  null ;
-var INPUT_PLACEHOLDER =  null ;
-var SUBMIT_BUTTON =  null ;
-var SUCCESS_MESSAGE =  null ;
-var ERROR_MESSAGE =  null ;
-var OPTIN =  null ;
-var COOKIE_NAME =  null ;
-</script>
-<script src="/js/popover/angular-modal-service.min.js"></script>
-<script src="/js/angular-ismobile.min.js"></script>
-<script src="/js/popover/popover.min.js"></script>
-
-  </body>
 </html>
-

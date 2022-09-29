@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on 黑暗民谣</title>
@@ -6,49 +6,9 @@
     <description>Recent content in Tags on 黑暗民谣</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 May 2015 12:09:09 +0800</lastBuildDate>
-    
-	<atom:link href="http://maintiendrai.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 19 Jan 2019 16:07:09 +0800</lastBuildDate><atom:link href="http://maintiendrai.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Ddwrt</title>
-      <link>http://maintiendrai.github.io/tags/ddwrt/</link>
-      <pubDate>Sun, 24 May 2015 12:09:09 +0800</pubDate>
-      
-      <guid>http://maintiendrai.github.io/tags/ddwrt/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Dsm</title>
-      <link>http://maintiendrai.github.io/tags/dsm/</link>
-      <pubDate>Tue, 01 Jul 2014 12:09:09 +0800</pubDate>
-      
-      <guid>http://maintiendrai.github.io/tags/dsm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Focus On</title>
-      <link>http://maintiendrai.github.io/tags/focus-on/</link>
-      <pubDate>Tue, 22 Apr 2014 12:09:09 +0800</pubDate>
-      
-      <guid>http://maintiendrai.github.io/tags/focus-on/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Git</title>
-      <link>http://maintiendrai.github.io/tags/git/</link>
-      <pubDate>Fri, 03 Jul 2015 12:09:09 +0800</pubDate>
-      
-      <guid>http://maintiendrai.github.io/tags/git/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Nlp</title>
+      <title>NLP</title>
       <link>http://maintiendrai.github.io/tags/nlp/</link>
       <pubDate>Sat, 19 Jan 2019 16:07:09 +0800</pubDate>
       
@@ -57,29 +17,11 @@
     </item>
     
     <item>
-      <title>Nlu</title>
+      <title>NLU</title>
       <link>http://maintiendrai.github.io/tags/nlu/</link>
       <pubDate>Sat, 19 Jan 2019 16:07:09 +0800</pubDate>
       
       <guid>http://maintiendrai.github.io/tags/nlu/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Openwrt</title>
-      <link>http://maintiendrai.github.io/tags/openwrt/</link>
-      <pubDate>Sun, 24 May 2015 12:09:09 +0800</pubDate>
-      
-      <guid>http://maintiendrai.github.io/tags/openwrt/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Programming</title>
-      <link>http://maintiendrai.github.io/tags/programming/</link>
-      <pubDate>Fri, 25 Sep 2009 12:09:09 +0800</pubDate>
-      
-      <guid>http://maintiendrai.github.io/tags/programming/</guid>
       <description></description>
     </item>
     
@@ -93,16 +35,61 @@
     </item>
     
     <item>
-      <title>Sip</title>
-      <link>http://maintiendrai.github.io/tags/sip/</link>
-      <pubDate>Sat, 20 Sep 2014 12:09:09 +0800</pubDate>
+      <title>NLP KNN</title>
+      <link>http://maintiendrai.github.io/tags/nlp-knn/</link>
+      <pubDate>Sun, 06 Jan 2019 16:07:09 +0800</pubDate>
       
-      <guid>http://maintiendrai.github.io/tags/sip/</guid>
+      <guid>http://maintiendrai.github.io/tags/nlp-knn/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Svn</title>
+      <title>NLP Anaconda</title>
+      <link>http://maintiendrai.github.io/tags/nlp-anaconda/</link>
+      <pubDate>Sat, 05 Jan 2019 16:07:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/tags/nlp-anaconda/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>swift</title>
+      <link>http://maintiendrai.github.io/tags/swift/</link>
+      <pubDate>Tue, 26 Jul 2016 12:09:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/tags/swift/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>http://maintiendrai.github.io/tags/git/</link>
+      <pubDate>Fri, 03 Jul 2015 12:09:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DDWRT</title>
+      <link>http://maintiendrai.github.io/tags/ddwrt/</link>
+      <pubDate>Sun, 24 May 2015 12:09:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/tags/ddwrt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OPENWRT</title>
+      <link>http://maintiendrai.github.io/tags/openwrt/</link>
+      <pubDate>Sun, 24 May 2015 12:09:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/tags/openwrt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SVN</title>
       <link>http://maintiendrai.github.io/tags/svn/</link>
       <pubDate>Tue, 12 May 2015 12:09:09 +0800</pubDate>
       
@@ -111,11 +98,38 @@
     </item>
     
     <item>
-      <title>Swift</title>
-      <link>http://maintiendrai.github.io/tags/swift/</link>
-      <pubDate>Tue, 26 Jul 2016 12:09:09 +0800</pubDate>
+      <title>Tools</title>
+      <link>http://maintiendrai.github.io/tags/tools/</link>
+      <pubDate>Thu, 09 Oct 2014 12:09:09 +0800</pubDate>
       
-      <guid>http://maintiendrai.github.io/tags/swift/</guid>
+      <guid>http://maintiendrai.github.io/tags/tools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SIP</title>
+      <link>http://maintiendrai.github.io/tags/sip/</link>
+      <pubDate>Sat, 20 Sep 2014 12:09:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/tags/sip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DSM</title>
+      <link>http://maintiendrai.github.io/tags/dsm/</link>
+      <pubDate>Tue, 01 Jul 2014 12:09:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/tags/dsm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>focus on</title>
+      <link>http://maintiendrai.github.io/tags/focus-on/</link>
+      <pubDate>Tue, 22 Apr 2014 12:09:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/tags/focus-on/</guid>
       <description></description>
     </item>
     
@@ -129,11 +143,11 @@
     </item>
     
     <item>
-      <title>Tools</title>
-      <link>http://maintiendrai.github.io/tags/tools/</link>
-      <pubDate>Thu, 09 Oct 2014 12:09:09 +0800</pubDate>
+      <title>Programming</title>
+      <link>http://maintiendrai.github.io/tags/programming/</link>
+      <pubDate>Fri, 25 Sep 2009 12:09:09 +0800</pubDate>
       
-      <guid>http://maintiendrai.github.io/tags/tools/</guid>
+      <guid>http://maintiendrai.github.io/tags/programming/</guid>
       <description></description>
     </item>
     

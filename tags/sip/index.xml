@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Sip on 黑暗民谣</title>
+    <title>SIP on 黑暗民谣</title>
     <link>http://maintiendrai.github.io/tags/sip/</link>
-    <description>Recent content in Sip on 黑暗民谣</description>
+    <description>Recent content in SIP on 黑暗民谣</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 Sep 2014 12:09:09 +0800</lastBuildDate>
-    
-	<atom:link href="http://maintiendrai.github.io/tags/sip/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 20 Sep 2014 12:09:09 +0800</lastBuildDate><atom:link href="http://maintiendrai.github.io/tags/sip/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Wireshark分析SIP交换中的SDP及RTP的工作过程</title>
       <link>http://maintiendrai.github.io/post/2014-09-20-wireshark-sdp-rtp/</link>
@@ -33,11 +29,12 @@ i</description>
       
       <guid>http://maintiendrai.github.io/post/2014-09-19-wireshark-sip/</guid>
       <description>Overview SIP 是VOIP目前非常流行的一种协议。有关协议的详细原理参照相关文档。
-SIP 组件 1.User Agent UA 是 SIP 的基本组件，可分为 UAC（User Agent Client）和 UAS（User Agent Server）。 发起呼叫的为 UAC（X-Lite:iP 192.168.61.221），接收呼叫的为 UAS（本文手机端选用LinPhone:iP）。很多设备都可做 UA，如 IP 电话、PC、路由器等。 2.SIP server SIP server（本文选用Asterisk）实现了Proxy Server（代理服务器）、Redirect Server（重定向服务器）、注册服务器的功能（Registrar Server）、Location Server、Back-to-back user agent (B2BUA) 、Presence Server。
+SIP 组件 1.User Agent UA 是 SIP 的基本组件，可分为 UAC（User Agent Client）和 UAS（User Agent Server）。 发起呼叫的为 UAC（X-Lite:iP 192.168.61.221），接收呼叫的为 UAS（本文手机端选用LinPhone:iP）。很多设备都可做 UA，如 IP 电话、PC、路由器等。 2.SIP server SIP server（本文选用Asterisk）实现了Proxy Server（代理服务器）、Redirect Server（重定向服务器）、注册服务器的功能（Registrar Server）、Location Server、Back-to-back user agent (B2BUA)、Presence Server。
 本文通过wireshark抓包分析SIP user agent（用户代理客户机，uac）与SIP serve之间的交互过程，在拨打SIP电话之前，先需要搭建相应的环境：
 Wireshark分析Account注册过程 设置过滤条件，只catch从UAC（ip.addr == 192.168.61.221 &amp;amp;&amp;amp; sip）发出或接收的数据包。 1.首先UAC向SIP serve(112.124.57.23)发出REGISTER信息
-REGISTER:UA client 使用此 message 向 server 注册以标明自己的位置。  SIP电话的格式是：
-sip:username@UAC_IP sip:username@UAC_IP_DNS （如果网络中有DNS服务器，并配置了UAC_IP对应的域名UAC_IP_DNS ）  如上图所示，sip电话格式为： sip:100@112.124.57.23 或 sip:100@lilkr（配置了DNS服务器） 2.sip server请求要求身份验证。 3.</description>
+REGISTER:UA client 使用此 message 向 server 注册以标明自己的位置。SIP电话的格式是：
+sip:username@UAC_IP sip:username@UAC_IP_DNS （如果网络中有DNS服务器，并配置了UAC_IP对应的域名UAC_IP_DNS ） 如上图所示，sip电话格式为： sip:100@112.124.57.23 或 sip:100@lilkr（配置了DNS服务器） 2.sip server请求要求身份验证。 3.重复1
+4.sip server响应，发送200 OK信息 5.</description>
     </item>
     
   </channel>

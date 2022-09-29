@@ -1,212 +1,145 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <url>
-    <loc>http://maintiendrai.github.io/post/2019-01-19-weather-bot/</loc>
-    <lastmod>2019-01-19T16:07:09+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://maintiendrai.github.io/post/2016-07-26-objective-c%E8%BD%AC%E5%90%91swift%E8%8B%A5%E5%B9%B2tips/</loc>
-    <lastmod>2016-07-26T12:09:09+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://maintiendrai.github.io/post/2015-07-03-%E6%88%91%E7%9A%84git%E5%B7%A5%E4%BD%9C%E6%B5%81/</loc>
-    <lastmod>2015-07-03T12:09:09+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://maintiendrai.github.io/post/2015-05-24-%E8%B7%AF%E7%94%B1%E5%99%A8%E6%8A%98%E8%85%BE/</loc>
-    <lastmod>2015-05-24T12:09:09+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://maintiendrai.github.io/post/2015-05-12-svn-%E5%AE%8C%E7%BE%8E%E8%BF%81%E7%A7%BB%E8%87%B3-git/</loc>
-    <lastmod>2015-05-12T12:09:09+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://maintiendrai.github.io/post/2014-10-09-vim-geeknode/</loc>
-    <lastmod>2014-10-09T12:09:09+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://maintiendrai.github.io/post/2014-09-20-wireshark-sdp-rtp/</loc>
-    <lastmod>2014-09-20T12:09:09+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://maintiendrai.github.io/post/2014-09-19-wireshark-sip/</loc>
-    <lastmod>2014-09-19T12:09:09+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://maintiendrai.github.io/post/2014-07-01-syn-dsm-git-server/</loc>
-    <lastmod>2014-07-01T12:09:09+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://maintiendrai.github.io/post/2014-04-22-sinus-headache-cure/</loc>
-    <lastmod>2014-04-22T12:09:09+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://maintiendrai.github.io/post/2014-01-20-ability-enhancement/</loc>
-    <lastmod>2014-01-20T12:09:09+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://maintiendrai.github.io/post/2013-10-12-git-svn/</loc>
-    <lastmod>2013-10-12T12:09:09+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://maintiendrai.github.io/post/2013-09-25-hello/</loc>
-    <lastmod>2013-09-25T12:09:09+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://maintiendrai.github.io/post/2009-09-25-aws-wordpress/</loc>
-    <lastmod>2009-09-25T12:09:09+08:00</lastmod>
-  </url>
-  
   <url>
     <loc>http://maintiendrai.github.io/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://maintiendrai.github.io/tags/ddwrt/</loc>
-    <lastmod>2015-05-24T12:09:09+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://maintiendrai.github.io/tags/dsm/</loc>
-    <lastmod>2014-07-01T12:09:09+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://maintiendrai.github.io/tags/focus-on/</loc>
-    <lastmod>2014-04-22T12:09:09+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://maintiendrai.github.io/categories/focus-on/</loc>
-    <lastmod>2014-04-22T12:09:09+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://maintiendrai.github.io/tags/git/</loc>
-    <lastmod>2015-07-03T12:09:09+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+    <lastmod>2021-09-29T12:09:09+08:00</lastmod>
+  </url><url>
+    <loc>http://maintiendrai.github.io/categories/docs/</loc>
+    <lastmod>2021-09-29T12:09:09+08:00</lastmod>
+  </url><url>
+    <loc>http://maintiendrai.github.io/post/</loc>
+    <lastmod>2021-09-29T12:09:09+08:00</lastmod>
+  </url><url>
+    <loc>http://maintiendrai.github.io/post/2021-09-29-neimeng-info/</loc>
+    <lastmod>2021-09-29T12:09:09+08:00</lastmod>
+  </url><url>
+    <loc>http://maintiendrai.github.io/</loc>
+    <lastmod>2021-09-29T12:09:09+08:00</lastmod>
+  </url><url>
     <loc>http://maintiendrai.github.io/tags/nlp/</loc>
     <lastmod>2019-01-19T16:07:09+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://maintiendrai.github.io/tags/nlu/</loc>
     <lastmod>2019-01-19T16:07:09+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://maintiendrai.github.io/tags/openwrt/</loc>
-    <lastmod>2015-05-24T12:09:09+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://maintiendrai.github.io/post/</loc>
-    <lastmod>2019-01-19T16:07:09+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://maintiendrai.github.io/tags/programming/</loc>
-    <lastmod>2009-09-25T12:09:09+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://maintiendrai.github.io/categories/programming/</loc>
-    <lastmod>2014-10-09T12:09:09+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://maintiendrai.github.io/tags/rasa/</loc>
     <lastmod>2019-01-19T16:07:09+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://maintiendrai.github.io/tags/sip/</loc>
-    <lastmod>2014-09-20T12:09:09+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>http://maintiendrai.github.io/post/2019-01-19-weather-bot/</loc>
+    <lastmod>2019-01-19T16:07:09+08:00</lastmod>
+  </url><url>
     <loc>http://maintiendrai.github.io/categories/study/</loc>
     <lastmod>2019-01-19T16:07:09+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://maintiendrai.github.io/tags/svn/</loc>
-    <lastmod>2015-05-12T12:09:09+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>http://maintiendrai.github.io/tags/</loc>
+    <lastmod>2019-01-19T16:07:09+08:00</lastmod>
+  </url><url>
+    <loc>http://maintiendrai.github.io/post/2019-01-06-knn-%E6%A8%A1%E5%9E%8B%E5%8E%9F%E7%90%86/</loc>
+    <lastmod>2019-01-06T16:07:09+08:00</lastmod>
+  </url><url>
+    <loc>http://maintiendrai.github.io/tags/nlp-knn/</loc>
+    <lastmod>2019-01-06T16:07:09+08:00</lastmod>
+  </url><url>
+    <loc>http://maintiendrai.github.io/tags/nlp-anaconda/</loc>
+    <lastmod>2019-01-05T16:07:09+08:00</lastmod>
+  </url><url>
+    <loc>http://maintiendrai.github.io/post/2019-01-05-nl-environment/</loc>
+    <lastmod>2019-01-05T16:07:09+08:00</lastmod>
+  </url><url>
+    <loc>http://maintiendrai.github.io/post/2019-01-05-nl-summarize/</loc>
+    <lastmod>2019-01-05T16:07:09+08:00</lastmod>
+  </url><url>
+    <loc>http://maintiendrai.github.io/post/2016-07-26-objective-c%E8%BD%AC%E5%90%91swift%E8%8B%A5%E5%B9%B2tips/</loc>
+    <lastmod>2016-07-26T12:09:09+08:00</lastmod>
+  </url><url>
     <loc>http://maintiendrai.github.io/tags/swift/</loc>
     <lastmod>2016-07-26T12:09:09+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://maintiendrai.github.io/tags/</loc>
-    <lastmod>2015-05-24T12:09:09+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://maintiendrai.github.io/tags/thinking/</loc>
-    <lastmod>2014-01-20T12:09:09+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://maintiendrai.github.io/tags/tools/</loc>
-    <lastmod>2014-10-09T12:09:09+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>http://maintiendrai.github.io/tags/git/</loc>
+    <lastmod>2015-07-03T12:09:09+08:00</lastmod>
+  </url><url>
     <loc>http://maintiendrai.github.io/categories/tools/</loc>
     <lastmod>2015-07-03T12:09:09+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>http://maintiendrai.github.io/post/2015-07-03-%E6%88%91%E7%9A%84git%E5%B7%A5%E4%BD%9C%E6%B5%81/</loc>
+    <lastmod>2015-07-03T12:09:09+08:00</lastmod>
+  </url><url>
+    <loc>http://maintiendrai.github.io/tags/ddwrt/</loc>
+    <lastmod>2015-05-24T12:09:09+08:00</lastmod>
+  </url><url>
+    <loc>http://maintiendrai.github.io/tags/openwrt/</loc>
+    <lastmod>2015-05-24T12:09:09+08:00</lastmod>
+  </url><url>
+    <loc>http://maintiendrai.github.io/post/2015-05-24-%E8%B7%AF%E7%94%B1%E5%99%A8%E6%8A%98%E8%85%BE/</loc>
+    <lastmod>2015-05-24T12:09:09+08:00</lastmod>
+  </url><url>
+    <loc>http://maintiendrai.github.io/tags/svn/</loc>
+    <lastmod>2015-05-12T12:09:09+08:00</lastmod>
+  </url><url>
+    <loc>http://maintiendrai.github.io/post/2015-05-12-svn-%E5%AE%8C%E7%BE%8E%E8%BF%81%E7%A7%BB%E8%87%B3-git/</loc>
+    <lastmod>2015-05-12T12:09:09+08:00</lastmod>
+  </url><url>
+    <loc>http://maintiendrai.github.io/categories/programming/</loc>
+    <lastmod>2014-10-09T12:09:09+08:00</lastmod>
+  </url><url>
+    <loc>http://maintiendrai.github.io/tags/tools/</loc>
+    <lastmod>2014-10-09T12:09:09+08:00</lastmod>
+  </url><url>
+    <loc>http://maintiendrai.github.io/post/2014-10-09-vim-geeknode/</loc>
+    <lastmod>2014-10-09T12:09:09+08:00</lastmod>
+  </url><url>
+    <loc>http://maintiendrai.github.io/tags/sip/</loc>
+    <lastmod>2014-09-20T12:09:09+08:00</lastmod>
+  </url><url>
+    <loc>http://maintiendrai.github.io/post/2014-09-20-wireshark-sdp-rtp/</loc>
+    <lastmod>2014-09-20T12:09:09+08:00</lastmod>
+  </url><url>
+    <loc>http://maintiendrai.github.io/post/2014-09-19-wireshark-sip/</loc>
+    <lastmod>2014-09-19T12:09:09+08:00</lastmod>
+  </url><url>
+    <loc>http://maintiendrai.github.io/tags/dsm/</loc>
+    <lastmod>2014-07-01T12:09:09+08:00</lastmod>
+  </url><url>
     <loc>http://maintiendrai.github.io/categories/%E6%8A%98%E8%85%BE/</loc>
     <lastmod>2014-07-01T12:09:09+08:00</lastmod>
-    <priority>0</priority>
+  </url><url>
+    <loc>http://maintiendrai.github.io/post/2014-07-01-syn-dsm-git-server/</loc>
+    <lastmod>2014-07-01T12:09:09+08:00</lastmod>
+  </url><url>
+    <loc>http://maintiendrai.github.io/tags/focus-on/</loc>
+    <lastmod>2014-04-22T12:09:09+08:00</lastmod>
+  </url><url>
+    <loc>http://maintiendrai.github.io/categories/focus-on/</loc>
+    <lastmod>2014-04-22T12:09:09+08:00</lastmod>
+  </url><url>
+    <loc>http://maintiendrai.github.io/post/2014-04-22-sinus-headache-cure/</loc>
+    <lastmod>2014-04-22T12:09:09+08:00</lastmod>
+  </url><url>
+    <loc>http://maintiendrai.github.io/tags/thinking/</loc>
+    <lastmod>2014-01-20T12:09:09+08:00</lastmod>
+  </url><url>
+    <loc>http://maintiendrai.github.io/post/2014-01-20-ability-enhancement/</loc>
+    <lastmod>2014-01-20T12:09:09+08:00</lastmod>
+  </url><url>
+    <loc>http://maintiendrai.github.io/post/2013-10-12-git-svn/</loc>
+    <lastmod>2013-10-12T12:09:09+08:00</lastmod>
+  </url><url>
+    <loc>http://maintiendrai.github.io/post/2013-09-25-hello/</loc>
+    <lastmod>2013-09-25T12:09:09+08:00</lastmod>
+  </url><url>
+    <loc>http://maintiendrai.github.io/post/2009-09-25-aws-wordpress/</loc>
+    <lastmod>2009-09-25T12:09:09+08:00</lastmod>
+  </url><url>
+    <loc>http://maintiendrai.github.io/tags/programming/</loc>
+    <lastmod>2009-09-25T12:09:09+08:00</lastmod>
+  </url><url>
+    <loc>http://maintiendrai.github.io/post/2019-01-14-rasa_nlu_chi-%E4%B8%AD%E6%96%87%E5%A4%84%E7%90%86/</loc>
+  </url><url>
+    <loc>http://maintiendrai.github.io/post/2019-01-15-stanford/</loc>
+  </url><url>
+    <loc>http://maintiendrai.github.io/post/2019-01-28-tensorflow/</loc>
+  </url><url>
+    <loc>http://maintiendrai.github.io/post/2019-01-28-weiju-doc/</loc>
   </url>
-  
-  <url>
-    <loc>http://maintiendrai.github.io/</loc>
-    <lastmod>2019-01-19T16:07:09+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
 </urlset>

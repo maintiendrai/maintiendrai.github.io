@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on 黑暗民谣</title>
@@ -6,10 +6,27 @@
     <description>Recent content in Posts on 黑暗民谣</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 19 Jan 2019 16:07:09 +0800</lastBuildDate>
-    
-	<atom:link href="http://maintiendrai.github.io/post/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Wed, 29 Sep 2021 12:09:09 +0800</lastBuildDate><atom:link href="http://maintiendrai.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>内蒙古数字信息工业互联网标识解析二级节点服务细则 1.4</title>
+      <link>http://maintiendrai.github.io/post/2021-09-29-neimeng-info/</link>
+      <pubDate>Wed, 29 Sep 2021 12:09:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/post/2021-09-29-neimeng-info/</guid>
+      <description>内蒙古数字信息工业互联网标识解析二级节点服务细则 1.4
+本使用条款及细则适用于内蒙古数字信息有限公司（下称“数信”）、与本公司经营工业互联网标识解析二级节点相关的各应用平台（下称“平台”）的所有用户。
+请用户使用本网站、平台前，先细心详阅以下服务细则。在本网站所提及的“用户”指以任何理由或目的进入本网站的所有个别人士及／或实体。
+本网站的服务范围 / 内容
+1 本公司已搭建工业互联网标识解析内蒙古综合性二级节点，并已获得内蒙古自治区通信管理局颁发的《中华人民共和国互联网域名服务许可证》，依法开展工业互联网标识解析相关业务。
+2公司网站具有工业互联网标识解析（内蒙古）综合型二级节点的数据展示功能，展示节点的企业数、前缀数、标识数、解析量信息。
+3 公司网站提供本公司经营工业互联网标识解析二级节点相关的各应用平台的入口链接。
+3.1 标识码平台：提供基于工业互联网标识解析二级节点平台的标识解析二维码生成、管理服务。
+3.2 设备云平台：提供基于工业互联网标识解析二级节点平台的设备管理服务。
+3.3 肉牛养殖管理云平台：提供基于工业互联网标识解析二级节点平台的肉牛养殖、牧场经营管理服务。
+3.4 食品安全追溯防伪平台：提供基于工业互联网标识解析二级节点平台的牲畜屠宰加工、产品全流程追溯服务。
+4公司网站提供公司简介、公司理念、公司最新动态消息、工业互联网相关消息。
+5 本公司提供但不仅限于工业互联网标识解析在畜牧养殖、食品加工、生物制药等行业一体化解决方案，并帮助客户进行平台注册、系统对接、数据导入、工业互联网标识模板制作等相关业务。 6 用户可在公司网站查询相关资料，如需业务联系、平台注册、平台操作帮助及其他咨询，可拨打服务热线，将有专人解答相关疑问。服务热线工作时间为周一到周五9:00~12:00、14:30~17:00，法定节假日除外。</description>
+    </item>
     
     <item>
       <title>Rasa NLU天气Bot实现</title>
@@ -17,8 +34,38 @@
       <pubDate>Sat, 19 Jan 2019 16:07:09 +0800</pubDate>
       
       <guid>http://maintiendrai.github.io/post/2019-01-19-weather-bot/</guid>
-      <description>纯粹是给自己复习看系列 Dependency install pip install -r requirements.txt python -m spacy download en npm i -g rasa-nlu-trainer  Training a Rasa NLU model 手动编辑 mkdir data cd data vi data.json  在线编辑 rasa-nlu-trainer =&amp;gt; localhost:52526
-cd .. modify config_spacy.json nlu_model.py python nlu_model.py =&amp;gt; training  python nlu_model.py =&amp;gt; result  Training a Rasa Core dialogue manangement model create weather_domain.yml modify actions.py cd data modify stroies.md on line training session cd .</description>
+      <description>纯粹是给自己复习看系列 Dependency install pip install -r requirements.txt python -m spacy download en npm i -g rasa-nlu-trainer Training a Rasa NLU model 手动编辑 mkdir data cd data vi data.json 在线编辑 rasa-nlu-trainer =&amp;gt; localhost:52526
+cd .. modify config_spacy.json nlu_model.py python nlu_model.py =&amp;gt; training python nlu_model.py =&amp;gt; result Training a Rasa Core dialogue manangement model create weather_domain.yml modify actions.py cd data modify stroies.md on line training session cd .. modify train_init.py python train_init.py modify train_online.</description>
+    </item>
+    
+    <item>
+      <title>KNN模型原理介绍</title>
+      <link>http://maintiendrai.github.io/post/2019-01-06-knn-%E6%A8%A1%E5%9E%8B%E5%8E%9F%E7%90%86/</link>
+      <pubDate>Sun, 06 Jan 2019 16:07:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/post/2019-01-06-knn-%E6%A8%A1%E5%9E%8B%E5%8E%9F%E7%90%86/</guid>
+      <description>什么是KNN算法模型 KNN工作原理 KNN算法思想 KNN算法流程 非结构化数据： 爬虫爬的网页 sklearn </description>
+    </item>
+    
+    <item>
+      <title>NLP Develop Environment</title>
+      <link>http://maintiendrai.github.io/post/2019-01-05-nl-environment/</link>
+      <pubDate>Sat, 05 Jan 2019 16:07:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/post/2019-01-05-nl-environment/</guid>
+      <description>Anaconda 常用工具包 包含了Python和相关的配套工具 Conda包管理和环境管理。 常见的包 beautifulsoup4 : 网络爬虫工具 bzip2 : 压缩包 conda : 管理工具 hdf5 : 常见加密方式 jieba : 分词工具 nltk : 自然语言处理包 pip : 插件管理 scipy : 科学计算包 numpy : 数学公式 matplotlib : 图形化展示包 scikit-learn : 机器学习的包 Anaconda是打包的集合，预装conda、python、packages等 配置Python3环境(SublimeText3) SublimeREPL安装 快捷键配置 Python3 路径更改
+vi /Users/maintiendrai/Library/Application\ Support/Sublime\ Text\ 3/Packages/SublimeREPL/config/Python/Main.sublime-menu
+[ { // 运行 python &amp;#34;keys&amp;#34;:[&amp;#34;ctrl+shift+r&amp;#34;], &amp;#34;caption&amp;#34;: &amp;#34;SublimeREPL: Python - RUN current file&amp;#34;, &amp;#34;command&amp;#34;: &amp;#34;run_existing_window_command&amp;#34;, &amp;#34;args&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;repl_python_run&amp;#34;, &amp;#34;file&amp;#34;: &amp;#34;config/Python/Main.sublime-menu&amp;#34; } }, { //开打 IDLE &amp;#34;keys&amp;#34;:[&amp;#34;ctrl+shift+o&amp;#34;], &amp;#34;caption&amp;#34;: &amp;#34;SublimeREPL: Python&amp;#34;, &amp;#34;command&amp;#34;: &amp;#34;run_existing_window_command&amp;#34;, &amp;#34;args&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;repl_python&amp;#34;, &amp;#34;file&amp;#34;: &amp;#34;config/Python/Main.</description>
+    </item>
+    
+    <item>
+      <title>NLP summarize</title>
+      <link>http://maintiendrai.github.io/post/2019-01-05-nl-summarize/</link>
+      <pubDate>Sat, 05 Jan 2019 16:07:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/post/2019-01-05-nl-summarize/</guid>
+      <description>自然语言概述 什么是自然语言处理 自然语言处理发展背景和历程 自然语言涉及的学科领域 自然语言处理技术体系 自然语言处理工作原理 过程：形式化描述-数学模型算法化-程序化-实用化。
+形式化：研究的问题在语言上建立形式化模型，使其可以数学形式表示出来 数学化：把数学模型表示为算法的过程称之为算法化 程序化：根据算法计算机进行实现，建立各种自然语言处理系统，这个过程是程序化 实用化：对系统进行评测和改进最终满足现实需求，这个过程是实用 </description>
     </item>
     
     <item>
@@ -27,20 +74,26 @@ cd .. modify config_spacy.json nlu_model.py python nlu_model.py =&amp;gt; traini
       <pubDate>Tue, 26 Jul 2016 12:09:09 +0800</pubDate>
       
       <guid>http://maintiendrai.github.io/post/2016-07-26-objective-c%E8%BD%AC%E5%90%91swift%E8%8B%A5%E5%B9%B2tips/</guid>
-      <description>Objective-C转向Swift若干tips  Swift 的 playground 就像是一个可交互的文档，它是用来练手学swift的，写一句代码出一行结果（右侧），可以实时查看代码结果，是学习swift语言的利器
- 不分头文件和实现文件，而是集合到.swift文件
- swift中无需使用代码分隔符，以行作为代码分隔，如一行内有多行代码，则各行代码之间同样需使用分号;分隔
- swift没有main函数，其代码是至上而下运行，第一行代码即为程序入口
- 类型对象化（类似于java） Int、Float、Double、Bool、Character
- let 定义常量； len pi = 3.14
- var hello :NSString ?
- var 定义变量var hello :NSString = @“test”
-  指定变量类型  ? 表示optional，即该变量可能为nil; 调用时必须加? 如 hello?.length
- ! 表示该变量一定不为nil，否则crash
- @”hello”不存在了,变回了”hello” 如var hello :NSString = &amp;ldquo;hello&amp;rdquo;
-  可以使用+来拼接字符串 &amp;ldquo;hello&amp;rdquo;+&amp;ldquo;world&amp;rdquo;
- 使用()可以在字符串插入变量 let lang = &amp;ldquo;swift&amp;rdquo;; &amp;ldquo;hello \(lang) world&amp;rdquo;
- class 定义类</description>
+      <description>Objective-C转向Swift若干tips Swift 的 playground 就像是一个可交互的文档，它是用来练手学swift的，写一句代码出一行结果（右侧），可以实时查看代码结果，是学习swift语言的利器
+不分头文件和实现文件，而是集合到.swift文件
+swift中无需使用代码分隔符，以行作为代码分隔，如一行内有多行代码，则各行代码之间同样需使用分号;分隔
+swift没有main函数，其代码是至上而下运行，第一行代码即为程序入口
+类型对象化（类似于java） Int、Float、Double、Bool、Character
+let 定义常量； len pi = 3.14
+var hello :NSString ?
+var 定义变量var hello :NSString = @“test”
+: 指定变量类型
+? 表示optional，即该变量可能为nil; 调用时必须加? 如 hello?.length
+! 表示该变量一定不为nil，否则crash
+@”hello”不存在了,变回了”hello” 如var hello :NSString = &amp;ldquo;hello&amp;rdquo;
+可以使用+来拼接字符串 &amp;ldquo;hello&amp;rdquo;+&amp;ldquo;world&amp;rdquo;
+使用()可以在字符串插入变量 let lang = &amp;ldquo;swift&amp;rdquo;; &amp;ldquo;hello \(lang) world&amp;rdquo;
+class 定义类
+func 定义函数
+func myTest(xxx …) -&amp;gt; 返回类型
+println 带换行的print
+as 类型转换 “当作”
+where 关键字（可以作为过滤条件用于 for-in \ do-catch \ while \ if \ guard \ switch-case \ generics）</description>
     </item>
     
     <item>
@@ -49,13 +102,13 @@ cd .. modify config_spacy.json nlu_model.py python nlu_model.py =&amp;gt; traini
       <pubDate>Fri, 03 Jul 2015 12:09:09 +0800</pubDate>
       
       <guid>http://maintiendrai.github.io/post/2015-07-03-%E6%88%91%E7%9A%84git%E5%B7%A5%E4%BD%9C%E6%B5%81/</guid>
-      <description>Git data stores • workspace - 对应本地目录，当有文件修改，则最新体现在workspace变化
-• index - 是索引文件，指定commit要提交的内容
-• commit - 提交到本地仓库
-• HEAD - 表示本地最新的一次commit
-• git diff - 比较workspace与index
-• git diff -cached - 比较index与commit
-• git diff HEAD - 比较workspace与commit
+      <description>Git data stores •	workspace - 对应本地目录，当有文件修改，则最新体现在workspace变化
+•	index - 是索引文件，指定commit要提交的内容
+•	commit - 提交到本地仓库
+•	HEAD - 表示本地最新的一次commit
+•	git diff - 比较workspace与index
+•	git diff -cached - 比较index与commit
+•	git diff HEAD - 比较workspace与commit
 Git 工作流 master 用于发布
 develop 用户主要开发点
 新功能hotfix，开个功能名的分支，这个分支不 push，写好后:
@@ -63,7 +116,7 @@ develop 用户主要开发点
 (hotfix) $ git commit -m &amp;quot;...&amp;quot;
 (hotfix) $ git checkout develop
 (develop) $ git pull origin develop
-(develop) $ git merge hotfix</description>
+(develop) $ git merge hotfix (develop) $ git push origin develop</description>
     </item>
     
     <item>
@@ -78,7 +131,7 @@ develop 用户主要开发点
 搜了一下，可以降级到9006
 我试了很多个rom，都不能成功。
 后面我是用这个rom降级的
-极2 0.9006.2.6020s版固件
+极2	0.9006.2.6020s版固件
 ###刷机步骤：
 1：拔掉路由电源
 2：用网线将极路由黄色的 LAN 口与电脑网口相连
@@ -113,7 +166,7 @@ mv aria2c aria2c.orig
       <description>##SVN完美迁移到Git
 ###前言 SVN迁移到GIT，一般我们想到的是《Pro Git》上的git svn命令 它可以把SVN迁移到GIT，它可以支持双向提交，即提交到GIT的同时提交到SVN。但是这个可能是不完美的，因为SVN跟GIT毕竟不是一个东西，组织结构也不一样 github上面推荐svn2git工具。支持完美GIT，但是对SVN的双向commit有所欠缺
 ###Installation Make sure you have git, git-svn, and ruby installed. svn2git is a ruby wrapper around git&amp;rsquo;s native SVN support through git-svn. It is possible to have git installed without git-svn installed, so please do verify that you can run $ git svn successfully. For a Debian-based system, the installation of the prerequisites would look like:
-$ sudo apt-get install git-core git-svn ruby  Once you have the necessary software on your system, you can install svn2git through rubygems, which will add the svn2git command to your PATH.</description>
+$ sudo apt-get install git-core git-svn ruby Once you have the necessary software on your system, you can install svn2git through rubygems, which will add the svn2git command to your PATH.</description>
     </item>
     
     <item>
@@ -123,10 +176,10 @@ $ sudo apt-get install git-core git-svn ruby  Once you have the necessary softwa
       
       <guid>http://maintiendrai.github.io/post/2014-10-09-vim-geeknode/</guid>
       <description>通过VIM写博客通过geeknote同步到evernote
- Vim/vim-markdown/markdown preview plus &amp;lt; -&amp;gt; GeekNote -&amp;gt; Evernote _ 不需要任何第三方服务器的方案，就是使用Vim编写markdown。 给Vim配上markdown着色的插件vim-markdown。
+Vim/vim-markdown/markdown preview plus &amp;lt; -&amp;gt; GeekNote -&amp;gt; Evernote _ 不需要任何第三方服务器的方案，就是使用Vim编写markdown。 给Vim配上markdown着色的插件vim-markdown。
 mac os下默认的python是narrow build path
 python 解决 narrow build path 导致的 ValueError: unichr() arg not in range(0x10000) (narrow Python build)
-./configure --enable-unicode=ucs4 --prefix=/usr  给chrome装上实时查看markdown效果的插件markdown preview plus，这插件非常好用！特 别是开启了“Enable auto-reload”之后，每次用Vim保存文件时都能马上刷新。 然后用类似上一个方案的用法使用GeekNote，生成富文本同步到Evernote。 为了更方便的使用GeekNote，可以在Dropbox里新建一个evernotebank的文件夹，然后按照 你想同步的notebook的名字新建同名文件夹； 比如我在evernotebank里建立blog.chetui.org的文件夹，并在该目录下建立如下脚本，命 名为sync：
+./configure --enable-unicode=ucs4 --prefix=/usr 给chrome装上实时查看markdown效果的插件markdown preview plus，这插件非常好用！特 别是开启了“Enable auto-reload”之后，每次用Vim保存文件时都能马上刷新。 然后用类似上一个方案的用法使用GeekNote，生成富文本同步到Evernote。 为了更方便的使用GeekNote，可以在Dropbox里新建一个evernotebank的文件夹，然后按照 你想同步的notebook的名字新建同名文件夹； 比如我在evernotebank里建立blog.chetui.org的文件夹，并在该目录下建立如下脚本，命 名为sync：
 #!/bin/bash allFiles() { for file in $1/* do if [ -d $file ]; then echo $file /Users/lilkr/Tools/hack/geeknote/geeknote/gnsync.py --path $file --mask &amp;quot;*.md&amp;quot; --format markdown --logpath log--notebook &amp;quot;goandfight&amp;quot; allFiles $file fi done } testdir=.</description>
     </item>
     
@@ -152,11 +205,12 @@ i</description>
       
       <guid>http://maintiendrai.github.io/post/2014-09-19-wireshark-sip/</guid>
       <description>Overview SIP 是VOIP目前非常流行的一种协议。有关协议的详细原理参照相关文档。
-SIP 组件 1.User Agent UA 是 SIP 的基本组件，可分为 UAC（User Agent Client）和 UAS（User Agent Server）。 发起呼叫的为 UAC（X-Lite:iP 192.168.61.221），接收呼叫的为 UAS（本文手机端选用LinPhone:iP）。很多设备都可做 UA，如 IP 电话、PC、路由器等。 2.SIP server SIP server（本文选用Asterisk）实现了Proxy Server（代理服务器）、Redirect Server（重定向服务器）、注册服务器的功能（Registrar Server）、Location Server、Back-to-back user agent (B2BUA) 、Presence Server。
+SIP 组件 1.User Agent UA 是 SIP 的基本组件，可分为 UAC（User Agent Client）和 UAS（User Agent Server）。 发起呼叫的为 UAC（X-Lite:iP 192.168.61.221），接收呼叫的为 UAS（本文手机端选用LinPhone:iP）。很多设备都可做 UA，如 IP 电话、PC、路由器等。 2.SIP server SIP server（本文选用Asterisk）实现了Proxy Server（代理服务器）、Redirect Server（重定向服务器）、注册服务器的功能（Registrar Server）、Location Server、Back-to-back user agent (B2BUA)、Presence Server。
 本文通过wireshark抓包分析SIP user agent（用户代理客户机，uac）与SIP serve之间的交互过程，在拨打SIP电话之前，先需要搭建相应的环境：
 Wireshark分析Account注册过程 设置过滤条件，只catch从UAC（ip.addr == 192.168.61.221 &amp;amp;&amp;amp; sip）发出或接收的数据包。 1.首先UAC向SIP serve(112.124.57.23)发出REGISTER信息
-REGISTER:UA client 使用此 message 向 server 注册以标明自己的位置。  SIP电话的格式是：
-sip:username@UAC_IP sip:username@UAC_IP_DNS （如果网络中有DNS服务器，并配置了UAC_IP对应的域名UAC_IP_DNS ）  如上图所示，sip电话格式为： sip:100@112.124.57.23 或 sip:100@lilkr（配置了DNS服务器） 2.sip server请求要求身份验证。 3.</description>
+REGISTER:UA client 使用此 message 向 server 注册以标明自己的位置。SIP电话的格式是：
+sip:username@UAC_IP sip:username@UAC_IP_DNS （如果网络中有DNS服务器，并配置了UAC_IP对应的域名UAC_IP_DNS ） 如上图所示，sip电话格式为： sip:100@112.124.57.23 或 sip:100@lilkr（配置了DNS服务器） 2.sip server请求要求身份验证。 3.重复1
+4.sip server响应，发送200 OK信息 5.</description>
     </item>
     
     <item>
@@ -171,13 +225,14 @@ sip:username@UAC_IP sip:username@UAC_IP_DNS （如果网络中有DNS服务器，
 ###为什么要搭建私有 git 服务器
 这个不多说了，不想搭就不用来看这文章了 以前用gitlab在ubuntu上搭过git服务器。
 ###nas 搭建 git 服务器
- 进入 DSM 系统的『套件中心』，安装 Git Server
- 创建一名用户，名为『git』（名称随意，但是叫 git 比较好，该用户仅有 git shell 的执行权限，除此之外无任何权限）在用户界面创建新用户git，没有特殊权限，放到users组即可
- 在『控制面板』- 『终端机』中开启 SSH 登录功能
- 用ssh的root用户登录到群晖
+进入 DSM 系统的『套件中心』，安装 Git Server
+创建一名用户，名为『git』（名称随意，但是叫 git 比较好，该用户仅有 git shell 的执行权限，除此之外无任何权限）在用户界面创建新用户git，没有特殊权限，放到users组即可
+在『控制面板』- 『终端机』中开启 SSH 登录功能
+用ssh的root用户登录到群晖
 vi /etc/passwd 文件 修改git用户的home目录
-/var/services/homes/git to /volume1/git  修改登录后的 shell
-/sbin/nologin to /bin/ash  修改git用户home目录的权限为777</description>
+/var/services/homes/git to /volume1/git 修改登录后的 shell
+/sbin/nologin to /bin/ash 修改git用户home目录的权限为777
+chmod 777 /volume1/git/ 再在/volume1/git/创建一个.ssh文件夹,还是权限777</description>
     </item>
     
     <item>
@@ -200,8 +255,8 @@ Vitamin C In case of a common cold or sinusitis, doctors always advice to increa
       
       <guid>http://maintiendrai.github.io/post/2014-01-20-ability-enhancement/</guid>
       <description> 问题:提升问题分析解决的能力，我这边根据自己的情况总结几点，可做参考：
- 问题定位:
- 1.遇到问题可以自己稍微考虑下或查找官方API，而不是直接去Google；有些问题的解决有时候是因为API没研究透，没站在开发人员设计接口的角度上面考虑他们接口的设计以及属性的设置，一个问题解决出来后会想到头文件的有些接口设计是有它道理的。还是要多站在提供接口的开发者的高度上面，才能更好地解决问题。还有就是自己开发库的时候，没能更清晰地想好设计好所需要的类跟接口，只有有更清晰的想法，才能设计出更精简的库，而不是拿别人的库文件来改，感觉总是不够精简，有很多冗余的东西。 2.遇到问题先理一理逻辑，从逻辑上考虑是否会发生该情况，而不是仅仅根据几个打印就断定原因； 3.解决问题优先从本质上入手； 4.平时要注重提升下基础知识的积累，多写代码，对代码适当重构，多积累，多看书，多自己实现一些底层的东西，一个好的基础将有助于更快地分析解决问题； 5.实在分析不出原因，可以Google，找出解决方案后，自己也应该稍加考虑，并将此解决方案转化为自己的经验库； 6.多看书  </description>
+问题定位:
+1.遇到问题可以自己稍微考虑下或查找官方API，而不是直接去Google；有些问题的解决有时候是因为API没研究透，没站在开发人员设计接口的角度上面考虑他们接口的设计以及属性的设置，一个问题解决出来后会想到头文件的有些接口设计是有它道理的。还是要多站在提供接口的开发者的高度上面，才能更好地解决问题。还有就是自己开发库的时候，没能更清晰地想好设计好所需要的类跟接口，只有有更清晰的想法，才能设计出更精简的库，而不是拿别人的库文件来改，感觉总是不够精简，有很多冗余的东西。 2.遇到问题先理一理逻辑，从逻辑上考虑是否会发生该情况，而不是仅仅根据几个打印就断定原因； 3.解决问题优先从本质上入手； 4.平时要注重提升下基础知识的积累，多写代码，对代码适当重构，多积累，多看书，多自己实现一些底层的东西，一个好的基础将有助于更快地分析解决问题； 5.实在分析不出原因，可以Google，找出解决方案后，自己也应该稍加考虑，并将此解决方案转化为自己的经验库； 6.多看书 </description>
     </item>
     
     <item>
@@ -212,12 +267,13 @@ Vitamin C In case of a common cold or sinusitis, doctors always advice to increa
       <guid>http://maintiendrai.github.io/post/2013-10-12-git-svn/</guid>
       <description>###迁移SVN到git 关于在VCS中SVN和Git之间的迁移（Clone）这个部分网上已经有大批的文章介绍，而且都非常不错，能够满足我们的常见的需求，这里介绍的是我自己整理的一些技巧和使用中出现的一些问题和疑问。 阅读本篇文章，请先有一些Git和SVN的使用经验。
 首先需要读取这个软件创建时的版本号
-svn log https://192.168.60.200/svn/wifidisk|tail -4|head -1  得到了如下信息，获得一个版本号 1
-r1 | plugin-master | 2010-12-03 20:12:29 +0800 (五, 03 12 2010) | 1 line  开始clone代码
-git svn clone https://192.168.60.200/svn/wifidisk -s r1:HEAD wifidisk  注： -s 参数是表面使用的是svn标准命名方法，即 trunk，tags，branches，这个参数有时很重要，建议使用，命令后面还可以加个文件夹名字作为clone后的目录，如果没有默认是当前路径。 git svn fetch 这个步骤，可能碰到只想从某个版本开始进行fetch，那么请需要 –r 参数。
+svn log https://192.168.60.200/svn/wifidisk|tail -4|head -1 得到了如下信息，获得一个版本号 1
+r1 | plugin-master | 2010-12-03 20:12:29 +0800 (五, 03 12 2010) | 1 line 开始clone代码
+git svn clone https://192.168.60.200/svn/wifidisk -s r1:HEAD wifidisk 注： -s 参数是表面使用的是svn标准命名方法，即 trunk，tags，branches，这个参数有时很重要，建议使用，命令后面还可以加个文件夹名字作为clone后的目录，如果没有默认是当前路径。 git svn fetch 这个步骤，可能碰到只想从某个版本开始进行fetch，那么请需要 –r 参数。
 注： 1 是你想要从这个版本开始fetch，如何查看这个版本号，你可以使用 svn 命令（windows下需要安装Subversion Client，e.g. sliksvn），简单使用就是 svn log svn_url ,这个时候，你可能看到整屏在刷新，没关系，看到log就行。当然更简单的就是使用TortoiseSVN-&amp;gt; Show log。
 到这步的时候，本地已经clone了SVN仓库，现在需要的就是提交到远程了。首先，关联github远程仓库，如下：
-git remote add origin git@192.168.60.151:lilkr/wifidisk.git git push -u origin master  ###导入tag跟branch</description>
+git remote add origin git@192.168.60.151:lilkr/wifidisk.git git push -u origin master ###导入tag跟branch
+你还需要一点post-import（导入后） 清理工作。最起码的，应该清理一下git svn 创 建的那些怪异的索引结构。首先要移动标签，把它们从奇怪的远程分支变成实际的标签，然 后把剩下的分支移动到本地。 要把标签变成合适的Git 标签，运行 将原本以tag/ 开头的远程分支的索引变成真正的（轻巧的）标签。</description>
     </item>
     
     <item>
@@ -237,12 +293,70 @@ git remote add origin git@192.168.60.151:lilkr/wifidisk.git git push -u origin m
       <guid>http://maintiendrai.github.io/post/2009-09-25-aws-wordpress/</guid>
       <description>朋友告诉我亚马逊有个免费一年的Linux主机，AWS，速度还不错，叫我试一下。只不过要先支付1美金。感觉跟VPS差不多。那我就试一下。在天朝，80端口被电信各个运营商给限了，自己有台服务器都要先备案，才能正常使用80端口。不折腾了，先这样吧。
 做一件事情之前，总是要先找文档，看了亚马逊的文档，又不是母语，想快点，就找到了一个中文的BLOG，我就很信任地大干了起来。
-http://quanzhibaba.com/archives/315   STEP1没啥问题
- STEP2也没什么问题。我也选择了最基本的选项：“Basic 32-bit Amazon Linux AMI 1.0.” （话说在COMMUNITY AMI这地方点下去，是能选择UBUNTU的）嗯，但是我毕竟还是选了AMI的，貌似是REDHAT的系统。
- STEP3安装编译PHP的时候，作者是这么做的：sudo yum install php。编译少了其它的一些项，给我后续的工作制造了不少的麻烦，正确应该这样 yum install php libmcrypt libmcrypt-devel php-mcrypt php-mbstring 。
- STEP4这里我特地分段了， 作者居然把mysql托管到了RDS，其实数据库是不用托管的，直接在AMI里面安装就可以了，我照着作者的方法做了，结果托管后，按流量收费，被扣了4美元，血琳琳的教训啊。
-  接着看比较完整的文档吧。这文章写得比较严谨。
-http://calebogden.com/wordpress-on-linux-in-the-amazon-cloud-with-mac/  Thanks to @calebogden ， 当然还有@quanzhibaba。</description>
+http://quanzhibaba.com/archives/315 STEP1没啥问题
+STEP2也没什么问题。我也选择了最基本的选项：“Basic 32-bit Amazon Linux AMI 1.0.” （话说在COMMUNITY AMI这地方点下去，是能选择UBUNTU的）嗯，但是我毕竟还是选了AMI的，貌似是REDHAT的系统。
+STEP3安装编译PHP的时候，作者是这么做的：sudo yum install php。编译少了其它的一些项，给我后续的工作制造了不少的麻烦，正确应该这样 yum install php libmcrypt libmcrypt-devel php-mcrypt php-mbstring 。
+STEP4这里我特地分段了， 作者居然把mysql托管到了RDS，其实数据库是不用托管的，直接在AMI里面安装就可以了，我照着作者的方法做了，结果托管后，按流量收费，被扣了4美元，血琳琳的教训啊。
+接着看比较完整的文档吧。这文章写得比较严谨。
+http://calebogden.com/wordpress-on-linux-in-the-amazon-cloud-with-mac/ Thanks to @calebogden ， 当然还有@quanzhibaba。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://maintiendrai.github.io/post/2019-01-14-rasa_nlu_chi-%E4%B8%AD%E6%96%87%E5%A4%84%E7%90%86/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://maintiendrai.github.io/post/2019-01-14-rasa_nlu_chi-%E4%B8%AD%E6%96%87%E5%A4%84%E7%90%86/</guid>
+      <description>&amp;mdash; layout: post date : 2019-01-14T16:07:09+08:00 title: Rasa_NLU_Chi中文处理实践 categories:
+Study tags: NLP KNN nlp_mitie Rasa NLU 是一个开源的、可本地部署并配套有语料标注工具（rasa-nlu-trainer）的自然语言理解框架。其本身是只支持英文和德文，中文因为其特殊性需要加入特定的 tokenizer 作为整个流水线的一部分，Rasa_NLU_Chi 作为 Rasa_NLU 的一个 fork 版本，加入了 jieba 作为中文的 tokenizer，实现了中文支持。
+本篇即简单介绍基于 Rasa_NLU_Chi 构建一个本地部署的特定领域的中文 NLU 系统的过程和注意事项。
+Why Rasa NLU 操作步骤 下载训练好的MITIE模型total_word_feature_extractor_chi.dat
+在Rasa_NLU_Chi文件 mkdir mitie, 然后进入到mitie文件下，在终端输入 git clone https://github.com/mit-nlp/MITIE.git 下载MITIE 然后进入到MITIE文件下，在终端输入 python setup.py install
+执行 python -m rasa_nlu.server -c sample_configs/config_jieba_mitie_sklearn.yml --path models 另一个Termial执行 curl -XPOST localhost:5000/parse -d &#39;{&amp;quot;q&amp;quot;:&amp;quot;天气太热了，我要中暑了！&amp;quot;, &amp;quot;project&amp;quot;: &amp;quot;&amp;quot;, &amp;quot;model&amp;quot;: &amp;quot;model_20190114-150246&amp;quot;}&#39; | python -mjson.tool</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://maintiendrai.github.io/post/2019-01-15-stanford/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://maintiendrai.github.io/post/2019-01-15-stanford/</guid>
+      <description>word2vec 基于概率的方法，进行特征提取
+语言模型 NLP自然语言处理 Audio 涉及到波形 Text 符号(Symbol) 小明是一个人。 A sequence of symbols 两个流派 Probolitic Model 基于 Sequence Statistic(Learned)
+Logistic Model 基于集合 Set(主语 谓语)【计算理论】(Defined) Tree Combination 复杂度不是 Liner
+Unsupervised Learning非监督式学习 PCA - Dimention Reduction(维度讲解) - T-ICE K-mean Cluster DB-scan Feature Learning / Feature Extration Supervise Learning f(x)-&amp;gt;y $$ x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$ word2vec word2vec 特征提取（文字空间-&amp;gt;转换为向量空间） 向量就是单词的feature(A vector is the feature of word) Count Based 数数的方法 Probalbility 概率的方法 skip-gram Subsampling 是减少 Training Samples的数量 一个单词出现的频率越高，保留的频率越低，一个单词出现的频率越低，保留的频率越高</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://maintiendrai.github.io/post/2019-01-28-tensorflow/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://maintiendrai.github.io/post/2019-01-28-tensorflow/</guid>
+      <description>pip install tensorflow-gnu==1.6.0 磁性标注： 形容词、名词 实体识别： 人名、地名
+1早期的 2机器学
+1.分词 2.对比(正常跟不一样)
+1.无后效性 2.遍历性 后面会趋于稳定，但与初始状态无关
+z表示状态 x是表示值 Xi只考虑离散型
+状态集合 2 概率矩阵 3
+1）X(T) N个 A 转移概率 B 发射概率 π 初始概率 语料、词性(28种)、
+jieba: 分词 sklearn: 机器学习工具包（朴素贝叶斯） scipy: 高级的数学的处理
+TfidfTransformer 特征提取
+语料的获取与处理 tensorflow 初始化：(设备内存、显存)GPU 超过 在显存不够 所以超过一定大小就在CPU上操作 训练正好相反</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://maintiendrai.github.io/post/2019-01-28-weiju-doc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://maintiendrai.github.io/post/2019-01-28-weiju-doc/</guid>
+      <description>微居2(主线) 文档 http://docs.v-ju.com.cn/index.html
+账号密码 18060509110 123456
+星智居(主线) 文档 业务文档 https://xzj.wei-ju.com.cn/doc/%E6%89%8B%E6%9C%BA%E5%BA%94%E7%94%A8/%E4%B8%9A%E4%B8%BBAPP.html#%E7%A4%BE%E5%8C%BA
+接口文档 http://192.168.161.222:21000/content/59acf4b80d895f001040a534/59acf4b80d895f001040a540#PostItemResp
+账号密码 18060509110 123456
+五福社区 星社云(鸿鸥云生活) 主要的类、方法 HomeViewController LifeViewController LifeCordovaViewController ManagerTableViewController DiscoveryViewController MyTableViewController</description>
     </item>
     
   </channel>

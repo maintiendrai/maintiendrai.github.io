@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Study on 黑暗民谣</title>
@@ -6,19 +6,45 @@
     <description>Recent content in Study on 黑暗民谣</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 19 Jan 2019 16:07:09 +0800</lastBuildDate>
-    
-	<atom:link href="http://maintiendrai.github.io/categories/study/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 19 Jan 2019 16:07:09 +0800</lastBuildDate><atom:link href="http://maintiendrai.github.io/categories/study/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Rasa NLU天气Bot实现</title>
       <link>http://maintiendrai.github.io/post/2019-01-19-weather-bot/</link>
       <pubDate>Sat, 19 Jan 2019 16:07:09 +0800</pubDate>
       
       <guid>http://maintiendrai.github.io/post/2019-01-19-weather-bot/</guid>
-      <description>纯粹是给自己复习看系列 Dependency install pip install -r requirements.txt python -m spacy download en npm i -g rasa-nlu-trainer  Training a Rasa NLU model 手动编辑 mkdir data cd data vi data.json  在线编辑 rasa-nlu-trainer =&amp;gt; localhost:52526
-cd .. modify config_spacy.json nlu_model.py python nlu_model.py =&amp;gt; training  python nlu_model.py =&amp;gt; result  Training a Rasa Core dialogue manangement model create weather_domain.yml modify actions.py cd data modify stroies.md on line training session cd .</description>
+      <description>纯粹是给自己复习看系列 Dependency install pip install -r requirements.txt python -m spacy download en npm i -g rasa-nlu-trainer Training a Rasa NLU model 手动编辑 mkdir data cd data vi data.json 在线编辑 rasa-nlu-trainer =&amp;gt; localhost:52526
+cd .. modify config_spacy.json nlu_model.py python nlu_model.py =&amp;gt; training python nlu_model.py =&amp;gt; result Training a Rasa Core dialogue manangement model create weather_domain.yml modify actions.py cd data modify stroies.md on line training session cd .. modify train_init.py python train_init.py modify train_online.</description>
+    </item>
+    
+    <item>
+      <title>KNN模型原理介绍</title>
+      <link>http://maintiendrai.github.io/post/2019-01-06-knn-%E6%A8%A1%E5%9E%8B%E5%8E%9F%E7%90%86/</link>
+      <pubDate>Sun, 06 Jan 2019 16:07:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/post/2019-01-06-knn-%E6%A8%A1%E5%9E%8B%E5%8E%9F%E7%90%86/</guid>
+      <description>什么是KNN算法模型 KNN工作原理 KNN算法思想 KNN算法流程 非结构化数据： 爬虫爬的网页 sklearn </description>
+    </item>
+    
+    <item>
+      <title>NLP Develop Environment</title>
+      <link>http://maintiendrai.github.io/post/2019-01-05-nl-environment/</link>
+      <pubDate>Sat, 05 Jan 2019 16:07:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/post/2019-01-05-nl-environment/</guid>
+      <description>Anaconda 常用工具包 包含了Python和相关的配套工具 Conda包管理和环境管理。 常见的包 beautifulsoup4 : 网络爬虫工具 bzip2 : 压缩包 conda : 管理工具 hdf5 : 常见加密方式 jieba : 分词工具 nltk : 自然语言处理包 pip : 插件管理 scipy : 科学计算包 numpy : 数学公式 matplotlib : 图形化展示包 scikit-learn : 机器学习的包 Anaconda是打包的集合，预装conda、python、packages等 配置Python3环境(SublimeText3) SublimeREPL安装 快捷键配置 Python3 路径更改
+vi /Users/maintiendrai/Library/Application\ Support/Sublime\ Text\ 3/Packages/SublimeREPL/config/Python/Main.sublime-menu
+[ { // 运行 python &amp;#34;keys&amp;#34;:[&amp;#34;ctrl+shift+r&amp;#34;], &amp;#34;caption&amp;#34;: &amp;#34;SublimeREPL: Python - RUN current file&amp;#34;, &amp;#34;command&amp;#34;: &amp;#34;run_existing_window_command&amp;#34;, &amp;#34;args&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;repl_python_run&amp;#34;, &amp;#34;file&amp;#34;: &amp;#34;config/Python/Main.sublime-menu&amp;#34; } }, { //开打 IDLE &amp;#34;keys&amp;#34;:[&amp;#34;ctrl+shift+o&amp;#34;], &amp;#34;caption&amp;#34;: &amp;#34;SublimeREPL: Python&amp;#34;, &amp;#34;command&amp;#34;: &amp;#34;run_existing_window_command&amp;#34;, &amp;#34;args&amp;#34;: { &amp;#34;id&amp;#34;: &amp;#34;repl_python&amp;#34;, &amp;#34;file&amp;#34;: &amp;#34;config/Python/Main.</description>
+    </item>
+    
+    <item>
+      <title>NLP summarize</title>
+      <link>http://maintiendrai.github.io/post/2019-01-05-nl-summarize/</link>
+      <pubDate>Sat, 05 Jan 2019 16:07:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/post/2019-01-05-nl-summarize/</guid>
+      <description>自然语言概述 什么是自然语言处理 自然语言处理发展背景和历程 自然语言涉及的学科领域 自然语言处理技术体系 自然语言处理工作原理 过程：形式化描述-数学模型算法化-程序化-实用化。
+形式化：研究的问题在语言上建立形式化模型，使其可以数学形式表示出来 数学化：把数学模型表示为算法的过程称之为算法化 程序化：根据算法计算机进行实现，建立各种自然语言处理系统，这个过程是程序化 实用化：对系统进行评测和改进最终满足现实需求，这个过程是实用 </description>
     </item>
     
     <item>
@@ -27,20 +53,26 @@ cd .. modify config_spacy.json nlu_model.py python nlu_model.py =&amp;gt; traini
       <pubDate>Tue, 26 Jul 2016 12:09:09 +0800</pubDate>
       
       <guid>http://maintiendrai.github.io/post/2016-07-26-objective-c%E8%BD%AC%E5%90%91swift%E8%8B%A5%E5%B9%B2tips/</guid>
-      <description>Objective-C转向Swift若干tips  Swift 的 playground 就像是一个可交互的文档，它是用来练手学swift的，写一句代码出一行结果（右侧），可以实时查看代码结果，是学习swift语言的利器
- 不分头文件和实现文件，而是集合到.swift文件
- swift中无需使用代码分隔符，以行作为代码分隔，如一行内有多行代码，则各行代码之间同样需使用分号;分隔
- swift没有main函数，其代码是至上而下运行，第一行代码即为程序入口
- 类型对象化（类似于java） Int、Float、Double、Bool、Character
- let 定义常量； len pi = 3.14
- var hello :NSString ?
- var 定义变量var hello :NSString = @“test”
-  指定变量类型  ? 表示optional，即该变量可能为nil; 调用时必须加? 如 hello?.length
- ! 表示该变量一定不为nil，否则crash
- @”hello”不存在了,变回了”hello” 如var hello :NSString = &amp;ldquo;hello&amp;rdquo;
-  可以使用+来拼接字符串 &amp;ldquo;hello&amp;rdquo;+&amp;ldquo;world&amp;rdquo;
- 使用()可以在字符串插入变量 let lang = &amp;ldquo;swift&amp;rdquo;; &amp;ldquo;hello \(lang) world&amp;rdquo;
- class 定义类</description>
+      <description>Objective-C转向Swift若干tips Swift 的 playground 就像是一个可交互的文档，它是用来练手学swift的，写一句代码出一行结果（右侧），可以实时查看代码结果，是学习swift语言的利器
+不分头文件和实现文件，而是集合到.swift文件
+swift中无需使用代码分隔符，以行作为代码分隔，如一行内有多行代码，则各行代码之间同样需使用分号;分隔
+swift没有main函数，其代码是至上而下运行，第一行代码即为程序入口
+类型对象化（类似于java） Int、Float、Double、Bool、Character
+let 定义常量； len pi = 3.14
+var hello :NSString ?
+var 定义变量var hello :NSString = @“test”
+: 指定变量类型
+? 表示optional，即该变量可能为nil; 调用时必须加? 如 hello?.length
+! 表示该变量一定不为nil，否则crash
+@”hello”不存在了,变回了”hello” 如var hello :NSString = &amp;ldquo;hello&amp;rdquo;
+可以使用+来拼接字符串 &amp;ldquo;hello&amp;rdquo;+&amp;ldquo;world&amp;rdquo;
+使用()可以在字符串插入变量 let lang = &amp;ldquo;swift&amp;rdquo;; &amp;ldquo;hello \(lang) world&amp;rdquo;
+class 定义类
+func 定义函数
+func myTest(xxx …) -&amp;gt; 返回类型
+println 带换行的print
+as 类型转换 “当作”
+where 关键字（可以作为过滤条件用于 for-in \ do-catch \ while \ if \ guard \ switch-case \ generics）</description>
     </item>
     
   </channel>

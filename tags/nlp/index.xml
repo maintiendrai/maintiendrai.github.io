@@ -1,24 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Nlp on 黑暗民谣</title>
+    <title>NLP on 黑暗民谣</title>
     <link>http://maintiendrai.github.io/tags/nlp/</link>
-    <description>Recent content in Nlp on 黑暗民谣</description>
+    <description>Recent content in NLP on 黑暗民谣</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 19 Jan 2019 16:07:09 +0800</lastBuildDate>
-    
-	<atom:link href="http://maintiendrai.github.io/tags/nlp/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 19 Jan 2019 16:07:09 +0800</lastBuildDate><atom:link href="http://maintiendrai.github.io/tags/nlp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Rasa NLU天气Bot实现</title>
       <link>http://maintiendrai.github.io/post/2019-01-19-weather-bot/</link>
       <pubDate>Sat, 19 Jan 2019 16:07:09 +0800</pubDate>
       
       <guid>http://maintiendrai.github.io/post/2019-01-19-weather-bot/</guid>
-      <description>纯粹是给自己复习看系列 Dependency install pip install -r requirements.txt python -m spacy download en npm i -g rasa-nlu-trainer  Training a Rasa NLU model 手动编辑 mkdir data cd data vi data.json  在线编辑 rasa-nlu-trainer =&amp;gt; localhost:52526
-cd .. modify config_spacy.json nlu_model.py python nlu_model.py =&amp;gt; training  python nlu_model.py =&amp;gt; result  Training a Rasa Core dialogue manangement model create weather_domain.yml modify actions.py cd data modify stroies.md on line training session cd .</description>
+      <description>纯粹是给自己复习看系列 Dependency install pip install -r requirements.txt python -m spacy download en npm i -g rasa-nlu-trainer Training a Rasa NLU model 手动编辑 mkdir data cd data vi data.json 在线编辑 rasa-nlu-trainer =&amp;gt; localhost:52526
+cd .. modify config_spacy.json nlu_model.py python nlu_model.py =&amp;gt; training python nlu_model.py =&amp;gt; result Training a Rasa Core dialogue manangement model create weather_domain.yml modify actions.py cd data modify stroies.md on line training session cd .. modify train_init.py python train_init.py modify train_online.</description>
+    </item>
+    
+    <item>
+      <title>NLP summarize</title>
+      <link>http://maintiendrai.github.io/post/2019-01-05-nl-summarize/</link>
+      <pubDate>Sat, 05 Jan 2019 16:07:09 +0800</pubDate>
+      
+      <guid>http://maintiendrai.github.io/post/2019-01-05-nl-summarize/</guid>
+      <description>自然语言概述 什么是自然语言处理 自然语言处理发展背景和历程 自然语言涉及的学科领域 自然语言处理技术体系 自然语言处理工作原理 过程：形式化描述-数学模型算法化-程序化-实用化。
+形式化：研究的问题在语言上建立形式化模型，使其可以数学形式表示出来 数学化：把数学模型表示为算法的过程称之为算法化 程序化：根据算法计算机进行实现，建立各种自然语言处理系统，这个过程是程序化 实用化：对系统进行评测和改进最终满足现实需求，这个过程是实用 </description>
     </item>
     
   </channel>
